@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Politique de confidentialité — Timeaxe AI</title>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Syne';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/syne-latin-800-normal.woff2') format('woff2')}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--blue-deep:#070f1f;--blue-500:#3b82f6;--blue-400:#60a5fa;--blue-100:#dbeafe;--blue-50:#eff6ff;--text:#0a1628;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0}
+body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(7,15,31,0.92);backdrop-filter:blur(16px)}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:#fff;text-decoration:none;letter-spacing:-.4px}
+.nav-logo span{color:var(--blue-400)}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px}
+.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);padding:4px 11px;border-radius:100px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.lang-btn.active{background:var(--blue-500);color:#fff}
+.back{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none}
+.back:hover{color:#fff}
+main{max-width:720px;margin:0 auto;padding:64px 2rem 96px}
+h1{font-family:'Syne',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+.updated{font-size:13px;color:var(--muted);margin-bottom:40px}
+h2{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;letter-spacing:-.3px;margin:36px 0 12px}
+p,li{font-size:15px;color:var(--text2)}
+ul{padding-left:22px;margin:10px 0}
+li{margin-bottom:6px}
+a{color:var(--blue-500)}
+.box{background:var(--blue-50);border:1px solid var(--blue-100);border-radius:12px;padding:18px 22px;margin:24px 0;font-size:14px;color:var(--text2)}
+strong{color:var(--text);font-weight:600}
+@media(max-width:600px){
+  nav{padding:0 1.25rem}
+  .back{display:none}
+  main{padding:48px 1.25rem 72px}
+  h1{font-size:clamp(26px,7.5vw,36px);letter-spacing:-.5px;overflow-wrap:break-word}
+  h2{font-size:18px}
+}
+</style>
+</head>
+<body>
+<nav>
+  <a href="index.html" class="nav-logo">Timeaxe<span> AI</span></a>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <a href="index.html" class="back" data-i="back">← Retour au site</a>
+  </div>
+</nav>
+
+<main>
+  <h1 data-i="title">Politique de confidentialité</h1>
+  <p class="updated" data-i="updated">Dernière mise à jour : juin 2026</p>
+
+  <div class="box" data-i="summary"><strong>En bref :</strong> nous collectons uniquement votre adresse email, uniquement pour vous tenir informé du lancement de Timeaxe AI. Nous ne la vendons jamais, nous ne la partageons jamais à des fins commerciales, et vous pouvez demander sa suppression à tout moment.</div>
+
+  <h2 data-i="h_who">Qui sommes-nous ?</h2>
+  <p data-i="p_who">Timeaxe AI est une plateforme de planification du personnel pour l'hôtellerie-restauration, en cours de lancement. Pour toute question relative à vos données : <a href="mailto:bonjour@timeaxeai.com">bonjour@timeaxeai.com</a>.</p>
+
+  <h2 data-i="h_collect">Quelles données collectons-nous ?</h2>
+  <ul id="ul_collect">
+    <li data-i="li_c1"><strong>Adresse email</strong> — lorsque vous vous inscrivez à notre liste d'attente.</li>
+    <li data-i="li_c2"><strong>Langue choisie</strong> (FR/EN) — uniquement pour vous écrire dans la bonne langue.</li>
+  </ul>
+  <p data-i="p_collect2">C'est tout. Pas de cookies publicitaires, pas de traceurs tiers, pas de profilage.</p>
+
+  <h2 data-i="h_why">Pourquoi et sur quelle base légale ?</h2>
+  <p data-i="p_why">Nous utilisons votre email pour vous informer du lancement de Timeaxe AI et de l'ouverture de l'accès anticipé. La base légale est votre <strong>consentement</strong> (art. 6.1.a RGPD), donné lors de votre inscription. Vous pouvez le retirer à tout moment.</p>
+
+  <h2 data-i="h_where">Où sont stockées vos données ?</h2>
+  <p data-i="p_where">Votre email est stocké chez notre prestataire d'emailing, dans le respect du RGPD. La liste à jour de nos sous-traitants est disponible sur demande à <a href="mailto:bonjour@timeaxeai.com">bonjour@timeaxeai.com</a>.</p>
+
+  <h2 data-i="h_long">Combien de temps ?</h2>
+  <p data-i="p_long">Jusqu'au lancement de Timeaxe AI, puis au maximum 3 ans après votre dernière interaction, ou immédiatement sur demande de suppression.</p>
+
+  <h2 data-i="h_rights">Vos droits</h2>
+  <p data-i="p_rights">Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité, de limitation et d'opposition. Pour les exercer, écrivez-nous à <a href="mailto:bonjour@timeaxeai.com">bonjour@timeaxeai.com</a> — nous répondons sous 30 jours. Vous pouvez aussi introduire une réclamation auprès de la CNIL (<a href="https://www.cnil.fr" rel="noopener">cnil.fr</a>).</p>
+
+  <h2 data-i="h_unsub">Se désinscrire</h2>
+  <p data-i="p_unsub">Chaque email que nous envoyons contient un lien de désinscription en un clic. Vous pouvez aussi simplement répondre « stop » à n'importe quel email.</p>
+</main>
+
+<script>
+const t = {
+  fr: {
+    back:"← Retour au site",
+    title:"Politique de confidentialité",
+    updated:"Dernière mise à jour : juin 2026",
+    summary:"<strong>En bref :</strong> nous collectons uniquement votre adresse email, uniquement pour vous tenir informé du lancement de Timeaxe AI. Nous ne la vendons jamais, nous ne la partageons jamais à des fins commerciales, et vous pouvez demander sa suppression à tout moment.",
+    h_who:"Qui sommes-nous ?",
+    p_who:"Timeaxe AI est une plateforme de planification du personnel pour l'hôtellerie-restauration, en cours de lancement. Pour toute question relative à vos données : <a href='mailto:bonjour@timeaxeai.com'>bonjour@timeaxeai.com</a>.",
+    h_collect:"Quelles données collectons-nous ?",
+    li_c1:"<strong>Adresse email</strong> — lorsque vous vous inscrivez à notre liste d'attente.",
+    li_c2:"<strong>Langue choisie</strong> (FR/EN) — uniquement pour vous écrire dans la bonne langue.",
+    p_collect2:"C'est tout. Pas de cookies publicitaires, pas de traceurs tiers, pas de profilage.",
+    h_why:"Pourquoi et sur quelle base légale ?",
+    p_why:"Nous utilisons votre email pour vous informer du lancement de Timeaxe AI et de l'ouverture de l'accès anticipé. La base légale est votre <strong>consentement</strong> (art. 6.1.a RGPD), donné lors de votre inscription. Vous pouvez le retirer à tout moment.",
+    h_where:"Où sont stockées vos données ?",
+    p_where:"Votre email est stocké chez notre prestataire d'emailing, dans le respect du RGPD. La liste à jour de nos sous-traitants est disponible sur demande à <a href='mailto:bonjour@timeaxeai.com'>bonjour@timeaxeai.com</a>.",
+    h_long:"Combien de temps ?",
+    p_long:"Jusqu'au lancement de Timeaxe AI, puis au maximum 3 ans après votre dernière interaction, ou immédiatement sur demande de suppression.",
+    h_rights:"Vos droits",
+    p_rights:"Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de portabilité, de limitation et d'opposition. Pour les exercer, écrivez-nous à <a href='mailto:bonjour@timeaxeai.com'>bonjour@timeaxeai.com</a> — nous répondons sous 30 jours. Vous pouvez aussi introduire une réclamation auprès de la CNIL (<a href='https://www.cnil.fr' rel='noopener'>cnil.fr</a>).",
+    h_unsub:"Se désinscrire",
+    p_unsub:"Chaque email que nous envoyons contient un lien de désinscription en un clic. Vous pouvez aussi simplement répondre « stop » à n'importe quel email."
+  },
+  en: {
+    back:"← Back to site",
+    title:"Privacy Policy",
+    updated:"Last updated: June 2026",
+    summary:"<strong>In short:</strong> we collect only your email address, only to keep you informed about the launch of Timeaxe AI. We never sell it, never share it for commercial purposes, and you can request its deletion at any time.",
+    h_who:"Who are we?",
+    p_who:"Timeaxe AI is a staff scheduling platform for the hospitality industry, currently preparing for launch. For any questions about your data: <a href='mailto:bonjour@timeaxeai.com'>bonjour@timeaxeai.com</a>.",
+    h_collect:"What data do we collect?",
+    li_c1:"<strong>Email address</strong> — when you join our waitlist.",
+    li_c2:"<strong>Chosen language</strong> (FR/EN) — only so we can write to you in the right language.",
+    p_collect2:"That's it. No advertising cookies, no third-party trackers, no profiling.",
+    h_why:"Why, and on what legal basis?",
+    p_why:"We use your email to inform you about the launch of Timeaxe AI and the opening of early access. The legal basis is your <strong>consent</strong> (Art. 6.1.a GDPR), given when you sign up. You can withdraw it at any time.",
+    h_where:"Where is your data stored?",
+    p_where:"Your email is stored with our email service provider, in compliance with GDPR. An up-to-date list of our processors is available on request at <a href='mailto:bonjour@timeaxeai.com'>bonjour@timeaxeai.com</a>.",
+    h_long:"For how long?",
+    p_long:"Until the launch of Timeaxe AI, then at most 3 years after your last interaction, or immediately upon a deletion request.",
+    h_rights:"Your rights",
+    p_rights:"Under GDPR, you have the right of access, rectification, erasure, portability, restriction, and objection. To exercise them, write to us at <a href='mailto:bonjour@timeaxeai.com'>bonjour@timeaxeai.com</a> — we respond within 30 days. You may also lodge a complaint with your supervisory authority (in France, the CNIL — <a href='https://www.cnil.fr' rel='noopener'>cnil.fr</a>).",
+    h_unsub:"Unsubscribing",
+    p_unsub:"Every email we send contains a one-click unsubscribe link. You can also simply reply \"stop\" to any email."
+  }
+};
+function setLang(lang){
+  try{localStorage.setItem('txLang',lang)}catch(e){}
+  const d=t[lang];
+  document.querySelectorAll('[data-i]').forEach(el=>{const k=el.getAttribute('data-i');if(d[k]!==undefined)el.innerHTML=d[k]});
+  document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.textContent.toLowerCase()===lang)});
+  document.documentElement.lang=lang;
+  document.title=(lang==='fr'?'Politique de confidentialité':'Privacy Policy')+' — Timeaxe AI';
+  document.querySelectorAll('a').forEach(a=>{
+    const href=a.getAttribute('href')||'';
+    if(href.includes('index.html'))a.setAttribute('href','index.html?lang='+lang);
+    if(href.includes('faq.html'))a.setAttribute('href','faq.html?lang='+lang);
+  });
+}
+/* restore language: URL param wins, then localStorage */
+(function(){
+  let p=new URLSearchParams(window.location.search).get('lang');
+  if(p!=='en'&&p!=='fr'){try{p=localStorage.getItem('txLang')}catch(e){p=null}}
+  if(p==='en'||p==='fr')setLang(p);
+})();
+</script>
+</body>
+</html>

@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>FAQ — Timeaxe AI</title>
+<style>
+@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Syne';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/syne-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Syne';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/syne-latin-800-normal.woff2') format('woff2')}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --blue-deep:#070f1f;--blue-600:#2563eb;--blue-500:#3b82f6;--blue-400:#60a5fa;
+  --blue-200:#bfdbfe;--blue-100:#dbeafe;--blue-50:#eff6ff;
+  --text:#0a1628;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0;
+  --radius-lg:18px;--radius-xl:28px;
+}
+html{scroll-behavior:smooth}
+body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;padding-top:env(safe-area-inset-top);background:rgba(7,15,31,0.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase}
+.nav-logo span{color:#fff;background:var(--blue-500);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
+.nav-right{display:flex;align-items:center;gap:12px}
+.lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px}
+.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.4);padding:4px 11px;border-radius:100px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.lang-btn.active{background:var(--blue-500);color:#fff}
+.back{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap}
+.back:hover{color:#fff}
+
+/* HERO BAND */
+.faq-hero{background:var(--blue-deep);padding:80px 2rem 72px;text-align:center;position:relative;overflow:hidden}
+.faq-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(96,165,250,0.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%)}
+.faq-hero-orb{position:absolute;width:500px;height:500px;background:rgba(37,99,235,0.22);border-radius:50%;filter:blur(80px);top:-150px;left:50%;transform:translateX(-50%);pointer-events:none}
+.faq-hero-inner{position:relative;z-index:2}
+.faq-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:var(--blue-300,#93c5fd);font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:24px}
+.faq-hero h1{font-family:'Syne',sans-serif;font-size:clamp(36px,6vw,58px);font-weight:800;letter-spacing:-2px;line-height:1.05;color:#fff;margin-bottom:16px}
+.faq-hero h1 span{background:linear-gradient(120deg,var(--blue-400),#a5f3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.faq-hero p{font-size:17px;color:rgba(255,255,255,0.55);max-width:500px;margin:0 auto}
+
+/* CATEGORIES */
+.faq-body{max-width:760px;margin:0 auto;padding:72px 2rem 96px}
+.faq-category{margin-bottom:56px}
+.cat-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-500);margin-bottom:20px;display:flex;align-items:center;gap:10px}
+.cat-label::after{content:'';flex:1;height:1px;background:var(--border)}
+
+/* ACCORDION */
+.faq-item{border:1px solid var(--border);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
+.faq-item.open{border-color:var(--blue-200);box-shadow:0 4px 24px rgba(37,99,235,0.08)}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:#fff;border:none;cursor:pointer;text-align:left;font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.2px;transition:background .15s}
+.faq-q:hover{background:var(--blue-50)}
+.faq-item.open .faq-q{background:var(--blue-50);color:var(--blue-600)}
+.faq-icon{width:28px;height:28px;border-radius:50%;background:var(--blue-50);border:1px solid var(--blue-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .3s}
+.faq-item.open .faq-icon{background:var(--blue-500);border-color:var(--blue-500);transform:rotate(45deg)}
+.faq-icon svg{width:14px;height:14px;stroke:var(--blue-500);fill:none;stroke-width:2.5;stroke-linecap:round;transition:stroke .2s}
+.faq-item.open .faq-icon svg{stroke:#fff}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .35s cubic-bezier(.2,.6,.2,1)}
+.faq-item.open .faq-a{max-height:400px}
+.faq-a-inner{padding:0 24px 22px;font-size:15px;color:var(--text2);line-height:1.75}
+.faq-a-inner strong{color:var(--text);font-weight:600}
+.faq-a-inner .tag{display:inline-block;font-size:12px;font-weight:600;color:var(--blue-600);background:var(--blue-50);border:1px solid var(--blue-100);padding:3px 10px;border-radius:100px;margin-top:10px}
+
+/* BOTTOM CTA */
+.faq-cta{background:var(--blue-deep);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;margin-top:64px;position:relative;overflow:hidden}
+.faq-cta::before{content:'';position:absolute;width:400px;height:400px;background:rgba(37,99,235,0.2);border-radius:50%;filter:blur(70px);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none}
+.faq-cta h2{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.8px;color:#fff;margin-bottom:10px;position:relative;z-index:1}
+.faq-cta h2 span{background:linear-gradient(120deg,var(--blue-400),#a5f3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.faq-cta p{font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:28px;position:relative;z-index:1}
+.faq-cta a{display:inline-block;background:var(--blue-500);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;box-shadow:0 4px 24px rgba(59,130,246,0.4);transition:background .15s,transform .15s;position:relative;z-index:1}
+.faq-cta a:hover{background:var(--blue-600);transform:translateY(-2px)}
+
+footer{background:var(--blue-deep);border-top:1px solid rgba(255,255,255,0.05);padding:24px 2.5rem calc(24px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center}
+footer p{font-size:13px;color:rgba(255,255,255,0.28)}
+footer a{color:rgba(255,255,255,0.28);text-decoration:underline}
+
+@media(max-width:600px){
+  nav{padding:0 1.25rem;height:calc(58px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top)}
+  .back{display:none}
+  .faq-hero{padding:80px 1.25rem 52px}
+  .faq-hero h1{letter-spacing:-1px;font-size:clamp(32px,9vw,44px);overflow-wrap:break-word}
+  .faq-hero p{font-size:15px}
+  .faq-body{padding:40px 1.25rem 64px}
+  .faq-cta{padding:32px 22px}
+  .faq-cta h2{font-size:22px}
+  .faq-q{padding:16px 16px;font-size:14px}
+  .faq-a-inner{padding:0 16px 16px;font-size:14px}
+  .cat-label{font-size:10px}
+  footer{flex-direction:column;gap:6px;text-align:center;padding-bottom:calc(18px + env(safe-area-inset-bottom))}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index.html" class="nav-logo">TIMEAXE <span>AI</span></a>
+  <div class="nav-right">
+    <div class="lang-toggle">
+      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+      <button class="lang-btn" onclick="setLang('en')">EN</button>
+    </div>
+    <a href="index.html" class="back" data-i="back">← Retour</a>
+  </div>
+</nav>
+
+<div class="faq-hero">
+  <div class="faq-hero-orb"></div>
+  <div class="faq-hero-inner">
+    <div class="faq-eyebrow">FAQ</div>
+    <h1 data-i="hero_title">Vous avez des <span>questions ?</span></h1>
+    <p data-i="hero_sub">Tout ce que vous devez savoir sur Timeaxe AI, avant même de nous parler.</p>
+  </div>
+</div>
+
+<div class="faq-body">
+
+  <!-- CATEGORY 1 -->
+  <div class="faq-category">
+    <div class="cat-label" data-i="cat1">Le produit</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q1">Timeaxe AI est-il déjà disponible ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a1">Oui — Timeaxe AI est <strong>entièrement développé et prêt au lancement</strong>. Nous finalisons actuellement notre phase de pré-lancement avec un groupe restreint d'établissements pilotes, avant d'ouvrir l'accès à l'ensemble de notre liste d'attente en juillet 2026. <span class="tag">🚀 Lancement juillet 2026</span></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q2">Pour quels types d'établissements est-il conçu ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a2">Timeaxe AI est conçu pour <strong>fonctionner avec tous les types d'établissements de l'hôtellerie-restauration</strong>, du petit café de quartier au grand hôtel particulier. La plateforme s'adapte à la taille de votre équipe et à la complexité de vos horaires — pas l'inverse.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q3">Faut-il être à l'aise avec la technologie pour l'utiliser ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a3">Pas du tout. Timeaxe AI a été pensé pour être <strong>aussi simple à utiliser que possible</strong>. Si vous pouvez envoyer un email ou utiliser un smartphone, vous pouvez utiliser Timeaxe. Nous accompagnons chaque établissement à la prise en main lors de l'onboarding.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q4">Les employés doivent-ils télécharger une application ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a4">L'application mobile n'est <strong>pas obligatoire</strong>. Les employés peuvent pointer leur arrivée et leur départ via une tablette ou un téléphone partagé sur place. Cela dit, nous recommandons l'application — elle offre à chaque employé un accès simple à son planning, ses horaires et ses notifications, depuis son propre téléphone.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q5">Timeaxe s'intègre-t-il à mes outils existants ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a5">Au lancement, Timeaxe propose un <strong>export Excel</strong> pour une compatibilité immédiate avec vos outils actuels (logiciels de paie, RH, etc.). D'autres intégrations natives sont déjà en cours de développement et seront annoncées prochainement. <span class="tag">📋 Export Excel disponible au lancement</span></div></div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 2 -->
+  <div class="faq-category">
+    <div class="cat-label" data-i="cat2">Tarifs &amp; accès</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q6">Combien coûte Timeaxe AI ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a6">Nos tarifs seront <strong>compétitifs par rapport aux solutions existantes du secteur</strong>, en tenant compte des fonctionnalités offertes. Les détails tarifaires seront communiqués lors du lancement. Les membres de notre liste d'attente seront les premiers informés — et potentiellement les mieux lotis.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q7">Y a-t-il un engagement ou une durée minimale ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a7">Aucun engagement, aucune durée minimale. Timeaxe AI est proposé <strong>sans contrat et sans engagement</strong> — vous êtes libre d'annuler à tout moment. Nous préférons vous garder parce que le produit vous convient, pas parce qu'un contrat vous y oblige.</div></div>
+    </div>
+  </div>
+
+  <!-- CATEGORY 3 -->
+  <div class="faq-category">
+    <div class="cat-label" data-i="cat3">Liste d'attente &amp; lancement</div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q8">Que se passe-t-il après mon inscription ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a8">Dès votre inscription, vous recevez un <strong>email de confirmation</strong>. Dans les 24 heures, un membre de notre équipe vous contacte personnellement pour mieux comprendre vos besoins et adapter votre expérience d'onboarding en conséquence. Ce n'est pas un email automatique — c'est une vraie conversation. <span class="tag">📬 Réponse sous 24h</span></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q9">Y a-t-il des avantages à rejoindre la liste maintenant ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a9">Oui. Parmi les membres de notre liste d'attente, nous sélectionnerons quelques établissements pour <strong>piloter Timeaxe AI avant le lancement officiel</strong>. Ces partenaires pré-lancement bénéficieront d'un package de bienvenue généreux en remerciement de leur confiance et de leurs retours. Plus vous vous inscrivez tôt, plus vous avez de chances d'en faire partie. <span class="tag">🎁 Package pilote offert</span></div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q10">Quand le lancement est-il prévu ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a10">Le lancement public de Timeaxe AI est prévu pour <strong>juillet 2026</strong>. Les membres de la liste d'attente auront accès en priorité, avant l'ouverture au grand public.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" onclick="toggle(this)">
+        <span data-i="q11">Que faire de tout ce temps retrouvé ?</span>
+        <span class="faq-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </button>
+      <div class="faq-a"><div class="faq-a-inner" data-i="a11">Excellente question — c'est tout un défi. Chez Timeaxe, nous recommandons : prendre un café en terrasse et observer les passants, vous mettre à l'ornithologie (quoique trouver des oiseaux à Paris autres que des pigeons relève de l'exploit), ou — soyons fous — consacrer ce temps à vos clients. <strong>À vous de choisir.</strong> ☕🐦</div></div>
+    </div>
+  </div>
+
+  <!-- BOTTOM CTA -->
+  <div class="faq-cta">
+    <h2 data-i="cta_title">Encore des questions ? <span>On est là.</span></h2>
+    <p data-i="cta_sub">Notre équipe répond personnellement à chaque demande — généralement sous 24h.</p>
+    <a href="mailto:bonjour@timeaxeai.com" data-i="cta_btn">Nous contacter</a>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 Timeaxe AI 🇪🇺</p>
+  <p><a href="privacy.html" data-i="footer_privacy">Confidentialité</a> · <a href="mailto:bonjour@timeaxeai.com" style="color:inherit">bonjour@timeaxeai.com</a></p>
+</footer>
+
+<script>
+const t = {
+  fr:{
+    back:"← Retour",
+    hero_title:"Vous avez des <span>questions ?</span>",
+    hero_sub:"Tout ce que vous devez savoir sur Timeaxe AI, avant même de nous parler.",
+    cat1:"Le produit",cat2:"Tarifs & accès",cat3:"Liste d'attente & lancement",
+    q1:"Timeaxe AI est-il déjà disponible ?",
+    a1:"Oui — Timeaxe AI est <strong>entièrement développé et prêt au lancement</strong>. Nous finalisons actuellement notre phase de pré-lancement avec un groupe restreint d'établissements pilotes, avant d'ouvrir l'accès à l'ensemble de notre liste d'attente en juillet 2026. <span class='tag'>🚀 Lancement juillet 2026</span>",
+    q2:"Pour quels types d'établissements est-il conçu ?",
+    a2:"Timeaxe AI est conçu pour <strong>fonctionner avec tous les types d'établissements de l'hôtellerie-restauration</strong>, du petit café de quartier au grand hôtel particulier. La plateforme s'adapte à la taille de votre équipe et à la complexité de vos horaires — pas l'inverse.",
+    q3:"Faut-il être à l'aise avec la technologie pour l'utiliser ?",
+    a3:"Pas du tout. Timeaxe AI a été pensé pour être <strong>aussi simple à utiliser que possible</strong>. Si vous pouvez envoyer un email ou utiliser un smartphone, vous pouvez utiliser Timeaxe. Nous accompagnons chaque établissement à la prise en main lors de l'onboarding.",
+    q4:"Les employés doivent-ils télécharger une application ?",
+    a4:"L'application mobile n'est <strong>pas obligatoire</strong>. Les employés peuvent pointer leur arrivée et leur départ via une tablette ou un téléphone partagé sur place. Cela dit, nous recommandons l'application — elle offre à chaque employé un accès simple à son planning, ses horaires et ses notifications, depuis son propre téléphone.",
+    q5:"Timeaxe s'intègre-t-il à mes outils existants ?",
+    a5:"Au lancement, Timeaxe propose un <strong>export Excel</strong> pour une compatibilité immédiate avec vos outils actuels. D'autres intégrations natives sont déjà en cours de développement et seront annoncées prochainement. <span class='tag'>📋 Export Excel disponible au lancement</span>",
+    q6:"Combien coûte Timeaxe AI ?",
+    a6:"Nos tarifs seront <strong>compétitifs par rapport aux solutions existantes du secteur</strong>, en tenant compte des fonctionnalités offertes. Les détails tarifaires seront communiqués lors du lancement. Les membres de notre liste d'attente seront les premiers informés.",
+    q7:"Y a-t-il un engagement ou une durée minimale ?",
+    a7:"Aucun engagement, aucune durée minimale. Timeaxe AI est proposé <strong>sans contrat et sans engagement</strong> — vous êtes libre d'annuler à tout moment. Nous préférons vous garder parce que le produit vous convient, pas parce qu'un contrat vous y oblige.",
+    q8:"Que se passe-t-il après mon inscription ?",
+    a8:"Dès votre inscription, vous recevez un <strong>email de confirmation</strong>. Dans les 24 heures, un membre de notre équipe vous contacte personnellement pour mieux comprendre vos besoins et adapter votre expérience d'onboarding. Ce n'est pas un email automatique — c'est une vraie conversation. <span class='tag'>📬 Réponse sous 24h</span>",
+    q9:"Y a-t-il des avantages à rejoindre la liste maintenant ?",
+    a9:"Oui. Parmi les membres de notre liste d'attente, nous sélectionnerons quelques établissements pour <strong>piloter Timeaxe AI avant le lancement officiel</strong>. Ces partenaires bénéficieront d'un package de bienvenue généreux en remerciement de leur confiance et de leurs retours. <span class='tag'>🎁 Package pilote offert</span>",
+    q10:"Quand le lancement est-il prévu ?",
+    q11:"Que faire de tout ce temps retrouvé ?",
+    a11:"Excellente question — c'est tout un défi. Chez Timeaxe, nous recommandons : prendre un café en terrasse et observer les passants, vous mettre à l'ornithologie (quoique trouver des oiseaux à Paris autres que des pigeons relève de l'exploit), ou — soyons fous — consacrer ce temps à vos clients. <strong>À vous de choisir.</strong> ☕🐦",
+    a10:"Le lancement public de Timeaxe AI est prévu pour <strong>juillet 2026</strong>. Les membres de la liste d'attente auront accès en priorité, avant l'ouverture au grand public.",
+    cta_title:"Encore des questions ? <span>On est là.</span>",
+    cta_sub:"Notre équipe répond personnellement à chaque demande — généralement sous 24h.",
+    cta_btn:"Nous contacter",
+    footer_privacy:"Confidentialité"
+  },
+  en:{
+    back:"← Back",
+    hero_title:"Got <span>questions?</span>",
+    hero_sub:"Everything you need to know about Timeaxe AI, before we even speak.",
+    cat1:"The product",cat2:"Pricing & access",cat3:"Waitlist & launch",
+    q1:"Is Timeaxe AI already available?",
+    a1:"Yes — Timeaxe AI is <strong>fully built and ready to launch</strong>. We're currently finalising our pre-launch phase with a select group of pilot venues, before opening access to our full waitlist in July 2026. <span class='tag'>🚀 Launching July 2026</span>",
+    q2:"What types of venues is it designed for?",
+    a2:"Timeaxe AI is built to <strong>work for all sizes of hospitality venue</strong>, from a small neighbourhood café to a large hotel. The platform adapts to the size of your team and the complexity of your rota — not the other way around.",
+    q3:"Do you need to be tech-savvy to use it?",
+    a3:"Not at all. Timeaxe AI has been designed to be <strong>as easy to use as possible</strong>. If you can send an email or use a smartphone, you can use Timeaxe. We guide every venue through onboarding personally.",
+    q4:"Do employees need to download an app?",
+    a4:"The mobile app is <strong>not mandatory</strong>. Employees can clock in and out via a shared tablet or phone at the venue. That said, we do recommend the app — it gives each team member easy access to their schedule, shifts, and notifications from their own phone.",
+    q5:"Does Timeaxe integrate with my existing tools?",
+    a5:"At launch, Timeaxe offers an <strong>Excel export</strong> for immediate compatibility with your current tools. Further native integrations are already in development and will be announced soon. <span class='tag'>📋 Excel export available at launch</span>",
+    q6:"How much does Timeaxe AI cost?",
+    a6:"Our pricing will be <strong>competitive relative to existing solutions in the industry</strong>, reflecting the features on offer. Full pricing details will be shared at launch. Waitlist members will be the first to know — and may well get the best deal.",
+    q7:"Is there a minimum contract or commitment?",
+    a7:"No commitment, no minimum term. Timeaxe AI is offered <strong>contract-free with no strings attached</strong> — you're free to cancel at any time. We'd rather keep you because the product works for you, not because a contract locks you in.",
+    q8:"What happens after I sign up?",
+    a8:"As soon as you sign up, you'll receive a <strong>confirmation email</strong>. Within 24 hours, a member of our team will reach out personally to learn more about your needs and tailor your onboarding experience. This isn't an automated sequence — it's a real conversation. <span class='tag'>📬 Response within 24h</span>",
+    q9:"Are there any benefits to joining the waitlist now?",
+    a9:"Yes. From our waitlist, we'll be selecting a handful of venues to <strong>pilot Timeaxe AI before the official launch</strong>. These early partners will receive a generous welcome package as a thank-you for their trust and feedback. The earlier you sign up, the better your chances. <span class='tag'>🎁 Pilot package included</span>",
+    q10:"When is the launch?",
+    q11:"What should I do with all this newfound time?",
+    a11:"Excellent question — it's quite the challenge. At Timeaxe, we recommend: grabbing a coffee on a terrace and doing some people-watching, taking up birdwatching (though finding birds in Paris that aren't pigeons is a real achievement), or — wild idea — spending that extra time with your clients. <strong>Your call.</strong> ☕🐦",
+    a10:"The public launch of Timeaxe AI is planned for <strong>July 2026</strong>. Waitlist members will get priority access before the general public.",
+    cta_title:"Still have questions? <span>We're here.</span>",
+    cta_sub:"Our team responds personally to every enquiry — usually within 24 hours.",
+    cta_btn:"Get in touch",
+    footer_privacy:"Privacy"
+  }
+};
+
+
+let _faqLang = 'fr';
+
+function setLang(lang){
+  _faqLang = lang;
+  try{localStorage.setItem('txLang',lang)}catch(e){}
+  const d=t[lang];
+  document.querySelectorAll('[data-i]').forEach(el=>{const k=el.getAttribute('data-i');if(d[k]!==undefined)el.innerHTML=d[k]});
+  document.querySelectorAll('.lang-btn').forEach(b=>{b.classList.toggle('active',b.textContent.toLowerCase()===lang)});
+  document.documentElement.lang=lang;
+  document.title='FAQ — Timeaxe AI';
+  /* update all links back to index */
+  document.querySelectorAll('a').forEach(a=>{
+    const href=a.getAttribute('href')||'';
+    if(href.includes('index.html'))a.setAttribute('href','index.html?lang='+lang);
+  });
+}
+
+function toggle(btn){
+  const item=btn.closest('.faq-item');
+  const isOpen=item.classList.contains('open');
+  document.querySelectorAll('.faq-item.open').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)item.classList.add('open');
+}
+
+/* restore language: URL param wins, then localStorage */
+let _p=new URLSearchParams(window.location.search).get('lang');
+if(_p!=='en'&&_p!=='fr'){try{_p=localStorage.getItem('txLang')}catch(e){_p=null}}
+if(_p==='en'||_p==='fr')setLang(_p);
+</script>
+</body>
+</html>

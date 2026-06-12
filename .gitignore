@@ -1,0 +1,8 @@
+# OS junk
+.DS_Store
+
+# Local editor / assistant settings
+.claude/
+
+# Generated knowledge graph (rebuild with `graphify .`)
+graphify-out/
