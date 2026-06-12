@@ -892,7 +892,7 @@ async function sendEmail(email,name,extra){
   try{
     const body=new URLSearchParams();
     body.append('EMAIL', email);
-    if(name){body.append('FIRSTNAME', name)}
+    if(name){body.append('NOM', name)}
     body.append('OPT_IN', '1');
     if(extra){for(const k in extra)body.append(k, extra[k])}
     body.append('email_address_check', '');
