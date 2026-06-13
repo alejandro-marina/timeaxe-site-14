@@ -1,0 +1,18 @@
+# Timeaxe AI
+
+> Timeaxe AI is a French SaaS that auto-generates labour-law-compliant staff schedules for the hospitality industry (restaurants and hotels). It produces optimized weekly schedules in seconds, reducing overtime and burnout while staying compliant with French labour law (the 35-hour week, the HCR collective agreement, and mandatory rest periods). EU-hosted and GDPR/CNIL-compliant. Currently pre-launch — public launch is July 2026; early access is via a free waitlist.
+
+## Product
+- Status: Pre-launch. Public launch July 2026. Waitlist open (free early access).
+- For: French hospitality venues — cafés, restaurants and hotels of all sizes.
+- Key features: AI-generated staff schedules; French labour-law compliance (35h week, HCR convention collective, mandatory daily/weekly rest, overtime rules); overtime and burnout reduction; Excel export at launch; optional mobile clock-in app.
+- Pricing: Competitive vs. existing solutions; no contract, cancel anytime. Full details at launch.
+- Data & trust: EU-hosted, GDPR (RGPD) compliant, CNIL framework.
+
+## Pages
+- Home: https://timeaxeai.com/
+- FAQ: https://timeaxeai.com/faq.html
+- Privacy policy: https://timeaxeai.com/privacy.html
+
+## Contact
+- Email: bonjour@timeaxeai.com
