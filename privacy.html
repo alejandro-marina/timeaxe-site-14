@@ -32,7 +32,7 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Syne';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/syne-latin-800-normal.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{--blue-deep:#070f1f;--blue-500:#3b82f6;--blue-400:#60a5fa;--blue-100:#dbeafe;--blue-50:#eff6ff;--text:#0a1628;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0}
+:root{--blue-deep:#070f1f;--blue-500:#3b82f6;--blue-600:#2563eb;--blue-400:#60a5fa;--blue-100:#dbeafe;--blue-50:#eff6ff;--text:#0a1628;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0}
 body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(7,15,31,0.92);backdrop-filter:blur(16px)}
 .nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:#fff;text-decoration:none;display:inline-flex;align-items:center;letter-spacing:-.4px}
@@ -54,6 +54,10 @@ li{margin-bottom:6px}
 a{color:var(--blue-600)}
 .box{background:var(--blue-50);border:1px solid var(--blue-100);border-radius:12px;padding:18px 22px;margin:24px 0;font-size:14px;color:var(--text2)}
 strong{color:var(--text);font-weight:600}
+footer{background:var(--blue-deep);padding:28px 2rem calc(28px + env(safe-area-inset-bottom));text-align:center}
+footer p{font-size:13px;color:rgba(255,255,255,0.55);margin-bottom:5px}
+footer p:last-child{margin-bottom:0}
+footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 @media(max-width:600px){
   nav{padding:0 1.25rem}
   .back{display:none}
@@ -107,11 +111,17 @@ strong{color:var(--text);font-weight:600}
   <p data-i="p_unsub">Chaque email que nous envoyons contient un lien de désinscription en un clic. Vous pouvez aussi simplement répondre « stop » à n'importe quel email.</p>
 </main>
 
+<footer>
+  <p>© 2026 Timeaxe AI 🇪🇺</p>
+  <p><a href="about.html" data-i="footer_about">À propos</a> · <a href="faq.html" data-i="footer_faq">FAQ</a> · <a href="legal.html" data-i="footer_legal">Mentions légales</a> · <a href="mailto:bonjour@timeaxeai.com" style="color:inherit">bonjour@timeaxeai.com</a></p>
+</footer>
+
 <script>
 const t = {
   fr: {
     back:"← Retour au site",
     title:"Politique de confidentialité",
+    footer_about:"À propos",footer_faq:"FAQ",footer_legal:"Mentions légales",
     updated:"Dernière mise à jour : juin 2026",
     summary:"<strong>En bref :</strong> nous collectons uniquement votre adresse email, uniquement pour vous tenir informé du lancement de Timeaxe AI. Nous ne la vendons jamais, nous ne la partageons jamais à des fins commerciales, et vous pouvez demander sa suppression à tout moment.",
     h_who:"Qui sommes-nous ?",
@@ -134,6 +144,7 @@ const t = {
   en: {
     back:"← Back to site",
     title:"Privacy Policy",
+    footer_about:"About",footer_faq:"FAQ",footer_legal:"Legal",
     updated:"Last updated: June 2026",
     summary:"<strong>In short:</strong> we collect only your email address, only to keep you informed about the launch of Timeaxe AI. We never sell it, never share it for commercial purposes, and you can request its deletion at any time.",
     h_who:"Who are we?",
