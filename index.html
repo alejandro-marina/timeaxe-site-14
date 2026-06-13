@@ -321,7 +321,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
       <button class="lang-btn active" onclick="setLang('fr')">FR</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
-    <a href="#waitlist" class="nav-cta magnetic" onclick="goWaitlist();return false;" data-i="nav_cta">Rejoindre la liste</a>
+    <a href="#" class="nav-cta magnetic" onclick="goWaitlist();return false;" data-i="nav_cta">Rejoindre la liste</a>
   </div>
 </nav>
 
@@ -949,11 +949,9 @@ async function submitForm(inputId,formId,successId){
 
 /* modal */
 function goWaitlist(){
-  const email=document.getElementById('heroEmail');
-  const wl=document.getElementById('waitlist');
-  if(window.__lenis){window.__lenis.scrollTo(wl,{offset:-90});}
-  else{wl.scrollIntoView({behavior:'smooth',block:'center'});}
-  setTimeout(()=>{try{email.focus({preventScroll:true});}catch(e){email.focus();}},500);
+  /* scroll to the top of the hero so the title + subtitle are visible above the form */
+  if(window.__lenis){window.__lenis.scrollTo(0);}
+  else{window.scrollTo({top:0,behavior:'smooth'});}
 }
 function openModal(){
   document.getElementById('modalBody').style.display='block';
