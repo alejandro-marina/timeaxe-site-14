@@ -48,8 +48,8 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Syne';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/syne-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Syne';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/syne-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --blue-deep:#070f1f;--blue-600:#2563eb;--blue-500:#3b82f6;--blue-400:#60a5fa;
@@ -62,7 +62,7 @@ body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;col
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;padding-top:env(safe-area-inset-top);background:rgba(7,15,31,0.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;display:inline-flex;align-items:center;letter-spacing:.5px;text-transform:uppercase}
+.nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;display:inline-flex;align-items:center;letter-spacing:.5px;text-transform:uppercase}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
 .nav-right{display:flex;align-items:center;gap:12px}
@@ -78,7 +78,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .faq-hero-orb{position:absolute;width:500px;height:500px;background:rgba(37,99,235,0.22);border-radius:50%;filter:blur(80px);top:-150px;left:50%;transform:translateX(-50%);pointer-events:none}
 .faq-hero-inner{position:relative;z-index:2}
 .faq-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:var(--blue-300,#93c5fd);font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:24px}
-.faq-hero h1{font-family:'Syne',sans-serif;font-size:clamp(36px,6vw,58px);font-weight:800;letter-spacing:-2px;line-height:1.05;color:#fff;margin-bottom:16px}
+.faq-hero h1{font-family:'Inter',sans-serif;font-size:clamp(36px,6vw,58px);font-weight:800;letter-spacing:-1px;line-height:1.05;color:#fff;margin-bottom:16px}
 .faq-hero h1 span{background:linear-gradient(120deg,var(--blue-400),#a5f3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .faq-hero p{font-size:17px;color:rgba(255,255,255,0.55);max-width:500px;margin:0 auto}
 
@@ -91,7 +91,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 /* ACCORDION */
 .faq-item{border:1px solid var(--border);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden;transition:border-color .2s,box-shadow .2s}
 .faq-item.open{border-color:var(--blue-200);box-shadow:0 4px 24px rgba(37,99,235,0.08)}
-.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:#fff;border:none;cursor:pointer;text-align:left;font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.2px;transition:background .15s}
+.faq-q{width:100%;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:#fff;border:none;cursor:pointer;text-align:left;font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--text);letter-spacing:-.2px;transition:background .15s}
 .faq-q:hover{background:var(--blue-50)}
 .faq-item.open .faq-q{background:var(--blue-50);color:var(--blue-600)}
 .faq-icon{width:28px;height:28px;border-radius:50%;background:var(--blue-50);border:1px solid var(--blue-100);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s,transform .3s}
@@ -107,7 +107,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 /* BOTTOM CTA */
 .faq-cta{background:var(--blue-deep);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;margin-top:64px;position:relative;overflow:hidden}
 .faq-cta::before{content:'';position:absolute;width:400px;height:400px;background:rgba(37,99,235,0.2);border-radius:50%;filter:blur(70px);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none}
-.faq-cta h2{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.8px;color:#fff;margin-bottom:10px;position:relative;z-index:1}
+.faq-cta h2{font-family:'Inter',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.8px;color:#fff;margin-bottom:10px;position:relative;z-index:1}
 .faq-cta h2 span{background:linear-gradient(120deg,var(--blue-400),#a5f3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .faq-cta p{font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:28px;position:relative;z-index:1}
 .faq-cta a{display:inline-block;background:var(--blue-500);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;box-shadow:0 4px 24px rgba(59,130,246,0.4);transition:background .15s,transform .15s;position:relative;z-index:1}

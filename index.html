@@ -4,7 +4,6 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/fonts/syne-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Logiciel de planning IA pour restaurants et hôtels | Timeaxe AI</title>
 <meta name="description" content="Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — conformes au droit du travail français, avec moins d'heures supplémentaires et moins d'épuisement.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -68,9 +67,8 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Syne';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/syne-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Syne';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/syne-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Syne';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/syne-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
 </style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -89,7 +87,7 @@ body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;col
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 max(2.5rem,env(safe-area-inset-left)) 0 max(2.5rem,env(safe-area-inset-right));height:calc(64px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top);background:rgba(7,15,31,0.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
+.nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-links{display:flex;gap:28px;align-items:center}
@@ -114,7 +112,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:var(--blue-300);font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:34px}
 .badge-dot{width:6px;height:6px;background:var(--blue-400);border-radius:50%;flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-h1{font-family:'Syne',sans-serif;font-size:clamp(38px,6.5vw,76px);font-weight:800;line-height:1.05;letter-spacing:-1.8px;color:#fff;margin-bottom:26px}
+h1{font-family:'Inter',sans-serif;font-size:clamp(38px,6.5vw,76px);font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:26px}
 h1 .w{display:inline-block;white-space:pre}
 h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:18px;color:rgba(255,255,255,0.58);max-width:580px;margin:0 auto 46px;line-height:1.7}
@@ -186,14 +184,14 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .stats-inner{display:flex;max-width:960px;width:100%}
 .stat{flex:1;text-align:center;padding:0 24px;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
-.stat-num{font-family:'Syne',sans-serif;font-size:40px;font-weight:800;color:var(--blue-deep);letter-spacing:-1.5px;line-height:1}
+.stat-num{font-family:'Inter',sans-serif;font-size:40px;font-weight:800;color:var(--blue-deep);letter-spacing:-1px;line-height:1}
 .stat-num span{color:var(--blue-500)}
 .stat-label{font-size:13px;color:var(--text-muted);margin-top:6px}
 
 /* GENERIC SECTIONS */
 .section{max-width:980px;margin:0 auto;padding:104px 2rem}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-500);margin-bottom:14px}
-.section-h2{font-family:'Syne',sans-serif;font-size:clamp(25px,4.2vw,42px);font-weight:800;letter-spacing:-1.2px;line-height:1.08;margin-bottom:56px;color:var(--blue-deep);max-width:560px;overflow-wrap:break-word;hyphens:auto}
+.section-h2{font-family:'Inter',sans-serif;font-size:clamp(25px,4.2vw,42px);font-weight:800;letter-spacing:-1.2px;line-height:1.08;margin-bottom:56px;color:var(--blue-deep);max-width:560px;overflow-wrap:break-word;hyphens:auto}
 
 /* HORIZONTAL FEATURES */
 .hfeat{background:var(--blue-deep);position:relative;overflow:hidden}
@@ -204,10 +202,10 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .hfeat-track{display:flex;gap:24px;padding:0 max(2rem,calc((100vw - 980px)/2));width:max-content;will-change:transform}
 .hcard{width:min(420px,82vw);flex-shrink:0;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-xl);padding:42px 38px;position:relative;overflow:hidden}
 .hcard::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(59,130,246,0.25),transparent 70%);filter:blur(30px)}
-.hcard-num{font-family:'Syne',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-400);margin-bottom:26px}
+.hcard-num{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-400);margin-bottom:26px}
 .h-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;margin-bottom:24px;box-shadow:0 8px 24px rgba(37,99,235,0.4)}
 .h-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.hcard h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-.4px}
+.hcard h3{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-.4px}
 .hcard p{font-size:14.5px;color:rgba(255,255,255,0.55);line-height:1.75}
 .hcard .f-stat{display:inline-block;font-size:13px;font-weight:600;color:var(--blue-300);background:rgba(59,130,246,0.14);padding:5px 14px;border-radius:100px;margin-top:20px;border:1px solid rgba(96,165,250,0.25)}
 .hfeat-hint{text-align:center;font-size:12px;color:rgba(255,255,255,0.55);padding-bottom:32px;letter-spacing:.06em;text-transform:uppercase}
@@ -222,7 +220,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .eu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:28px}
 .eu-card{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:30px;transition:transform .25s,box-shadow .25s,border-color .25s;box-shadow:0 2px 10px rgba(15,40,80,0.04)}
 .eu-card:hover{transform:translateY(-4px);border-color:var(--blue-300);box-shadow:0 16px 40px rgba(37,99,235,0.12)}
-.eu-card h3{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;display:flex;align-items:center;gap:12px;letter-spacing:-.2px}
+.eu-card h3{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;display:flex;align-items:center;gap:12px;letter-spacing:-.2px}
 .eu-icon{width:40px;height:40px;border-radius:var(--radius-md);background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(37,99,235,0.3)}
 .eu-icon svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .eu-card p{font-size:14px;color:var(--text-secondary);line-height:1.7}
@@ -237,7 +235,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .law-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .law-card{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:30px;transition:transform .25s,box-shadow .25s}
 .law-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(59,130,246,0.1)}
-.law-card h3{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:8px;letter-spacing:-.2px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.law-card h3{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:8px;letter-spacing:-.2px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .law-tag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--blue-500);color:#fff;padding:3px 8px;border-radius:4px}
 .law-card p{font-size:14px;color:var(--text-secondary);line-height:1.65}
 .law-note{margin-top:26px;background:var(--blue-50);border:1px solid var(--blue-200);border-radius:var(--radius-md);padding:18px 22px;display:flex;gap:14px;align-items:flex-start}
@@ -252,8 +250,8 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .step{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:38px 32px;transition:transform .25s,box-shadow .25s}
 .step:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(59,130,246,0.1)}
-.step-num{font-family:'Syne',sans-serif;font-size:52px;font-weight:800;letter-spacing:-2px;background:linear-gradient(135deg,var(--blue-500),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:20px}
-.step h3{font-family:'Syne',sans-serif;font-size:18px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;letter-spacing:-.3px}
+.step-num{font-family:'Inter',sans-serif;font-size:52px;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--blue-500),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:20px}
+.step h3{font-family:'Inter',sans-serif;font-size:18px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;letter-spacing:-.3px}
 .step p{font-size:14px;color:var(--text-secondary);line-height:1.7}
 
 /* QUOTES */
@@ -263,7 +261,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .quote-card{border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:36px;background:#fff;transition:transform .25s,box-shadow .25s}
 .quote-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(59,130,246,0.1)}
 .quote-eyebrow{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
-.quote-card blockquote{font-family:'Syne',sans-serif;font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.3px;color:var(--blue-deep);margin-bottom:22px}
+.quote-card blockquote{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.3px;color:var(--blue-deep);margin-bottom:22px}
 .quote-card ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .quote-card li{font-size:14px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:10px}
 .li-dot{width:16px;height:16px;border-radius:50%;background:var(--blue-50);border:1px solid var(--blue-200);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px}
@@ -273,7 +271,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .bottom-cta-wrap{background:var(--blue-deep);position:relative;overflow:hidden}
 #ctaCanvas{position:absolute;inset:0;width:100%;height:100%}
 .bottom-cta{position:relative;z-index:2;text-align:center;padding:110px 2rem;max-width:700px;margin:0 auto}
-.bottom-cta h2{font-family:'Syne',sans-serif;font-size:clamp(32px,5.2vw,54px);font-weight:800;letter-spacing:-1.8px;line-height:1.02;color:#fff;margin-bottom:18px}
+.bottom-cta h2{font-family:'Inter',sans-serif;font-size:clamp(32px,5.2vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.02;color:#fff;margin-bottom:18px}
 .bottom-cta h2 span{background:linear-gradient(120deg,var(--blue-400),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .bottom-cta>p{font-size:17px;color:rgba(255,255,255,0.5);margin-bottom:42px}
 .bottom-form{display:flex;gap:10px;max-width:470px;margin:0 auto 14px;justify-content:center}
@@ -296,7 +294,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 .modal-close svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round}
 .modal-icon{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 24px rgba(37,99,235,0.35);position:relative;z-index:1}
 .modal-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.modal h3{font-family:'Syne',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.6px;color:var(--blue-deep);margin-bottom:8px;position:relative;z-index:1}
+.modal h3{font-family:'Inter',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.6px;color:var(--blue-deep);margin-bottom:8px;position:relative;z-index:1}
 .modal>div>p{font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:24px;position:relative;z-index:1}
 .modal-form{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;position:relative;z-index:1}
 .modal-form input{height:50px;border:1.5px solid var(--border);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:var(--text-primary);outline:none;transition:border-color .15s;text-align:center}
@@ -603,7 +601,6 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
     <div class="quotes-grid">
       <div class="quote-card" data-anim="up">
         <p class="quote-eyebrow" data-i="q1_ey">Restaurants</p>
-        <blockquote data-i="q1_q">« On a enfin arrêté de perdre de bons employés à cause de mauvais plannings. »</blockquote>
         <ul>
           <li><span class="li-dot"></span><span data-i="q1_l1">Salle et cuisine planifiées au même endroit</span></li>
           <li><span class="li-dot"></span><span data-i="q1_l2">Gère les coupures et les couverts variables automatiquement</span></li>
@@ -612,7 +609,6 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
       </div>
       <div class="quote-card" data-anim="up">
         <p class="quote-eyebrow" data-i="q2_ey">Hôtels</p>
-        <blockquote data-i="q2_q">« 4 heures de préparation, ramenées à 30 secondes de relecture. »</blockquote>
         <ul>
           <li><span class="li-dot"></span><span data-i="q2_l1">Coordonne housekeeping, F&amp;B et réception en simultané</span></li>
           <li><span class="li-dot"></span><span data-i="q2_l2">S'adapte aux prévisions d'occupation et à la saisonnalité</span></li>
@@ -627,7 +623,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div style="background:var(--blue-50);border-top:1px solid var(--blue-100);border-bottom:1px solid var(--blue-100);padding:72px 2rem;text-align:center">
   <div style="max-width:560px;margin:0 auto">
     <p style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:14px" data-i="faq_eyebrow">Questions fréquentes</p>
-    <h2 style="font-family:'Syne',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--blue-deep);margin-bottom:16px" data-i="faq_title">Vous avez des questions sur Timeaxe AI ?</h2>
+    <h2 style="font-family:'Inter',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--blue-deep);margin-bottom:16px" data-i="faq_title">Vous avez des questions sur Timeaxe AI ?</h2>
     <p style="font-size:16px;color:var(--text-secondary);margin-bottom:32px" data-i="faq_sub">Lancement, tarifs, fonctionnalités, liste d'attente — on a les réponses.</p>
     <a href="faq.html" style="display:inline-block;background:var(--blue-deep);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'" data-i="faq_btn">Voir la FAQ</a>
   </div>
@@ -750,9 +746,9 @@ const translations = {
     step2_h:"L'IA construit votre planning",step2_p:"Timeaxe analyse les données historiques, anticipe les pics d'affluence et génère un planning conforme au droit du travail en quelques secondes.",
     step3_h:"Vérifiez et publiez",step3_p:"Ajustez si besoin, puis publiez. Les employés reçoivent leur planning automatiquement. Toutes les semaines, sans effort.",
     who_eyebrow:"Pour qui",who_h2:"Conçu pour l'hôtellerie-restauration.",
-    q1_ey:"Restaurants",q1_q:"« On a enfin arrêté de perdre de bons employés à cause de mauvais plannings. »",
+    q1_ey:"Restaurants",
     q1_l1:"Salle et cuisine planifiées au même endroit",q1_l2:"Gère les coupures et les couverts variables automatiquement",q1_l3:"Signale quand quelqu'un enchaîne trop de fermetures de suite",
-    q2_ey:"Hôtels",q2_q:"« 4 heures de préparation, ramenées à 30 secondes de relecture. »",
+    q2_ey:"Hôtels",
     q2_l1:"Coordonne housekeeping, F&B et réception en simultané",q2_l2:"S'adapte aux prévisions d'occupation et à la saisonnalité",q2_l3:"Conformité droit du travail intégrée — plus de vérifications manuelles",
     cta_h2a:"Soyez parmi",cta_h2b:"les <span>premiers</span>.",
     cta_sub:"Nous ouvrons l'accès à un petit groupe d'établissements avant notre lancement public. Rejoignez la liste d'attente et passez en tête de file.",
@@ -807,9 +803,9 @@ const translations = {
     step2_h:"AI builds your schedule",step2_p:"Timeaxe analyses historical data, predicts peak periods, and generates a labour-law-compliant schedule in seconds.",
     step3_h:"Review and publish",step3_p:"Make any tweaks you want, then publish. Staff get notified automatically. Every week, effortlessly.",
     who_eyebrow:"Who it's for",who_h2:"Built for hospitality, front to back.",
-    q1_ey:"Restaurants",q1_q:"\"We finally stopped losing good people to bad schedules.\"",
+    q1_ey:"Restaurants",
     q1_l1:"Front-of-house and kitchen scheduling in one place",q1_l2:"Handles split shifts and variable covers automatically",q1_l3:"Flags when someone's working too many closes in a row",
-    q2_ey:"Hotels",q2_q:"\"From 4 hours of planning to a 30-second review.\"",
+    q2_ey:"Hotels",
     q2_l1:"Coordinates housekeeping, F&B, and front desk in sync",q2_l2:"Adapts to occupancy forecasts and seasonal demand",q2_l3:"Labour law compliance built in — no more manual checks",
     cta_h2a:"Be first when",cta_h2b:"we <span>launch</span>.",
     cta_sub:"We're onboarding a small group of venues before our public launch. Join the waitlist and skip the queue.",

@@ -51,8 +51,8 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Syne';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/syne-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Syne';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/syne-latin-800-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
   --blue-deep:#070f1f;--blue-600:#2563eb;--blue-500:#3b82f6;--blue-400:#60a5fa;
@@ -65,7 +65,7 @@ body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;col
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;padding-top:env(safe-area-inset-top);background:rgba(7,15,31,0.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase}
+.nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
 .nav-right{display:flex;align-items:center;gap:12px}
 .lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px}
@@ -80,7 +80,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-hero-orb{position:absolute;width:500px;height:500px;background:rgba(37,99,235,0.22);border-radius:50%;filter:blur(80px);top:-150px;left:50%;transform:translateX(-50%);pointer-events:none}
 .ab-hero-inner{position:relative;z-index:2}
 .ab-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:#93c5fd;font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:24px}
-.ab-hero h1{font-family:'Syne',sans-serif;font-size:clamp(34px,5.5vw,54px);font-weight:800;letter-spacing:-2px;line-height:1.06;color:#fff;margin-bottom:18px;max-width:760px;margin-left:auto;margin-right:auto}
+.ab-hero h1{font-family:'Inter',sans-serif;font-size:clamp(34px,5.5vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:#fff;margin-bottom:18px;max-width:760px;margin-left:auto;margin-right:auto}
 .ab-hero h1 span{background:linear-gradient(120deg,var(--blue-400),#a5f3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ab-hero p{font-size:17px;color:rgba(255,255,255,0.55);max-width:540px;margin:0 auto}
 
@@ -89,16 +89,16 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-section{margin-bottom:52px}
 .ab-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:18px;display:flex;align-items:center;gap:10px}
 .ab-label::after{content:'';flex:1;height:1px;background:var(--border)}
-.ab-section h2{font-family:'Syne',sans-serif;font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-1px;color:var(--text);margin-bottom:18px;line-height:1.15}
+.ab-section h2{font-family:'Inter',sans-serif;font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-0.5px;color:var(--text);margin-bottom:18px;line-height:1.2}
 .ab-section p{font-size:16px;color:var(--text2);margin-bottom:18px}
 .ab-section p strong{color:var(--text);font-weight:600}
-.ab-pullquote{font-family:'Syne',sans-serif;font-size:clamp(20px,3.2vw,26px);font-weight:700;letter-spacing:-.6px;color:var(--blue-600);line-height:1.3;padding:8px 0 8px 22px;border-left:3px solid var(--blue-500);margin:28px 0}
+.ab-pullquote{font-family:'Inter',sans-serif;font-size:clamp(20px,3.2vw,26px);font-weight:700;letter-spacing:-.6px;color:var(--blue-600);line-height:1.3;padding:8px 0 8px 22px;border-left:3px solid var(--blue-500);margin:28px 0}
 
 /* VALUES */
 .ab-values{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
 .ab-value{border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 24px;transition:border-color .2s,box-shadow .2s}
 .ab-value:hover{border-color:var(--blue-200);box-shadow:0 4px 24px rgba(37,99,235,0.08)}
-.ab-value h3{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.ab-value h3{font-family:'Inter',sans-serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:10px}
 .ab-value .dot{width:9px;height:9px;border-radius:3px;flex-shrink:0}
 .ab-value p{font-size:14px;color:var(--text2);margin:0}
 
@@ -107,7 +107,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-founder{display:flex;gap:18px;align-items:flex-start}
 .ab-founder-badge{width:52px;height:52px;border-radius:14px;background:var(--blue-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ab-founder-badge svg rect{fill:var(--blue-400)}
-.ab-founder-name{font-family:'Syne',sans-serif;font-size:19px;font-weight:800;color:var(--text);letter-spacing:-.3px}
+.ab-founder-name{font-family:'Inter',sans-serif;font-size:19px;font-weight:800;color:var(--text);letter-spacing:-.3px}
 .ab-founder-role{font-size:13px;font-weight:600;color:var(--blue-600);margin-bottom:8px}
 .ab-founder p{font-size:14px;color:var(--text2);margin:0}
 .ab-cofounder{margin-top:20px;padding-top:20px;border-top:1px solid var(--border);font-size:14px;color:var(--text2)}
@@ -122,13 +122,13 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-recognition{display:flex;gap:16px;align-items:center;border:1px solid var(--blue-200);border-radius:var(--radius-lg);padding:20px 22px;background:linear-gradient(135deg,var(--blue-50),#fff);margin-top:8px}
 .ab-recognition .medal{width:46px;height:46px;border-radius:12px;background:var(--blue-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0}
 .ab-recognition .medal svg{width:24px;height:24px;stroke:var(--blue-400);fill:none;stroke-width:2}
-.ab-recognition .r-title{font-family:'Syne',sans-serif;font-size:16px;font-weight:800;color:var(--text);letter-spacing:-.3px;margin-bottom:2px}
+.ab-recognition .r-title{font-family:'Inter',sans-serif;font-size:16px;font-weight:800;color:var(--text);letter-spacing:-.3px;margin-bottom:2px}
 .ab-recognition .r-sub{font-size:13px;color:var(--text2)}
 
 /* CTA */
 .ab-cta{background:var(--blue-deep);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;margin:64px auto 0;max-width:720px;position:relative;overflow:hidden}
 .ab-cta::before{content:'';position:absolute;width:400px;height:400px;background:rgba(37,99,235,0.2);border-radius:50%;filter:blur(70px);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none}
-.ab-cta h2{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.8px;color:#fff;margin-bottom:10px;position:relative;z-index:1}
+.ab-cta h2{font-family:'Inter',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.8px;color:#fff;margin-bottom:10px;position:relative;z-index:1}
 .ab-cta h2 span{background:linear-gradient(120deg,var(--blue-400),#a5f3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ab-cta p{font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:28px;position:relative;z-index:1}
 .ab-cta a{display:inline-block;background:var(--blue-500);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;box-shadow:0 4px 24px rgba(59,130,246,0.4);transition:background .15s,transform .15s;position:relative;z-index:1}
@@ -179,14 +179,14 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
   <div class="ab-section">
     <div class="ab-label" data-i="story_label">Notre histoire</div>
     <h2 data-i="story_h" data-allow-html>Plus de 10 ans à voir le même problème, partout.</h2>
-    <p data-i="story_p1">Avant Timeaxe, nous avons passé notre carrière dans l'exigence : plus de dix ans dans l'hôtellerie-restauration et dix ans dans le luxe et la mode. Des clubs aux bars que nous avons redressés, des restaurants étoilés à Paris aux hôtels cinq étoiles en Suisse, jusqu'aux grandes maisons de mode françaises et italiennes.</p>
+    <p data-i="story_p1">Avant Timeaxe, nous avons passé nos carrières dans l'exigence : des années dans l'hôtellerie-restauration et dans le luxe et la mode. Des clubs aux bars que nous avons redressés, des restaurants étoilés à Paris aux hôtels cinq étoiles en Suisse, jusqu'aux grandes maisons de mode françaises et italiennes.</p>
     <p data-i="story_p2">Partout, le même constat revenait : <strong>les managers passaient des heures à construire les plannings</strong> — et malgré tout ce temps, les erreurs humaines persistaient. Un repos non respecté, une heure supplémentaire oubliée, un service en sous-effectif un samedi soir.</p>
     <div class="ab-pullquote" data-i="pullquote">Nous avons essayé les outils existants dans nos propres établissements. Aucun ne nous a jamais convaincus.</div>
     <p data-i="story_p3">Alors nous avons décidé de régler le problème nous-mêmes — en construisant l'outil que nous aurions voulu avoir derrière le comptoir. Un outil qui fait le travail à votre place, et qui respecte le droit du travail français par conception.</p>
   </div>
 
   <div class="ab-section">
-    <div class="ab-label" data-i="founders_label">Les fondateurs</div>
+    <div class="ab-label" data-i="founders_label">L'équipe fondatrice</div>
     <div class="ab-founders">
       <div class="ab-founder">
         <div class="ab-founder-badge" aria-hidden="true">
@@ -195,10 +195,10 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
         <div>
           <div class="ab-founder-name">Aiden McCarron</div>
           <div class="ab-founder-role" data-i="founder_role">CEO &amp; Développeur</div>
-          <p data-i="founder_bio">Issu du terrain comme du code. Aiden a dirigé des équipes dans l'hôtellerie-restauration et le luxe pendant plus de dix ans avant de prendre en main le développement de Timeaxe AI — pour que le produit soit pensé par quelqu'un qui a vécu le problème, pas seulement codé une solution.</p>
+          <p data-i="founder_bio">Issu du terrain comme du code. Aiden a dirigé des équipes dans l'hôtellerie-restauration et le luxe avant de prendre en main le développement de Timeaxe AI — pour que le produit soit pensé par quelqu'un qui a vécu le problème, pas seulement codé une solution.</p>
         </div>
       </div>
-      <div class="ab-cofounder" data-i="cofounder">Timeaxe AI est porté par deux fondateurs. Le second cumule plus de dix ans dans l'hôtellerie de luxe et la mode haut de gamme, entre Paris, la Suisse et l'Italie — l'expérience terrain qui façonne chaque décision produit.</div>
+      <div class="ab-cofounder" data-i="cofounder">Timeaxe AI est porté par <strong>quatre fondateurs</strong> : deux issus de l'hôtellerie-restauration et deux du luxe et de la mode haut de gamme. Ensemble, ils cumulent des années passées en cuisine, en salle, dans les hôtels et dans les grandes maisons — entre Paris, la Suisse et l'Italie. C'est cette double exigence, opérationnelle et créative, qui façonne chaque décision produit.</div>
     </div>
   </div>
 
@@ -263,14 +263,14 @@ const t = {
     hero_sub:"Timeaxe AI n'est pas né dans un bureau. Il est né en cuisine, en salle, et dans les couloirs des hôtels.",
     story_label:"Notre histoire",
     story_h:"Plus de 10 ans à voir le même problème, partout.",
-    story_p1:"Avant Timeaxe, nous avons passé notre carrière dans l'exigence : plus de dix ans dans l'hôtellerie-restauration et dix ans dans le luxe et la mode. Des clubs aux bars que nous avons redressés, des restaurants étoilés à Paris aux hôtels cinq étoiles en Suisse, jusqu'aux grandes maisons de mode françaises et italiennes.",
+    story_p1:"Avant Timeaxe, nous avons passé nos carrières dans l'exigence : des années dans l'hôtellerie-restauration et dans le luxe et la mode. Des clubs aux bars que nous avons redressés, des restaurants étoilés à Paris aux hôtels cinq étoiles en Suisse, jusqu'aux grandes maisons de mode françaises et italiennes.",
     story_p2:"Partout, le même constat revenait : <strong>les managers passaient des heures à construire les plannings</strong> — et malgré tout ce temps, les erreurs humaines persistaient. Un repos non respecté, une heure supplémentaire oubliée, un service en sous-effectif un samedi soir.",
     pullquote:"Nous avons essayé les outils existants dans nos propres établissements. Aucun ne nous a jamais convaincus.",
     story_p3:"Alors nous avons décidé de régler le problème nous-mêmes — en construisant l'outil que nous aurions voulu avoir derrière le comptoir. Un outil qui fait le travail à votre place, et qui respecte le droit du travail français par conception.",
-    founders_label:"Les fondateurs",
+    founders_label:"L'équipe fondatrice",
     founder_role:"CEO & Développeur",
-    founder_bio:"Issu du terrain comme du code. Aiden a dirigé des équipes dans l'hôtellerie-restauration et le luxe pendant plus de dix ans avant de prendre en main le développement de Timeaxe AI — pour que le produit soit pensé par quelqu'un qui a vécu le problème, pas seulement codé une solution.",
-    cofounder:"Timeaxe AI est porté par deux fondateurs. Le second cumule plus de dix ans dans l'hôtellerie de luxe et la mode haut de gamme, entre Paris, la Suisse et l'Italie — l'expérience terrain qui façonne chaque décision produit.",
+    founder_bio:"Issu du terrain comme du code. Aiden a dirigé des équipes dans l'hôtellerie-restauration et le luxe avant de prendre en main le développement de Timeaxe AI — pour que le produit soit pensé par quelqu'un qui a vécu le problème, pas seulement codé une solution.",
+    cofounder:"Timeaxe AI est porté par <strong>quatre fondateurs</strong> : deux issus de l'hôtellerie-restauration et deux du luxe et de la mode haut de gamme. Ensemble, ils cumulent des années passées en cuisine, en salle, dans les hôtels et dans les grandes maisons — entre Paris, la Suisse et l'Italie. C'est cette double exigence, opérationnelle et créative, qui façonne chaque décision produit.",
     reco_label:"Reconnaissance",
     reco_title:"Top 15 — GIS Summit, Hong Kong",
     reco_sub:"Sélectionnés parmi la compétition internationale (novembre 2025). Depuis, nous peaufinons le produit pour qu'il soit prêt à 100 % le jour du lancement.",
@@ -296,14 +296,14 @@ const t = {
     hero_sub:"Timeaxe AI wasn't born in an office. It was born in kitchens, on the floor, and in the corridors of hotels.",
     story_label:"Our story",
     story_h:"10+ years watching the same problem, everywhere.",
-    story_p1:"Before Timeaxe, we spent our careers in demanding rooms: over ten years in hospitality and ten years in luxury and fashion. From nightclubs to bars we turned around, from Michelin-starred restaurants in Paris to five-star hotels in Switzerland, to major French and Italian fashion houses.",
+    story_p1:"Before Timeaxe, we spent our careers in demanding rooms: years in hospitality and years in luxury and fashion. From nightclubs to bars we turned around, from Michelin-starred restaurants in Paris to five-star hotels in Switzerland, to major French and Italian fashion houses.",
     story_p2:"Everywhere, the same thing kept happening: <strong>managers spent hours building the rota</strong> — and despite all that time, human errors still slipped through. A rest period missed, an overtime hour forgotten, a Saturday night left understaffed.",
     pullquote:"We tried the existing tools in our own venues. None of them ever felt right.",
     story_p3:"So we decided to fix it ourselves — by building the tool we'd have wanted behind the counter. One that does the work for you, and respects French labour law by design.",
-    founders_label:"The founders",
+    founders_label:"The founding team",
     founder_role:"CEO & Developer",
-    founder_bio:"From the floor as much as from the code. Aiden led teams across hospitality and luxury for more than ten years before taking the lead on building Timeaxe AI — so the product is shaped by someone who lived the problem, not just coded a solution.",
-    cofounder:"Timeaxe AI is built by two founders. The second brings over ten years in luxury hospitality and high-end fashion across Paris, Switzerland and Italy — the on-the-ground experience that shapes every product decision.",
+    founder_bio:"From the floor as much as from the code. Aiden led teams across hospitality and luxury before taking the lead on building Timeaxe AI — so the product is shaped by someone who lived the problem, not just coded a solution.",
+    cofounder:"Timeaxe AI is built by <strong>four founders</strong>: two from hospitality and two from luxury and high-end fashion. Together they bring years spent in kitchens, on the floor, in hotels and in the great fashion houses — across Paris, Switzerland and Italy. It's that dual standard, operational and creative, that shapes every product decision.",
     reco_label:"Recognition",
     reco_title:"Top 15 — GIS Summit, Hong Kong",
     reco_sub:"Selected among the international competition (November 2025). Since then, we've been refining the product so it's 100% ready on launch day.",
