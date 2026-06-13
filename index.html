@@ -6,6 +6,7 @@
 <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/syne-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Timeaxe AI — Planification intelligente pour l'hôtellerie-restauration</title>
+<meta name="description" content="Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — conformes au droit du travail français, avec moins d'heures supplémentaires et moins d'épuisement.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
@@ -126,7 +127,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .marquee{display:flex;gap:64px;width:max-content;animation:scroll 28s linear infinite}
 .marquee-wrap:hover .marquee{animation-play-state:paused}
 @keyframes scroll{to{transform:translateX(-50%)}}
-.m-item{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.38);white-space:nowrap}
+.m-item{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap}
 .m-item svg{width:15px;height:15px;stroke:var(--blue-400);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
 /* STATS */
@@ -158,7 +159,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .hcard h3{font-family:'Syne',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-.4px}
 .hcard p{font-size:14.5px;color:rgba(255,255,255,0.55);line-height:1.75}
 .hcard .f-stat{display:inline-block;font-size:13px;font-weight:600;color:var(--blue-300);background:rgba(59,130,246,0.14);padding:5px 14px;border-radius:100px;margin-top:20px;border:1px solid rgba(96,165,250,0.25)}
-.hfeat-hint{text-align:center;font-size:12px;color:rgba(255,255,255,0.25);padding-bottom:32px;letter-spacing:.06em;text-transform:uppercase}
+.hfeat-hint{text-align:center;font-size:12px;color:rgba(255,255,255,0.55);padding-bottom:32px;letter-spacing:.06em;text-transform:uppercase}
 
 /* EU SECTION (light) */
 .eu-section{background:linear-gradient(180deg,#fff 0%,#f4f8ff 45%,#eef5ff 100%);position:relative;overflow:hidden;padding:104px 2rem;border-top:1px solid var(--border)}
@@ -231,7 +232,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .bottom-note{font-size:13px;color:rgba(255,255,255,0.3);margin-top:12px}
 
 footer{background:var(--blue-deep);border-top:1px solid rgba(255,255,255,0.05);padding:26px 2.5rem calc(26px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center}
-footer p{font-size:13px;color:rgba(255,255,255,0.28)}
+footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 
 /* MODAL */
 .modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(7,15,31,0.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
@@ -574,7 +575,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.28)}
 <!-- FAQ TEASER -->
 <div style="background:var(--blue-50);border-top:1px solid var(--blue-100);border-bottom:1px solid var(--blue-100);padding:72px 2rem;text-align:center">
   <div style="max-width:560px;margin:0 auto">
-    <p style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-500);margin-bottom:14px" data-i="faq_eyebrow">Questions fréquentes</p>
+    <p style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:14px" data-i="faq_eyebrow">Questions fréquentes</p>
     <h2 style="font-family:'Syne',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--blue-deep);margin-bottom:16px" data-i="faq_title">Vous avez des questions sur Timeaxe AI ?</h2>
     <p style="font-size:16px;color:var(--text-secondary);margin-bottom:32px" data-i="faq_sub">Lancement, tarifs, fonctionnalités, liste d'attente — on a les réponses.</p>
     <a href="faq.html" style="display:inline-block;background:var(--blue-deep);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'" data-i="faq_btn">Voir la FAQ</a>
