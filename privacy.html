@@ -13,7 +13,8 @@
 :root{--blue-deep:#070f1f;--blue-500:#3b82f6;--blue-400:#60a5fa;--blue-100:#dbeafe;--blue-50:#eff6ff;--text:#0a1628;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0}
 body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(7,15,31,0.92);backdrop-filter:blur(16px)}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:#fff;text-decoration:none;letter-spacing:-.4px}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:19px;color:#fff;text-decoration:none;display:inline-flex;align-items:center;letter-spacing:-.4px}
+.logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-logo span{color:var(--blue-400)}
 .nav-right{display:flex;align-items:center;gap:12px}
 .lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px}
@@ -42,7 +43,7 @@ strong{color:var(--text);font-weight:600}
 </head>
 <body>
 <nav>
-  <a href="index.html" class="nav-logo">Timeaxe<span> AI</span></a>
+  <a href="index.html" class="nav-logo"><svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 21 L14 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 9.6 L12.2 4.4 C17.2 3.7 20 6.8 19.2 11.3 C16.8 11.6 14.7 11 13 9.6 Z" fill="var(--blue-500)"/><path d="M15.4 7.8 V6 M15.4 7.8 L16.9 8.4" stroke="#fff" stroke-width="1.1" stroke-linecap="round"/></svg>Timeaxe<span> AI</span></a>
   <div class="nav-right">
     <div class="lang-toggle">
       <button class="lang-btn active" onclick="setLang('fr')">FR</button>

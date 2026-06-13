@@ -31,8 +31,9 @@ body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;col
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 max(2.5rem,env(safe-area-inset-left)) 0 max(2.5rem,env(safe-area-inset-right));height:calc(64px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top);background:rgba(7,15,31,0.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase}
+.nav-logo{font-family:'Syne',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
 .nav-logo span{color:#fff;background:var(--blue-500);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
+.logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:14px;color:rgba(255,255,255,0.55);text-decoration:none;transition:color .15s}
 .nav-links a:hover{color:#fff}
@@ -301,7 +302,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.28)}
 <body>
 
 <nav>
-  <a href="#" class="nav-logo">TIMEAXE <span>AI</span></a>
+  <a href="#" class="nav-logo" onclick="(window.__lenis?window.__lenis.scrollTo(0):window.scrollTo({top:0,behavior:'smooth'}));return false;"><svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 21 L14 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 9.6 L12.2 4.4 C17.2 3.7 20 6.8 19.2 11.3 C16.8 11.6 14.7 11 13 9.6 Z" fill="var(--blue-500)"/><path d="M15.4 7.8 V6 M15.4 7.8 L16.9 8.4" stroke="#fff" stroke-width="1.1" stroke-linecap="round"/></svg>TIMEAXE <span>AI</span></a>
   <div class="nav-links">
     <a href="#features" data-i="nav_features">Fonctionnalités</a>
     <a href="#eu" data-i="nav_eu">Souveraineté</a>
@@ -313,14 +314,14 @@ footer p{font-size:13px;color:rgba(255,255,255,0.28)}
       <button class="lang-btn active" onclick="setLang('fr')">FR</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
-    <a href="#" class="nav-cta magnetic" onclick="openModal();return false;" data-i="nav_cta">Rejoindre la liste</a>
+    <a href="#waitlist" class="nav-cta magnetic" onclick="goWaitlist();return false;" data-i="nav_cta">Rejoindre la liste</a>
   </div>
 </nav>
 
 <section class="hero">
   <canvas id="heroCanvas"></canvas>
   <div class="hero-inner">
-    <div class="hero-badge" data-anim="fade"><span class="badge-dot"></span><span data-i="badge">Accès anticipé ouvert — places limitées</span></div>
+    <div class="hero-badge" data-anim="fade"><span class="badge-dot"></span><span data-i="badge">Accès anticipé ouvert · Lancement public en juillet 2026</span></div>
     <h1 id="heroTitle"><span class="line" data-i-words="h1a">La planification qui</span><br><span class="line accent" data-i-words="h1b">pense à votre place</span></h1>
     <p class="hero-sub" data-anim="fade" data-i="hero_sub">Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — moins d'heures supplémentaires, moins d'épuisement, et des heures rendues à vos managers chaque semaine.</p>
     <div data-anim="fade" id="waitlist">
@@ -403,9 +404,9 @@ footer p{font-size:13px;color:rgba(255,255,255,0.28)}
 
 <div class="stats-section">
   <div class="stats-inner">
-    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="8">0</span>h+</div><div class="stat-label" data-i="s1">économisées par manager par semaine</div></div>
-    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="23">0</span>%</div><div class="stat-label" data-i="s2">de réduction des heures supplémentaires</div></div>
-    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="2.4" data-decimal="1">0</span>s</div><div class="stat-label" data-i="s3">pour générer un planning complet</div></div>
+    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="8">8</span>h+</div><div class="stat-label" data-i="s1">économisées par manager par semaine</div></div>
+    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="23">23</span>%</div><div class="stat-label" data-i="s2">de réduction des heures supplémentaires</div></div>
+    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="2.4" data-decimal="1">2,4</span>s</div><div class="stat-label" data-i="s3">pour générer un planning complet</div></div>
     <div class="stat" data-anim="up"><div class="stat-num"><span>0</span></div><div class="stat-label" data-i="s4">tableur nécessaire</div></div>
   </div>
 </div>
@@ -649,7 +650,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.28)}
 const translations = {
   fr: {
     nav_features:"Fonctionnalités",nav_eu:"Souveraineté",nav_faq:"FAQ",nav_how:"Comment ça marche",nav_cta:"Rejoindre la liste",
-    badge:"Accès anticipé ouvert — places limitées",
+    badge:"Accès anticipé ouvert · Lancement public en juillet 2026",
     h1a:"La planification qui",h1b:"pense à votre place",
     hero_sub:"Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — moins d'heures supplémentaires, moins d'épuisement, et des heures rendues à vos managers chaque semaine.",
     cta_hero:"Accès anticipé gratuit",success:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt.",
@@ -706,7 +707,7 @@ const translations = {
   },
   en: {
     nav_features:"Features",nav_eu:"EU sovereignty",nav_faq:"FAQ",nav_how:"How it works",nav_cta:"Join waitlist",
-    badge:"Now accepting early access applications",
+    badge:"Early access open · Public launch July 2026",
     h1a:"Scheduling that",h1b:"thinks for you",
     hero_sub:"Timeaxe AI builds perfect staff rotas for restaurants and hotels in seconds — less overtime, less burnout, and hours given back to your managers every week.",
     cta_hero:"Get early access",success:"You're on the list — we'll be in touch soon.",
@@ -940,6 +941,13 @@ async function submitForm(inputId,formId,successId){
 });
 
 /* modal */
+function goWaitlist(){
+  const email=document.getElementById('heroEmail');
+  const wl=document.getElementById('waitlist');
+  if(window.__lenis){window.__lenis.scrollTo(wl,{offset:-90});}
+  else{wl.scrollIntoView({behavior:'smooth',block:'center'});}
+  setTimeout(()=>{try{email.focus({preventScroll:true});}catch(e){email.focus();}},500);
+}
 function openModal(){
   document.getElementById('modalBody').style.display='block';
   document.getElementById('modalSuccess').style.display='none';
@@ -1050,7 +1058,7 @@ const counterIO=new IntersectionObserver(entries=>{
     requestAnimationFrame(tick);
   });
 },{threshold:0.5});
-document.querySelectorAll('[data-count]').forEach(el=>counterIO.observe(el));
+document.querySelectorAll('[data-count]').forEach(el=>{if(!reduceMotion)el.textContent='0';counterIO.observe(el)});
 
 /* ============ INIT (after libs load) ============ */
 window.addEventListener('load',()=>{
