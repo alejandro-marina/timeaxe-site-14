@@ -18,5 +18,7 @@ User-agent: Perplexity-User
 Allow: /
 User-agent: Google-Extended
 Allow: /
+User-agent: CCBot
+Allow: /
 
 Sitemap: https://timeaxeai.com/sitemap.xml

@@ -9,10 +9,14 @@
 - Pricing: Competitive vs. existing solutions; no contract, cancel anytime. Full details at launch.
 - Data & trust: EU-hosted, GDPR (RGPD) compliant, CNIL framework.
 
+## Recognition
+- Ranked 15th of 900+ startups in the pitch competition at the Global Innovation Show (GIS), AsiaWorld-Expo, Hong Kong (December 2-3, 2025) — co-hosted by SVIEF (Silicon Valley Innovation & Entrepreneurship Forum) and benchmarked as the "Asian CES".
+
 ## Pages
 - Home: https://timeaxeai.com/
-- FAQ: https://timeaxeai.com/faq.html
-- Privacy policy: https://timeaxeai.com/privacy.html
+- About: https://timeaxeai.com/about
+- FAQ: https://timeaxeai.com/faq
+- Privacy policy: https://timeaxeai.com/privacy
 
 ## Contact
 - Email: bonjour@timeaxeai.com
