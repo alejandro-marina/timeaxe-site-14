@@ -9,6 +9,10 @@
 /legal.html    /legal     301!
 /calculateur-heures-supplementaires-hcr.html  /calculateur-heures-supplementaires-hcr  301!
 /travail-de-nuit-restauration-hcr.html        /travail-de-nuit-restauration-hcr        301!
+/en/index.html  /en        301!
+/en/about.html  /en/about  301!
+/en/faq.html    /en/faq    301!
+/en/            /en        301!
 
 # Serve the extensionless URLs from their .html source (200 rewrite)
 /privacy    /privacy.html   200
@@ -19,6 +23,9 @@
 /legal      /legal.html     200
 /calculateur-heures-supplementaires-hcr  /calculateur-heures-supplementaires-hcr.html  200
 /travail-de-nuit-restauration-hcr        /travail-de-nuit-restauration-hcr.html        200
+/en          /en/index.html  200
+/en/about    /en/about.html  200
+/en/faq      /en/faq.html    200
 
 # Custom 404 fallback
 /*          /index.html     404
