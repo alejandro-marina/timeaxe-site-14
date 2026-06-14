@@ -54,6 +54,9 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+.promo-bar{background:#0c1a33;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
+.promo-bar a{display:block;padding:7px 12px;font-size:clamp(10px,2.7vw,12.5px);line-height:1.35;color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.promo-bar a:hover{color:#fff}
 :root{
   --blue-deep:#070f1f;--blue-600:#2563eb;--blue-500:#3b82f6;--blue-400:#60a5fa;
   --blue-200:#bfdbfe;--blue-100:#dbeafe;--blue-50:#eff6ff;
@@ -154,6 +157,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 </head>
 <body>
 
+<div class="promo-bar"><a href="index.html#waitlist" data-i="promo">Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →</a></div>
 <nav>
   <a href="index.html" class="nav-logo">TIMEAXE <span>AI</span></a>
   <div class="nav-right">
@@ -258,6 +262,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 const t = {
   fr:{
     back:"← Retour",
+    promo:"Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →",
     eyebrow:"À propos",
     hero_title:"Construit par des gens du métier, <span>pour les gens du métier.</span>",
     hero_sub:"Timeaxe AI n'est pas né dans un bureau. Il est né en cuisine, en salle, et dans les couloirs des hôtels.",
@@ -291,6 +296,7 @@ const t = {
   },
   en:{
     back:"← Back",
+    promo:"Early access — launching July 2026 · Join the waitlist →",
     eyebrow:"About",
     hero_title:"Built by hospitality people, <span>for hospitality people.</span>",
     hero_sub:"Timeaxe AI wasn't born in an office. It was born in kitchens, on the floor, and in the corridors of hotels.",

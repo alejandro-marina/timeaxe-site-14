@@ -33,6 +33,11 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+.promo-bar{background:#0c1a33;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
+.promo-bar a{display:block;padding:7px 12px;font-size:clamp(10px,2.7vw,12.5px);line-height:1.35;color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.promo-bar a:hover{color:#fff}
+.nav-about{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap}
+.nav-about:hover{color:#fff}
 :root{--blue-deep:#070f1f;--blue-500:#3b82f6;--blue-600:#2563eb;--blue-400:#60a5fa;--blue-100:#dbeafe;--blue-50:#eff6ff;--text:#0a1628;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0}
 body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(7,15,31,0.92);backdrop-filter:blur(16px)}
@@ -69,6 +74,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 </style>
 </head>
 <body>
+<div class="promo-bar"><a href="index.html#waitlist" data-i="promo">Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →</a></div>
 <nav>
   <a href="index.html" class="nav-logo"><svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 21 L14 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 9.6 L12.2 4.4 C17.2 3.7 20 6.8 19.2 11.3 C16.8 11.6 14.7 11 13 9.6 Z" fill="var(--blue-500)"/><path d="M15.4 7.8 V6 M15.4 7.8 L16.9 8.4" stroke="#fff" stroke-width="1.1" stroke-linecap="round"/></svg>Timeaxe<span> AI</span></a>
   <div class="nav-right">
@@ -76,6 +82,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
       <button class="lang-btn active" onclick="setLang('fr')">FR</button>
       <button class="lang-btn" onclick="setLang('en')">EN</button>
     </div>
+    <a href="about.html" class="nav-about" data-i="nav_about">À propos</a>
     <a href="index.html" class="back" data-i="back">← Retour au site</a>
   </div>
 </nav>
@@ -121,6 +128,8 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 const t = {
   fr: {
     back:"← Retour au site",
+    promo:"Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →",
+    nav_about:"À propos",
     title:"Politique de confidentialité",
     footer_about:"À propos",footer_faq:"FAQ",footer_legal:"Mentions légales",
     updated:"Dernière mise à jour : juin 2026",
@@ -144,6 +153,8 @@ const t = {
   },
   en: {
     back:"← Back to site",
+    promo:"Early access — launching July 2026 · Join the waitlist →",
+    nav_about:"About",
     title:"Privacy Policy",
     footer_about:"About",footer_faq:"FAQ",footer_legal:"Legal",
     updated:"Last updated: June 2026",

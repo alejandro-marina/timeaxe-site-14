@@ -72,6 +72,11 @@
 </style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+.promo-bar{position:fixed;top:0;left:0;right:0;z-index:201;background:#0c1a33;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
+.promo-bar a{display:block;line-height:32px;padding:0 12px;font-size:clamp(10px,2.7vw,12.5px);color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.promo-bar a:hover{color:#fff}
+.nav-about{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap}
+.nav-about:hover{color:#fff}
 :root{
   --blue-deep:#070f1f;--blue-night:#0a1628;--blue-900:#0d1f3c;--blue-800:#1a3560;
   --blue-600:#2563eb;--blue-500:#3b82f6;--blue-400:#60a5fa;
@@ -86,7 +91,7 @@ html.lenis,html.lenis body{height:auto}
 body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--text-primary);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 max(2.5rem,env(safe-area-inset-left)) 0 max(2.5rem,env(safe-area-inset-right));height:calc(64px + env(safe-area-inset-top));padding-top:env(safe-area-inset-top);background:rgba(7,15,31,0.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
+nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 max(2.5rem,env(safe-area-inset-left)) 0 max(2.5rem,env(safe-area-inset-right));height:64px;background:rgba(7,15,31,0.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
@@ -105,7 +110,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:200;display:flex;align-items:cen
 .magnetic{will-change:transform;transition:transform .25s cubic-bezier(.2,.7,.3,1)}
 
 /* HERO */
-.hero{min-height:100vh;min-height:100svh;background:var(--blue-deep);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:130px 2rem 100px;position:relative;overflow:hidden;text-align:center}
+.hero{min-height:100vh;min-height:100svh;background:var(--blue-deep);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:163px 2rem 100px;position:relative;overflow:hidden;text-align:center}
 #heroCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(96,165,250,0.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 50% 45%,black 30%,transparent 100%);pointer-events:none}
 .hero-inner{position:relative;z-index:2;max-width:880px;margin:0 auto}
@@ -324,7 +329,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .lang-btn{padding:4px 8px;font-size:11px}
   .nav-cta{padding:7px 12px;font-size:12px}
   .nav-right{gap:6px}
-  .hero{padding:110px 1.25rem 70px}
+  .hero{padding:143px 1.25rem 70px}
   h1{letter-spacing:-.8px;font-size:clamp(34px,9.5vw,48px);line-height:1.1}
   .hero-form,.bottom-form{flex-direction:column;align-items:center}
   .hero-form input[type="email"],.bottom-form input[type="email"]{width:100%;text-align:center}
@@ -357,6 +362,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 </head>
 <body>
 
+<div class="promo-bar"><a href="#waitlist" data-i="promo">Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →</a></div>
 <nav>
   <a href="#" class="nav-logo" onclick="(window.__lenis?window.__lenis.scrollTo(0):window.scrollTo({top:0,behavior:'smooth'}));return false;"><svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 21 L14 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 9.6 L12.2 4.4 C17.2 3.7 20 6.8 19.2 11.3 C16.8 11.6 14.7 11 13 9.6 Z" fill="var(--blue-500)"/><path d="M15.4 7.8 V6 M15.4 7.8 L16.9 8.4" stroke="#fff" stroke-width="1.1" stroke-linecap="round"/></svg>TIMEAXE <span>AI</span></a>
   <div class="nav-links">
@@ -364,6 +370,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
     <a href="#eu" data-i="nav_eu">Souveraineté</a>
     <a href="#how" data-i="nav_how">Comment ça marche</a>
     <a href="faq.html" data-i="nav_faq">FAQ</a>
+    <a href="about.html" data-i="nav_about">À propos</a>
   </div>
   <div class="nav-right">
     <div class="lang-toggle">
@@ -377,7 +384,6 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <section class="hero">
   <canvas id="heroCanvas"></canvas>
   <div class="hero-inner">
-    <div class="hero-badge" data-anim="fade"><span class="badge-dot"></span><span data-i="badge">Ouverture de l'accès anticipé en juillet 2026</span></div>
     <h1 id="heroTitle"><span class="line" data-i-words="h1a">La planification qui</span><br><span class="line accent" data-i-words="h1b">pense à votre place</span></h1>
     <p class="hero-sub" data-anim="fade" data-i="hero_sub">Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — moins d'heures supplémentaires, moins d'épuisement, et des heures rendues à vos managers chaque semaine.</p>
     <div data-anim="fade" id="waitlist">
@@ -703,7 +709,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 /* ============ TRANSLATIONS ============ */
 const translations = {
   fr: {
-    nav_features:"Fonctionnalités",nav_eu:"Souveraineté",nav_faq:"FAQ",nav_how:"Comment ça marche",nav_cta:"Rejoindre la liste",
+    nav_features:"Fonctionnalités",nav_eu:"Souveraineté",nav_faq:"FAQ",nav_how:"Comment ça marche",nav_cta:"Rejoindre la liste",promo:"Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →",nav_about:"À propos",
     badge:"Ouverture de l'accès anticipé en juillet 2026",
     h1a:"La planification qui",h1b:"pense à votre place",
     hero_sub:"Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — moins d'heures supplémentaires, moins d'épuisement, et des heures rendues à vos managers chaque semaine.",
@@ -760,7 +766,7 @@ const translations = {
     modal_ok_title:"Vous y êtes !",modal_ok_sub:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt."
   },
   en: {
-    nav_features:"Features",nav_eu:"EU sovereignty",nav_faq:"FAQ",nav_how:"How it works",nav_cta:"Join waitlist",
+    nav_features:"Features",nav_eu:"EU sovereignty",nav_faq:"FAQ",nav_how:"How it works",nav_cta:"Join waitlist",promo:"Early access — launching July 2026 · Join the waitlist →",nav_about:"About",
     badge:"Early access opens July 2026",
     h1a:"Scheduling that",h1b:"thinks for you",
     hero_sub:"Timeaxe AI builds perfect staff schedules for restaurants and hotels in seconds — less overtime, less burnout, and hours given back to your managers every week.",
