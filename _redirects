@@ -7,6 +7,8 @@
 /faq.html      /faq       301!
 /privacy.html  /privacy   301!
 /legal.html    /legal     301!
+/calculateur-heures-supplementaires-hcr.html  /calculateur-heures-supplementaires-hcr  301!
+/travail-de-nuit-restauration-hcr.html        /travail-de-nuit-restauration-hcr        301!
 
 # Serve the extensionless URLs from their .html source (200 rewrite)
 /privacy    /privacy.html   200
@@ -15,6 +17,8 @@
 /faq/       /faq.html       200
 /about      /about.html     200
 /legal      /legal.html     200
+/calculateur-heures-supplementaires-hcr  /calculateur-heures-supplementaires-hcr.html  200
+/travail-de-nuit-restauration-hcr        /travail-de-nuit-restauration-hcr.html        200
 
 # Custom 404 fallback
 /*          /index.html     404

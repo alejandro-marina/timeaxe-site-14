@@ -18,5 +18,11 @@
 - FAQ: https://timeaxeai.com/faq
 - Privacy policy: https://timeaxeai.com/privacy
 
+## Outils
+- Calculateur d'heures supplémentaires HCR — free calculator for overtime hours and pay under the French HCR collective agreement (35h week, 10%/20%/50% rates): https://timeaxeai.com/calculateur-heures-supplementaires-hcr
+
+## Guides
+- Travail de nuit en restauration (HCR) — guide to night-work rules, pay premiums and mandatory rest in French hospitality (2026): https://timeaxeai.com/travail-de-nuit-restauration-hcr
+
 ## Contact
 - Email: bonjour@timeaxeai.com

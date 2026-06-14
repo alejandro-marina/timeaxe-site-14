@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Calculateur d'heures supplémentaires HCR (gratuit) — Timeaxe AI</title>
+<meta name="description" content="Calculez gratuitement les heures supplémentaires et leurs majorations selon la convention collective HCR (hôtels, cafés, restaurants). Taux 2026, comparaison avec le régime légal, coût hebdomadaire. Sans inscription.">
+<link rel="canonical" href="https://timeaxeai.com/calculateur-heures-supplementaires-hcr">
+<meta name="robots" content="index, follow">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#070f1f">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Timeaxe AI">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:locale:alternate" content="en_US">
+<meta property="og:url" content="https://timeaxeai.com/calculateur-heures-supplementaires-hcr">
+<meta property="og:title" content="Calculateur d'heures supplémentaires HCR — gratuit">
+<meta property="og:description" content="Majorations HCR (10/20/50%), comparaison avec le régime légal, coût hebdomadaire. Gratuit, sans inscription.">
+<meta property="og:image" content="https://timeaxeai.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Calculateur d'heures supplémentaires HCR — gratuit">
+<meta name="twitter:description" content="Majorations HCR (10/20/50%), comparaison régime légal, coût hebdomadaire. Sans inscription.">
+<meta name="twitter:image" content="https://timeaxeai.com/og-image.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Calculateur d'heures supplémentaires HCR",
+  "url": "https://timeaxeai.com/calculateur-heures-supplementaires-hcr",
+  "applicationCategory": "BusinessApplication",
+  "operatingSystem": "Web",
+  "inLanguage": "fr-FR",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "description": "Calcule les heures supplémentaires et leurs majorations selon la convention collective HCR (hôtels, cafés, restaurants), avec comparaison au régime légal.",
+  "publisher": { "@id": "https://timeaxeai.com/#organization" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Accueil","item":"https://timeaxeai.com/"},
+    {"@type":"ListItem","position":2,"name":"Calculateur heures supplémentaires HCR","item":"https://timeaxeai.com/calculateur-heures-supplementaires-hcr"}
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --navy:#070f1f;--blue-600:#2563eb;--blue-500:#3b82f6;--blue-400:#60a5fa;
+  --blue-50:#eff6ff;--blue-100:#dbeafe;--blue-200:#bfdbfe;
+  --ink:#0a1628;--ink2:#475569;--ink3:#64748b;--line:#e2e8f0;--paper:#f8fafc;
+  --green:#10b981;--green-bg:#ecfdf5;--amber:#f59e0b;
+  --r:14px;--r-lg:20px;
+}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;background:var(--paper);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+
+/* top bar + nav (matches site) */
+.promo{background:#050b18;text-align:center;padding:8px 1rem;padding-top:calc(8px + env(safe-area-inset-top))}
+.promo a{color:rgba(255,255,255,0.82);font-size:13px;text-decoration:none}
+.promo a:hover{color:#fff}
+nav{display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:62px;background:var(--navy)}
+.logo{font-family:-apple-system,sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px}
+.logo span{background:var(--blue-600);color:#fff;padding:2px 7px;border-radius:6px;font-size:12px;margin-left:2px}
+.nav-back{color:rgba(255,255,255,0.6);font-size:14px;text-decoration:none}
+.nav-back:hover{color:#fff}
+
+/* hero */
+.head{max-width:780px;margin:0 auto;padding:54px 1.5rem 0;text-align:center}
+.eyebrow{display:inline-block;background:var(--blue-50);color:var(--blue-600);font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:100px;margin-bottom:18px}
+h1{font-size:clamp(28px,5vw,42px);font-weight:800;letter-spacing:-1.2px;line-height:1.1;margin-bottom:16px}
+.sub{font-size:17px;color:var(--ink2);max-width:600px;margin:0 auto}
+
+/* calculator card */
+.calc{max-width:780px;margin:36px auto 0;padding:0 1.5rem}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden;box-shadow:0 12px 40px rgba(10,22,40,0.06)}
+.card-body{padding:30px}
+.inputs{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:560px){.inputs{grid-template-columns:1fr}}
+label{display:block;font-size:13px;font-weight:600;color:var(--ink);margin-bottom:7px}
+label .hint{font-weight:400;color:var(--ink3);font-size:12px}
+.field{position:relative}
+input[type=number]{width:100%;height:52px;border:1.5px solid var(--line);border-radius:var(--r);padding:0 44px 0 16px;font-size:17px;font-family:inherit;color:var(--ink);outline:none;transition:border-color .15s;-moz-appearance:textfield}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+input:focus{border-color:var(--blue-500)}
+.unit{position:absolute;right:16px;top:50%;transform:translateY(-50%);color:var(--ink3);font-size:14px;pointer-events:none}
+
+/* results */
+.results{margin-top:26px;border-top:1px solid var(--line);padding-top:24px}
+.res-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:20px}
+@media(max-width:560px){.res-grid{grid-template-columns:1fr}}
+.res-card{border-radius:var(--r);padding:18px 20px;border:1px solid var(--line)}
+.res-card.hcr{background:var(--blue-50);border-color:var(--blue-100)}
+.res-card.legal{background:var(--paper)}
+.res-label{font-size:12px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;color:var(--ink2);margin-bottom:6px;display:flex;align-items:center;gap:7px}
+.res-label .tag{font-size:10px;font-weight:700;padding:2px 7px;border-radius:5px}
+.res-card.hcr .tag{background:var(--blue-600);color:#fff}
+.res-card.legal .tag{background:var(--ink3);color:#fff}
+.res-big{font-size:30px;font-weight:800;letter-spacing:-.5px;color:var(--ink)}
+.res-big .cur{font-size:18px;font-weight:600;color:var(--ink2)}
+.res-sub{font-size:13px;color:var(--ink2);margin-top:3px}
+.breakdown{background:var(--paper);border-radius:var(--r);padding:6px 18px;margin-bottom:6px}
+.brow{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-bottom:1px solid var(--line);font-size:14px}
+.brow:last-child{border-bottom:none}
+.brow .lbl{color:var(--ink2)}
+.brow .lbl b{color:var(--ink);font-weight:600}
+.brow .val{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.brow.tot{font-size:15px}
+.brow.tot .lbl b,.brow.tot .val{color:var(--blue-600);font-weight:800}
+.flag{display:flex;gap:9px;align-items:flex-start;background:#fffbeb;border:1px solid #fde68a;border-radius:var(--r);padding:13px 16px;margin-top:16px;font-size:13.5px;color:#92400e;line-height:1.5}
+.flag svg{width:17px;height:17px;flex-shrink:0;margin-top:1px;stroke:var(--amber);fill:none;stroke-width:2}
+.empty{text-align:center;color:var(--ink3);font-size:14px;padding:14px 0}
+.scope-note{background:var(--paper);border-top:1px solid var(--line);padding:14px 30px;font-size:12.5px;color:var(--ink3);line-height:1.5}
+@media(max-width:560px){.scope-note{padding:13px 22px}}
+
+/* rates reference */
+.rates{max-width:780px;margin:40px auto 0;padding:0 1.5rem}
+.rates h2{font-size:22px;font-weight:800;letter-spacing:-.5px;margin-bottom:6px}
+.rates p.lead{color:var(--ink2);font-size:15px;margin-bottom:20px}
+.rate-table{background:#fff;border:1px solid var(--line);border-radius:var(--r-lg);overflow:hidden}
+.rate-row{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:10px;padding:14px 22px;border-bottom:1px solid var(--line);font-size:14px;align-items:center}
+.rate-row:last-child{border-bottom:none}
+.rate-row.h{background:var(--paper);font-weight:700;font-size:12px;letter-spacing:.04em;text-transform:uppercase;color:var(--ink2)}
+.rate-row .hcr-v{font-weight:700;color:var(--blue-600)}
+.rate-row .leg-v{color:var(--ink2)}
+
+/* explainer */
+.explain{max-width:780px;margin:40px auto 0;padding:0 1.5rem}
+.explain h2{font-size:22px;font-weight:800;letter-spacing:-.5px;margin-bottom:14px}
+.explain h3{font-size:16px;font-weight:700;margin:22px 0 7px}
+.explain p{color:var(--ink2);font-size:15px;margin-bottom:12px}
+.explain strong{color:var(--ink);font-weight:600}
+.explain ul{margin:0 0 12px 20px;color:var(--ink2);font-size:15px}
+.explain li{margin-bottom:5px}
+.src{font-size:13px;color:var(--ink3);margin-top:10px}
+.src a{color:var(--blue-600)}
+
+/* disclaimer */
+.disclaimer{max-width:780px;margin:28px auto 0;padding:0 1.5rem}
+.disclaimer div{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;font-size:13px;color:var(--ink2);line-height:1.55}
+
+/* CTA */
+.cta{max-width:780px;margin:44px auto 0;padding:0 1.5rem}
+.cta-inner{background:var(--navy);border-radius:var(--r-lg);padding:40px 36px;text-align:center;position:relative;overflow:hidden}
+.cta-inner::before{content:'';position:absolute;width:360px;height:360px;background:rgba(37,99,235,0.22);border-radius:50%;filter:blur(70px);top:-120px;left:50%;transform:translateX(-50%)}
+.cta-inner h2{font-size:25px;font-weight:800;letter-spacing:-.6px;color:#fff;margin-bottom:10px;position:relative}
+.cta-inner h2 span{color:var(--blue-400)}
+.cta-inner p{color:rgba(255,255,255,0.6);font-size:15px;margin-bottom:24px;position:relative;max-width:480px;margin-left:auto;margin-right:auto}
+.cta-inner a{display:inline-block;background:var(--blue-600);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;position:relative;box-shadow:0 4px 24px rgba(59,130,246,0.4);transition:background .15s,transform .15s}
+.cta-inner a:hover{background:var(--blue-600);transform:translateY(-2px)}
+
+footer{max-width:780px;margin:46px auto 0;padding:24px 1.5rem calc(40px + env(safe-area-inset-bottom));border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;align-items:center}
+footer p{font-size:13px;color:var(--ink3)}
+footer a{color:var(--ink2);text-decoration:none;font-size:13px}
+footer a:hover{color:var(--blue-600)}
+.lang{display:flex;gap:2px;background:#fff;border:1px solid var(--line);border-radius:100px;padding:3px}
+.lang button{font-size:12px;font-weight:600;color:var(--ink3);padding:4px 11px;border-radius:100px;border:none;background:transparent;cursor:pointer;font-family:inherit}
+.lang button.on{background:var(--blue-600);color:#fff}
+@media(max-width:560px){nav{padding:0 1.25rem}.card-body{padding:22px}.cta-inner{padding:32px 22px}}
+</style>
+</head>
+<body>
+
+<div class="promo"><a href="/#hero" data-i="promo">Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →</a></div>
+<nav>
+  <a href="/" class="logo">TIMEAXE <span>AI</span></a>
+  <a href="/" class="nav-back" data-i="back">← Retour au site</a>
+</nav>
+
+<div class="head">
+  <span class="eyebrow" data-i="eyebrow">Outil gratuit</span>
+  <h1 data-i="h1">Calculateur d'heures supplémentaires HCR</h1>
+  <p class="sub" data-i="sub">Calculez les majorations d'heures supplémentaires selon la convention collective des hôtels, cafés et restaurants — et comparez-les au régime légal. Gratuit, sans inscription.</p>
+</div>
+
+<div class="calc">
+  <div class="card">
+    <div class="card-body">
+      <div class="inputs">
+        <div>
+          <label data-i="lab_hours">Heures travaillées <span class="hint" data-i="lab_hours_h">/ semaine</span></label>
+          <div class="field">
+            <input type="number" id="hours" min="0" max="60" step="0.5" placeholder="42" inputmode="decimal">
+            <span class="unit">h</span>
+          </div>
+        </div>
+        <div>
+          <label data-i="lab_rate">Taux horaire brut <span class="hint" data-i="lab_rate_h">/ heure</span></label>
+          <div class="field">
+            <input type="number" id="rate" min="0" step="0.01" placeholder="12.02" inputmode="decimal">
+            <span class="unit">€</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="results" id="results">
+        <div class="empty" data-i="empty">Entrez les heures et le taux horaire pour voir le calcul.</div>
+      </div>
+    </div>
+    <div class="scope-note" data-i="scope">Calcule les heures supplémentaires en décompte hebdomadaire standard. Ne prend pas en compte le travail de nuit, le dimanche, les jours fériés, ni les aménagements annualisés.</div>
+  </div>
+</div>
+
+<div class="rates">
+  <h2 data-i="rates_h">Les taux de majoration HCR (2026)</h2>
+  <p class="lead" data-i="rates_lead">La convention HCR applique des taux progressifs, différents — et souvent inférieurs — au régime légal.</p>
+  <div class="rate-table">
+    <div class="rate-row h">
+      <div data-i="rt_tier">Heures supplémentaires</div>
+      <div data-i="rt_hcr">Taux HCR</div>
+      <div data-i="rt_legal">Régime légal</div>
+    </div>
+    <div class="rate-row">
+      <div data-i="rt_1">De la 36ᵉ à la 39ᵉ heure</div>
+      <div class="hcr-v">+10 %</div>
+      <div class="leg-v">+25 %</div>
+    </div>
+    <div class="rate-row">
+      <div data-i="rt_2">De la 40ᵉ à la 43ᵉ heure</div>
+      <div class="hcr-v">+20 %</div>
+      <div class="leg-v">+25 %</div>
+    </div>
+    <div class="rate-row">
+      <div data-i="rt_3">À partir de la 44ᵉ heure</div>
+      <div class="hcr-v">+50 %</div>
+      <div class="leg-v">+50 %</div>
+    </div>
+  </div>
+</div>
+
+<div class="explain">
+  <h2 data-i="ex_h">Comment fonctionnent les heures supplémentaires en HCR</h2>
+  <p data-i="ex_p1">Dans l'hôtellerie-restauration, la durée légale du travail est de <strong>35 heures par semaine</strong>. Toute heure effectuée au-delà est une heure supplémentaire, qui doit être majorée (ou compensée par du repos).</p>
+  <p data-i="ex_p2">La particularité du secteur : la convention collective HCR (IDCC 1979) fixe ses propres taux de majoration, plus progressifs que le régime légal. Les premières heures supplémentaires sont majorées à seulement 10 %, ce qui surprend souvent — mais c'est légal, car le minimum conventionnel autorisé est de 10 %.</p>
+  <h3 data-i="ex_h2">À surveiller aussi</h3>
+  <ul>
+    <li data-i="ex_l1"><strong>Contingent annuel :</strong> 360 heures supplémentaires par an pour un établissement permanent (90 h par trimestre en saisonnier).</li>
+    <li data-i="ex_l2"><strong>Durées maximales :</strong> 10 h par jour, 48 h sur une semaine, 46 h en moyenne sur 12 semaines.</li>
+    <li data-i="ex_l3"><strong>Repos :</strong> 11 h consécutives entre deux services, et 2 jours de repos hebdomadaire.</li>
+  </ul>
+  <p class="src" data-i="src">Sources : Code du travail (art. L. 3121-27 et s.), convention collective nationale HCR (IDCC 1979, brochure 3292). Taux à jour pour 2026.</p>
+</div>
+
+<div class="disclaimer">
+  <div data-i="disclaimer"><strong>Bon à savoir.</strong> Ce calculateur couvre le décompte hebdomadaire standard des heures supplémentaires en HCR. Certains établissements appliquent une durée conventionnelle de 39 h ou un aménagement annualisé du temps de travail, où le décompte diffère. Cet outil est fourni à titre informatif et ne constitue pas un conseil juridique — vérifiez toujours votre accord d'entreprise et la convention applicable.</div>
+</div>
+
+<div class="cta">
+  <div class="cta-inner">
+    <h2 data-i="cta_h">Et si vos plannings <span>respectaient ces règles tout seuls&nbsp;?</span></h2>
+    <p data-i="cta_p">Timeaxe AI génère des plannings conformes à la convention HCR — majorations, repos, contingents — automatiquement. Plus de calculs manuels, plus d'erreurs.</p>
+    <a href="/#hero" data-i="cta_btn">Rejoindre la liste d'attente →</a>
+  </div>
+</div>
+
+<footer>
+  <p>© 2026 Timeaxe AI 🇪🇺</p>
+  <div style="display:flex;gap:14px;align-items:center">
+    <a href="/about" data-i="f_about">À propos</a>
+    <a href="/faq" data-i="f_faq">FAQ</a>
+    <div class="lang">
+      <button class="on" onclick="setLang('fr')">FR</button>
+      <button onclick="setLang('en')">EN</button>
+    </div>
+  </div>
+</footer>
+
+<script>
+// ---- HCR overtime rules (2026) ----
+// Overtime starts at hour 36. Tiers (hours beyond 35):
+//   36-39 (first 4h): +10%   |  40-43 (next 4h): +20%  |  44+ : +50%
+// Legal regime for comparison: 36-43 (first 8h): +25%  | 44+ : +50%
+function compute(hoursWorked, rate){
+  var ot = Math.max(0, hoursWorked - 35);
+  // HCR tiers
+  var t1 = Math.min(ot, 4);                 // +10%
+  var t2 = Math.min(Math.max(ot - 4, 0), 4);// +20%
+  var t3 = Math.max(ot - 8, 0);             // +50%
+  var hcrMaj = t1*rate*0.10 + t2*rate*0.20 + t3*rate*0.50;
+  var hcrTotal = hoursWorked*rate + hcrMaj;
+  // Legal regime
+  var l1 = Math.min(ot, 8);                  // +25%
+  var l2 = Math.max(ot - 8, 0);              // +50%
+  var legMaj = l1*rate*0.25 + l2*rate*0.50;
+  var legTotal = hoursWorked*rate + legMaj;
+  return {ot:ot,t1:t1,t2:t2,t3:t3,hcrMaj:hcrMaj,hcrTotal:hcrTotal,legMaj:legMaj,legTotal:legTotal,base:hoursWorked*rate};
+}
+function eur(n){return n.toLocaleString(CUR_LOCALE,{minimumFractionDigits:2,maximumFractionDigits:2})+' €';}
+function hh(n){return (Number.isInteger(n)?n:n.toFixed(1)).toString().replace('.',DEC)+' h';}
+
+var CUR_LOCALE='fr-FR', DEC=',';
+function render(){
+  var d=T[LANG];
+  var h=parseFloat(document.getElementById('hours').value);
+  var r=parseFloat(document.getElementById('rate').value);
+  var box=document.getElementById('results');
+  if(isNaN(h)||isNaN(r)||h<=0||r<=0){box.innerHTML='<div class="empty">'+d.empty+'</div>';return;}
+  var c=compute(h,r);
+  var saved=c.legMaj-c.hcrMaj;
+  var html='';
+  html+='<div class="res-grid">';
+  html+='<div class="res-card hcr"><div class="res-label">'+d.r_hcr+' <span class="tag">HCR</span></div><div class="res-big"><span class="cur"></span>'+eur(c.hcrTotal)+'</div><div class="res-sub">'+d.r_maj+' : '+eur(c.hcrMaj)+'</div></div>';
+  html+='<div class="res-card legal"><div class="res-label">'+d.r_legal+' <span class="tag">'+d.r_legaltag+'</span></div><div class="res-big">'+eur(c.legTotal)+'</div><div class="res-sub">'+d.r_maj+' : '+eur(c.legMaj)+'</div></div>';
+  html+='</div>';
+  if(c.ot>0){
+    html+='<div class="breakdown">';
+    html+='<div class="brow"><span class="lbl"><b>'+hh(35<h?35:h)+'</b> '+d.b_normal+'</span><span class="val">'+eur(c.base - (c.ot*r))+'</span></div>';
+    if(c.t1>0)html+='<div class="brow"><span class="lbl"><b>'+hh(c.t1)+'</b> '+d.b_t1+' <b style="color:#2563eb">+10%</b></span><span class="val">'+eur(c.t1*r*1.10)+'</span></div>';
+    if(c.t2>0)html+='<div class="brow"><span class="lbl"><b>'+hh(c.t2)+'</b> '+d.b_t2+' <b style="color:#2563eb">+20%</b></span><span class="val">'+eur(c.t2*r*1.20)+'</span></div>';
+    if(c.t3>0)html+='<div class="brow"><span class="lbl"><b>'+hh(c.t3)+'</b> '+d.b_t3+' <b style="color:#2563eb">+50%</b></span><span class="val">'+eur(c.t3*r*1.50)+'</span></div>';
+    html+='<div class="brow tot"><span class="lbl"><b>'+d.b_total+'</b></span><span class="val">'+eur(c.hcrTotal)+'</span></div>';
+    html+='</div>';
+    html+='<div class="flag"><svg viewBox="0 0 24 24"><path d="M12 9v4M12 17h.01M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg><span>'+d.flag.replace('{n}',eur(c.ot*r))+(c.ot>20?' '+d.flag_cont:'')+'</span></div>';
+  } else {
+    html+='<div class="empty">'+d.no_ot+'</div>';
+  }
+  box.innerHTML=html;
+}
+document.getElementById('hours').addEventListener('input',render);
+document.getElementById('rate').addEventListener('input',render);
+
+// ---- i18n ----
+var T={
+ fr:{
+  promo:"Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →",
+  back:"← Retour au site",
+  eyebrow:"Outil gratuit",
+  h1:"Calculateur d'heures supplémentaires HCR",
+  sub:"Calculez les majorations d'heures supplémentaires selon la convention collective des hôtels, cafés et restaurants — et comparez-les au régime légal. Gratuit, sans inscription.",
+  lab_hours:"Heures travaillées",lab_hours_h:"/ semaine",
+  lab_rate:"Taux horaire brut",lab_rate_h:"/ heure",
+  scope:"Calcule les heures supplémentaires en décompte hebdomadaire standard. Ne prend pas en compte le travail de nuit, le dimanche, les jours fériés, ni les aménagements annualisés.",
+  empty:"Entrez les heures et le taux horaire pour voir le calcul.",
+  r_hcr:"Coût total (HCR)",r_legal:"Si régime légal",r_legaltag:"Légal",r_maj:"Majorations",
+  b_normal:"au taux normal",b_t1:"supp. (36–39ᵉ)",b_t2:"supp. (40–43ᵉ)",b_t3:"supp. (44ᵉ+)",b_total:"Total brut hebdomadaire",
+  no_ot:"Aucune heure supplémentaire — la semaine est dans la durée légale de 35 h.",
+  flag:"Cette semaine génère {n} d'heures supplémentaires majorées.",
+  flag_cont:"⚠ Attention : ce rythme dépasse vite le contingent annuel de 360 h.",
+  rates_h:"Les taux de majoration HCR (2026)",
+  rates_lead:"La convention HCR applique des taux progressifs, différents — et souvent inférieurs — au régime légal.",
+  rt_tier:"Heures supplémentaires",rt_hcr:"Taux HCR",rt_legal:"Régime légal",
+  rt_1:"De la 36ᵉ à la 39ᵉ heure",rt_2:"De la 40ᵉ à la 43ᵉ heure",rt_3:"À partir de la 44ᵉ heure",
+  ex_h:"Comment fonctionnent les heures supplémentaires en HCR",
+  ex_p1:"Dans l'hôtellerie-restauration, la durée légale du travail est de <strong>35 heures par semaine</strong>. Toute heure effectuée au-delà est une heure supplémentaire, qui doit être majorée (ou compensée par du repos).",
+  ex_p2:"La particularité du secteur : la convention collective HCR (IDCC 1979) fixe ses propres taux de majoration, plus progressifs que le régime légal. Les premières heures supplémentaires sont majorées à seulement 10 %, ce qui surprend souvent — mais c'est légal, car le minimum conventionnel autorisé est de 10 %.",
+  ex_h2:"À surveiller aussi",
+  ex_l1:"<strong>Contingent annuel :</strong> 360 heures supplémentaires par an pour un établissement permanent (90 h par trimestre en saisonnier).",
+  ex_l2:"<strong>Durées maximales :</strong> 10 h par jour, 48 h sur une semaine, 46 h en moyenne sur 12 semaines.",
+  ex_l3:"<strong>Repos :</strong> 11 h consécutives entre deux services, et 2 jours de repos hebdomadaire.",
+  src:"Sources : Code du travail (art. L. 3121-27 et s.), convention collective nationale HCR (IDCC 1979, brochure 3292). Taux à jour pour 2026.",
+  disclaimer:"<strong>Bon à savoir.</strong> Ce calculateur couvre uniquement les heures supplémentaires en décompte hebdomadaire standard. Il ne calcule pas le <strong>travail de nuit</strong>, le travail du <strong>dimanche</strong> ou des <strong>jours fériés</strong>, ni les <strong>aménagements annualisés</strong> ou les durées conventionnelles de 39 h — qui suivent des règles distinctes et peuvent s'ajouter aux majorations ci-dessus. Cet outil est fourni à titre informatif et ne constitue pas un conseil juridique : vérifiez toujours votre accord d'entreprise et la convention applicable.",
+  cta_h:'Et si vos plannings <span>respectaient ces règles tout seuls&nbsp;?</span>',
+  cta_p:"Timeaxe AI génère des plannings conformes à la convention HCR — majorations, repos, contingents — automatiquement. Plus de calculs manuels, plus d'erreurs.",
+  cta_btn:"Rejoindre la liste d'attente →",
+  f_about:"À propos",f_faq:"FAQ"
+ },
+ en:{
+  promo:"Early access — launching July 2026 · Join the waitlist →",
+  back:"← Back to site",
+  eyebrow:"Free tool",
+  h1:"HCR overtime calculator",
+  sub:"Work out overtime pay and its surcharges under the French hospitality collective agreement (HCR) — and compare them to the standard legal rates. Free, no signup.",
+  lab_hours:"Hours worked",lab_hours_h:"/ week",
+  lab_rate:"Gross hourly rate",lab_rate_h:"/ hour",
+  scope:"Calculates standard weekly overtime only. It does not account for night work, Sunday or public-holiday work, or annualised arrangements.",
+  empty:"Enter hours and hourly rate to see the calculation.",
+  r_hcr:"Total cost (HCR)",r_legal:"If standard rates",r_legaltag:"Legal",r_maj:"Surcharges",
+  b_normal:"at normal rate",b_t1:"OT (36–39th)",b_t2:"OT (40–43rd)",b_t3:"OT (44th+)",b_total:"Gross weekly total",
+  no_ot:"No overtime — the week is within the 35h legal duration.",
+  flag:"This week generates {n} of surcharged overtime.",
+  flag_cont:"⚠ Note: at this pace you'll quickly exceed the 360h annual cap.",
+  rates_h:"HCR overtime rates (2026)",
+  rates_lead:"The HCR agreement applies progressive rates that differ from — and are often lower than — the standard legal regime.",
+  rt_tier:"Overtime hours",rt_hcr:"HCR rate",rt_legal:"Legal regime",
+  rt_1:"36th to 39th hour",rt_2:"40th to 43rd hour",rt_3:"44th hour onward",
+  ex_h:"How overtime works under HCR",
+  ex_p1:"In hospitality, the legal working week is <strong>35 hours</strong>. Any hour beyond that is overtime, which must be surcharged (or offset with compensatory rest).",
+  ex_p2:"The sector's quirk: the HCR collective agreement (IDCC 1979) sets its own surcharge rates, more progressive than the standard regime. The first overtime hours are surcharged at just 10% — which often surprises people — but it's legal, because the minimum allowed by agreement is 10%.",
+  ex_h2:"Also watch for",
+  ex_l1:"<strong>Annual cap:</strong> 360 overtime hours per year for a permanent establishment (90h per quarter for seasonal).",
+  ex_l2:"<strong>Maximum durations:</strong> 10h per day, 48h in a single week, 46h average over 12 weeks.",
+  ex_l3:"<strong>Rest:</strong> 11 consecutive hours between shifts, and 2 weekly rest days.",
+  src:"Sources: French Labour Code (art. L. 3121-27 et seq.), HCR national collective agreement (IDCC 1979, brochure 3292). Rates current for 2026.",
+  disclaimer:"<strong>Good to know.</strong> This calculator covers standard weekly overtime only. It does not calculate <strong>night work</strong>, <strong>Sunday</strong> or <strong>public-holiday</strong> work, or <strong>annualised arrangements</strong> and 39h contractual weeks — which follow separate rules and can stack on top of the surcharges above. This tool is informational and is not legal advice: always check your company agreement and the applicable convention.",
+  cta_h:'What if your schedules <span>followed these rules on their own?</span>',
+  cta_p:"Timeaxe AI generates HCR-compliant schedules — surcharges, rest, caps — automatically. No more manual maths, no more mistakes.",
+  cta_btn:"Join the waitlist →",
+  f_about:"About",f_faq:"FAQ"
+ }
+};
+var LANG='fr';
+function setLang(l){
+  LANG=l; CUR_LOCALE=(l==='fr'?'fr-FR':'en-GB'); DEC=(l==='fr'?',':'.');
+  try{localStorage.setItem('txLang',l)}catch(e){}
+  var d=T[l];
+  document.querySelectorAll('[data-i]').forEach(function(el){var k=el.getAttribute('data-i');if(d[k]!==undefined)el.innerHTML=d[k];});
+  document.querySelectorAll('.lang button').forEach(function(b){b.classList.toggle('on',b.textContent.toLowerCase()===l);});
+  document.documentElement.lang=l;
+  render();
+}
+var _p=new URLSearchParams(location.search).get('lang');
+if(_p!=='en'&&_p!=='fr'){try{_p=localStorage.getItem('txLang')}catch(e){_p=null}}
+setLang(_p==='en'?'en':'fr');
+</script>
+</body>
+</html>
