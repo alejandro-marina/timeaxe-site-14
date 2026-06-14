@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Logiciel de planning IA pour restaurants et hôtels | Timeaxe AI</title>
 <meta name="description" content="Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — conformes au droit du travail français, avec moins d'heures supplémentaires et moins d'épuisement.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -498,8 +499,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 
 <div class="stats-section">
   <div class="stats-inner">
-    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="8">8</span>h+</div><div class="stat-label" data-i="s1">économisées par manager par semaine</div></div>
-    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="23">23</span>%</div><div class="stat-label" data-i="s2">de réduction des heures supplémentaires</div></div>
+    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="8">8</span>h+</div><div class="stat-label" data-i="s1">de planning manuel, chaque semaine</div></div>
+    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="100">100</span>%</div><div class="stat-label" data-i="s2">conforme à la convention HCR &amp; aux 35h</div></div>
     <div class="stat" data-anim="up"><div class="stat-num"><span data-count="2.4" data-decimal="1">2,4</span>s</div><div class="stat-label" data-i="s3">pour générer un planning complet</div></div>
     <div class="stat" data-anim="up"><div class="stat-num"><span>0</span></div><div class="stat-label" data-i="s4">tableur nécessaire</div></div>
   </div>
@@ -766,10 +767,10 @@ const translations = {
     toast_txt:"Planning mis à jour — Sarah K. remplace Marco R. dimanche",
     m1:"100% RGPD",m2:"Hébergement 100% européen",m3:"Paiements européens",m4:"API européenne",m5:"Données chiffrées",
     m1b:"100% RGPD",m2b:"Hébergement 100% européen",m3b:"Paiements européens",m4b:"API européenne",m5b:"Données chiffrées",
-    s1:"économisées par manager par semaine",s2:"de réduction des heures supplémentaires",s3:"pour générer un planning complet",s4:"tableur nécessaire",
+    s1:"de planning manuel, chaque semaine",s2:"conforme à la convention HCR & aux 35h",s3:"pour générer un planning complet",s4:"tableur nécessaire",
     feat_eyebrow:"Ce que ça fait",feat_h2:"Trois problèmes. Résolus automatiquement.",
     f1_h:"Libère les managers",f1_p:"Fini les tableurs, les fils WhatsApp et la panique du lundi. Décrivez votre équipe et vos horaires — Timeaxe construit le planning instantanément.",f1_stat:"Planning en secondes, pas en heures",
-    f2_h:"Réduit la masse salariale",f2_p:"Timeaxe apprend vos périodes les plus chargées et adapte les effectifs avec précision. Plus de sureffectif en semaine creuse, ni de manque le week-end.",f2_stat:"Jusqu'à 23% d'heures supp. en moins",
+    f2_h:"Réduit la masse salariale",f2_p:"Timeaxe apprend vos périodes les plus chargées et adapte les effectifs avec précision. Plus de sureffectif en semaine creuse, ni de manque le week-end.",f2_stat:"Ajuste les effectifs à votre activité réelle",
     f3_h:"Fidélise votre équipe",f3_p:"L'IA détecte les signaux d'épuisement avant qu'ils deviennent une démission. Elle surveille les heures, signale les surcharges et équilibre les roulements.",f3_stat:"Détectez le burn-out avant qu'il soit trop tard",
     f4_h:"Garantit la conformité",f4_p:"35h, repos obligatoires, Convention HCR : chaque planning est vérifié contre le droit du travail français avant publication.",f4_stat:"Conformité vérifiée à chaque planning",
     hint:"Faites défiler ou balayez →",
@@ -824,10 +825,10 @@ const translations = {
     toast_txt:"Schedule updated — Sarah K. covers for Marco R. on Sunday",
     m1:"100% GDPR",m2:"100% European hosting",m3:"European payments",m4:"European API",m5:"Encrypted data",
     m1b:"100% GDPR",m2b:"100% European hosting",m3b:"European payments",m4b:"European API",m5b:"Encrypted data",
-    s1:"saved per manager per week",s2:"average overtime reduction",s3:"to generate a full schedule",s4:"spreadsheets needed",
+    s1:"of manual scheduling, every week",s2:"compliant with the HCR agreement & 35h",s3:"to generate a full schedule",s4:"spreadsheets needed",
     feat_eyebrow:"What it does",feat_h2:"Three problems. Solved automatically.",
     f1_h:"Saves manager time",f1_p:"No more spreadsheets, WhatsApp threads, or last-minute panic. Describe your team and hours — Timeaxe builds the schedule instantly.",f1_stat:"Schedule in seconds, not hours",
-    f2_h:"Reduces labour costs",f2_p:"Timeaxe learns your busiest periods and staffs them precisely. No more overstaffing quiet weekdays or scrambling on Saturday nights.",f2_stat:"Cut overtime by up to 23%",
+    f2_h:"Reduces labour costs",f2_p:"Timeaxe learns your busiest periods and staffs them precisely. No more overstaffing quiet weekdays or scrambling on Saturday nights.",f2_stat:"Matches staffing to real demand",
     f3_h:"Keeps staff happy",f3_p:"The AI detects burnout risk before it becomes a resignation. It tracks hours, flags overworked staff, and balances workloads fairly.",f3_stat:"Detect burnout before people quit",
     f4_h:"Guarantees compliance",f4_p:"35h week, mandatory rest, HCR agreement: every schedule is checked against French labour law before publishing.",f4_stat:"Compliance checked on every schedule",
     hint:"Scroll or swipe →",
