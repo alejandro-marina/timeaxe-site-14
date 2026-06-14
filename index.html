@@ -85,7 +85,7 @@
   --text-primary:#0a1628;--text-secondary:#475569;--text-muted:#94a3b8;--border:#e2e8f0;
   --radius-sm:8px;--radius-md:12px;--radius-lg:18px;--radius-xl:28px;
 }
-html{scroll-behavior:auto}
+html{scroll-behavior:auto;scroll-padding-top:110px}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
 body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--text-primary);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
@@ -1136,7 +1136,7 @@ window.addEventListener('load',()=>{
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
       a.addEventListener('click',e=>{
         const href=a.getAttribute('href');
-        if(href.length>1){e.preventDefault();const tgt=document.querySelector(href);if(tgt)lenis.scrollTo(tgt,{offset:-70})}
+        if(href.length>1){e.preventDefault();const tgt=document.querySelector(href);if(tgt)lenis.scrollTo(tgt,{offset:-110})}
       });
     });
   }
