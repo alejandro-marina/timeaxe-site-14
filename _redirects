@@ -9,10 +9,12 @@
 /legal.html    /legal     301!
 /calculateur-heures-supplementaires-hcr.html  /calculateur-heures-supplementaires-hcr  301!
 /travail-de-nuit-restauration-hcr.html        /travail-de-nuit-restauration-hcr        301!
-# EN pages are FLAT files (en.html, en-about.html, en-faq.html) — NOT an en/
-# directory — so /en never triggers Netlify's directory trailing-slash redirect
-# (a real en/ dir made /en -> /en/ -> /en loop). Old /en/*.html paths 301 too.
-/en.html        /en        301!
+# EN pages are FLAT files (en-home.html, en-about.html, en-faq.html) — NOT an
+# en/ directory, and NOT en.html. A real en/ dir made /en -> /en/ -> /en loop;
+# naming the home en.html made Netlify's Pretty-URLs normalize /en -> en.html ->
+# (/en.html 301) -> /en loop. en-home.html's pretty-URL is /en-home, so /en has
+# no colliding asset and resolves cleanly via the 200 rewrite below. Old paths 301.
+/en-home.html   /en        301!
 /en-about.html  /en/about  301!
 /en-faq.html    /en/faq    301!
 /en/index.html  /en        301!
@@ -29,7 +31,7 @@
 /legal      /legal.html     200
 /calculateur-heures-supplementaires-hcr  /calculateur-heures-supplementaires-hcr.html  200
 /travail-de-nuit-restauration-hcr        /travail-de-nuit-restauration-hcr.html        200
-/en          /en.html        200
+/en          /en-home.html   200
 /en/about    /en-about.html  200
 /en/faq      /en-faq.html    200
 
