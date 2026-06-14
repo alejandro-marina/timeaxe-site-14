@@ -16,29 +16,5 @@
   [headers.values]
     Content-Type = "application/manifest+json"
 
-# Canonicalize to extensionless URLs — 301 the .html forms to the pretty URL
-[[redirects]]
-  from = "/index.html"
-  to = "/"
-  status = 301
-  force = true
-[[redirects]]
-  from = "/about.html"
-  to = "/about"
-  status = 301
-  force = true
-[[redirects]]
-  from = "/faq.html"
-  to = "/faq"
-  status = 301
-  force = true
-[[redirects]]
-  from = "/privacy.html"
-  to = "/privacy"
-  status = 301
-  force = true
-[[redirects]]
-  from = "/legal.html"
-  to = "/legal"
-  status = 301
-  force = true
+# NOTE: URL redirects live in the _redirects file (it takes precedence over
+# netlify.toml), so the .html -> extensionless 301s are defined there.

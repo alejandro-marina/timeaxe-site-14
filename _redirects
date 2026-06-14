@@ -1,5 +1,20 @@
+# Canonicalize: 301 the .html forms to the extensionless URL.
+# Forced (!) so they override the static .html file. Must come BEFORE the
+# extensionless->.html rewrites below (first match wins; rewrites are terminal,
+# so /faq -> /faq.html 200 does not re-trigger /faq.html -> /faq 301).
+/index.html    /          301!
+/about.html    /about     301!
+/faq.html      /faq       301!
+/privacy.html  /privacy   301!
+/legal.html    /legal     301!
+
+# Serve the extensionless URLs from their .html source (200 rewrite)
 /privacy    /privacy.html   200
 /privacy/   /privacy.html   200
 /faq        /faq.html       200
 /faq/       /faq.html       200
+/about      /about.html     200
+/legal      /legal.html     200
+
+# Custom 404 fallback
 /*          /index.html     404
