@@ -111,6 +111,22 @@ nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-in
 .nav-cta{background:var(--blue-600);color:#fff;padding:9px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;white-space:nowrap}
 .nav-logo{flex-shrink:0}
 .nav-cta:hover{background:#1d4ed8}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;background:transparent;border:0;cursor:pointer;padding:9px;flex-shrink:0;margin-left:auto}
+.nav-burger span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:transform .25s,opacity .2s}
+.nav-collapse{display:flex;flex:1;align-items:center;justify-content:space-between;margin-left:32px;gap:16px}
+@media(max-width:860px){
+  .nav-burger{display:flex}
+  .nav-collapse{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;margin:0;background:var(--blue-night);border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 24px 40px rgba(0,0,0,0.4);padding:6px 1.25rem 18px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .3s ease,opacity .25s,visibility .25s}
+  nav.nav-open .nav-collapse{max-height:85vh;opacity:1;visibility:visible}
+  .nav-collapse .nav-links{flex-direction:column;align-items:stretch;gap:0;width:100%}
+  .nav-collapse .nav-links a{padding:13px 4px;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.85)}
+  .nav-collapse .nav-right{width:100%;flex-direction:column;align-items:stretch;gap:14px;margin-top:14px}
+  .nav-collapse .lang-toggle{align-self:flex-start}
+  .nav-collapse .nav-cta{text-align:center;padding:13px;font-size:14px}
+  nav.nav-open .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  nav.nav-open .nav-burger span:nth-child(2){opacity:0}
+  nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
 
 /* magnetic buttons */
 .magnetic{will-change:transform;transition:transform .25s cubic-bezier(.2,.7,.3,1)}
@@ -134,9 +150,11 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .btn-primary{height:54px;padding:0 30px;background:var(--blue-500);color:#fff;border:none;border-radius:100px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;white-space:nowrap;box-shadow:0 4px 28px rgba(59,130,246,0.45);transition:background .2s,box-shadow .2s}
 .btn-primary:hover{background:var(--blue-600);box-shadow:0 10px 36px rgba(59,130,246,0.55)}
 .form-note{font-size:13px;color:rgba(255,255,255,0.32)}
-.hero-reco{font-size:13px;color:rgba(255,255,255,0.58);max-width:600px;margin:22px auto 0;line-height:1.6}
-.hero-reco a{color:var(--blue-300);text-decoration:none;font-weight:600;white-space:nowrap}
-.hero-reco a:hover{text-decoration:underline}
+.cred-strip{background:#fff;padding:4px 2rem 34px}
+.cred-strip p{max-width:720px;margin:0 auto;text-align:center;font-size:13.5px;line-height:1.55;color:var(--text-secondary);background:var(--blue-50);border:1px solid var(--blue-100);border-radius:100px;padding:11px 26px}
+.cred-strip a{color:var(--blue-600);font-weight:600;text-decoration:none;white-space:nowrap}
+.cred-strip a:hover{text-decoration:underline}
+.feat-divider{max-width:1100px;width:calc(100% - 3rem);margin:36px auto 0;border:none;border-top:1px solid rgba(96,165,250,0.22)}
 .name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
 .name-input::placeholder{color:rgba(255,255,255,0.28)}
 .name-input:focus{border-color:var(--blue-400);background:rgba(255,255,255,0.08)}
@@ -331,7 +349,6 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .stat{flex:1 1 45%;padding:12px 8px;border-right:none}
   .stat-num{font-size:28px}
   nav{padding-left:1rem;padding-right:1rem}
-  .nav-links{display:none}
   .nav-logo{font-size:15px;letter-spacing:.3px}
   .nav-logo span{font-size:10px;padding:2px 6px}
   .lang-toggle{padding:3px}
@@ -374,19 +391,22 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div class="promo-bar"><a href="#hero" data-i="promo">Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →</a></div>
 <nav>
   <a href="#" class="nav-logo" onclick="(window.__lenis?window.__lenis.scrollTo(0):window.scrollTo({top:0,behavior:'smooth'}));return false;"><svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 21 L14 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 9.6 L12.2 4.4 C17.2 3.7 20 6.8 19.2 11.3 C16.8 11.6 14.7 11 13 9.6 Z" fill="var(--blue-500)"/><path d="M15.4 7.8 V6 M15.4 7.8 L16.9 8.4" stroke="#fff" stroke-width="1.1" stroke-linecap="round"/></svg>TIMEAXE <span>AI</span></a>
-  <div class="nav-links">
-    <a href="#features" data-i="nav_features">Fonctionnalités</a>
-    <a href="#eu" data-i="nav_eu">Souveraineté</a>
-    <a href="#how" data-i="nav_how">Comment ça marche</a>
-    <a href="faq.html" data-i="nav_faq">FAQ</a>
-    <a href="about.html" data-i="nav_about">À propos</a>
-  </div>
-  <div class="nav-right">
-    <div class="lang-toggle">
-      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
+  <button class="nav-burger" aria-label="Menu" aria-expanded="false" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <div class="nav-collapse">
+    <div class="nav-links">
+      <a href="#features" data-i="nav_features">Fonctionnalités</a>
+      <a href="#eu" data-i="nav_eu">Souveraineté</a>
+      <a href="#how" data-i="nav_how">Comment ça marche</a>
+      <a href="faq.html" data-i="nav_faq">FAQ</a>
+      <a href="about.html" data-i="nav_about">À propos</a>
     </div>
-    <a href="#" class="nav-cta magnetic" onclick="goWaitlist();return false;" data-i="nav_cta">Rejoindre la liste</a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#" class="nav-cta magnetic" onclick="goWaitlist();return false;" data-i="nav_cta">Rejoindre la liste</a>
+    </div>
   </div>
 </nav>
 
@@ -411,8 +431,6 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
       </div>
       <p class="form-note" data-i="form_note">Sans carte bancaire · Sans spam · <a href="privacy.html" style="color:inherit;text-decoration:underline">Politique de confidentialité</a></p>
     </div>
-
-    <p class="hero-reco" data-anim="fade" data-i="reco_line">15ᵉ sur 900+ startups au Global Innovation Show, Hong Kong — le « CES asiatique », co-organisé par le SVIEF de la Silicon Valley. <a href="about.html">En savoir plus →</a></p>
 
     <div class="schedule-card" id="scheduleCard">
       <div class="sc-header">
@@ -484,6 +502,10 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   </div>
 </div>
 
+<div class="cred-strip">
+  <p data-i="reco_line">Classés 15ᵉ au Global Innovation Show de Hong Kong, parmi 900+ startups. <a href="about.html">Découvrez notre histoire →</a></p>
+</div>
+
 <!-- HORIZONTAL FEATURES -->
 <div class="hfeat" id="features">
   <div class="hfeat-head">
@@ -523,6 +545,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
     </div>
   </div>
   <p class="hfeat-hint" data-i="hint">Faites défiler ou balayez →</p>
+  <hr class="feat-divider">
 </div>
 
 <!-- EU -->
@@ -726,7 +749,7 @@ const translations = {
     hero_sub:"Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — moins d'heures supplémentaires, moins d'épuisement, et des heures rendues à vos managers chaque semaine.",
     cta_hero:"Accès anticipé gratuit",success:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt.",
     form_note:"Sans carte bancaire · Sans spam · <a href='privacy.html' style='color:inherit;text-decoration:underline'>Politique de confidentialité</a>",
-    reco_line:"15ᵉ sur 900+ startups au Global Innovation Show, Hong Kong — le « CES asiatique », co-organisé par le SVIEF de la Silicon Valley. <a href='about.html'>En savoir plus →</a>",
+    reco_line:"Classés 15ᵉ au Global Innovation Show de Hong Kong, parmi 900+ startups. <a href='about.html'>Découvrez notre histoire →</a>",
     sc_title:"Semaine du 16 juin 2026 — Le Grand Bistrot",sc_time:"Généré en 2,4s",sc_ai:"Optimisé par IA",
     d_mon:"Lun",d_tue:"Mar",d_wed:"Mer",d_thu:"Jeu",d_fri:"Ven",d_sat:"Sam",d_sun:"Dim",
     leg_on:"Planifié",leg_peak:"Pic d'activité",leg_off:"Repos",no_overtime:"✓ Aucun conflit d'heures supp.",
@@ -784,7 +807,7 @@ const translations = {
     hero_sub:"Timeaxe AI builds perfect staff schedules for restaurants and hotels in seconds — less overtime, less burnout, and hours given back to your managers every week.",
     cta_hero:"Get early access",success:"You're on the list — we'll be in touch soon.",
     form_note:"No credit card · No spam · <a href='privacy.html' style='color:inherit;text-decoration:underline'>Privacy policy</a>",
-    reco_line:"Ranked 15th of 900+ startups at the Global Innovation Show, Hong Kong — the 'Asian CES,' co-hosted by Silicon Valley's SVIEF. <a href='about.html'>Read more →</a>",
+    reco_line:"Ranked 15th at the Global Innovation Show in Hong Kong, among 900+ startups. <a href='about.html'>Read our story →</a>",
     sc_title:"Week of 16 June 2026 — The Grand Bistrot",sc_time:"Generated in 2.4s",sc_ai:"AI optimised",
     d_mon:"Mon",d_tue:"Tue",d_wed:"Wed",d_thu:"Thu",d_fri:"Fri",d_sat:"Sat",d_sun:"Sun",
     leg_on:"Scheduled",leg_peak:"Peak shift",leg_off:"Day off",no_overtime:"✓ No overtime conflicts",
@@ -1204,6 +1227,10 @@ window.addEventListener('load',()=>{
   }
 
 });
+</script>
+<script>
+function toggleNav(btn){var n=btn.closest('nav');var o=n.classList.toggle('nav-open');btn.setAttribute('aria-expanded',o?'true':'false');}
+document.querySelectorAll('nav .nav-collapse a').forEach(function(a){a.addEventListener('click',function(){var n=a.closest('nav');if(n){n.classList.remove('nav-open');var b=n.querySelector('.nav-burger');if(b)b.setAttribute('aria-expanded','false');}});});
 </script>
 </body>
 </html>

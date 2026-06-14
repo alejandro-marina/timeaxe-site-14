@@ -51,6 +51,27 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px}
 .lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:100px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
 .lang-btn.active{background:var(--blue-600);color:#fff}
+.nav-links{display:flex;gap:28px;align-items:center}
+.nav-links a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s;white-space:nowrap}
+.nav-links a:hover{color:#fff}
+.nav-cta{background:var(--blue-600);color:#fff;padding:9px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;white-space:nowrap}
+.nav-cta:hover{background:#1d4ed8}
+.nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;background:transparent;border:0;cursor:pointer;padding:9px;flex-shrink:0;margin-left:auto}
+.nav-burger span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:transform .25s,opacity .2s}
+.nav-collapse{display:flex;flex:1;align-items:center;justify-content:space-between;margin-left:32px;gap:16px}
+@media(max-width:860px){
+  .nav-burger{display:flex}
+  .nav-collapse{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;margin:0;background:#0a1628;border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 24px 40px rgba(0,0,0,0.4);padding:6px 1.25rem 18px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .3s ease,opacity .25s,visibility .25s}
+  nav.nav-open .nav-collapse{max-height:85vh;opacity:1;visibility:visible}
+  .nav-collapse .nav-links{flex-direction:column;align-items:stretch;gap:0;width:100%}
+  .nav-collapse .nav-links a{padding:13px 4px;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.85)}
+  .nav-collapse .nav-right{width:100%;flex-direction:column;align-items:stretch;gap:14px;margin-top:14px}
+  .nav-collapse .lang-toggle{align-self:flex-start}
+  .nav-collapse .nav-cta{text-align:center;padding:13px;font-size:14px}
+  nav.nav-open .nav-burger span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  nav.nav-open .nav-burger span:nth-child(2){opacity:0}
+  nav.nav-open .nav-burger span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
 .back{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none}
 .back:hover{color:#fff}
 main{max-width:720px;margin:0 auto;padding:64px 2rem 96px}
@@ -80,13 +101,22 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 <div class="promo-bar"><a href="index.html#hero" data-i="promo">Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →</a></div>
 <nav>
   <a href="index.html" class="nav-logo"><svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 21 L14 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 9.6 L12.2 4.4 C17.2 3.7 20 6.8 19.2 11.3 C16.8 11.6 14.7 11 13 9.6 Z" fill="var(--blue-500)"/><path d="M15.4 7.8 V6 M15.4 7.8 L16.9 8.4" stroke="#fff" stroke-width="1.1" stroke-linecap="round"/></svg>Timeaxe<span> AI</span></a>
-  <div class="nav-right">
-    <div class="lang-toggle">
-      <button class="lang-btn active" onclick="setLang('fr')">FR</button>
-      <button class="lang-btn" onclick="setLang('en')">EN</button>
+  <button class="nav-burger" aria-label="Menu" aria-expanded="false" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
+  <div class="nav-collapse">
+    <div class="nav-links">
+      <a href="/#features" data-i="nav_features">Fonctionnalités</a>
+      <a href="/#eu" data-i="nav_eu">Souveraineté</a>
+      <a href="/#how" data-i="nav_how">Comment ça marche</a>
+      <a href="/faq" data-i="nav_faq">FAQ</a>
+      <a href="/about" data-i="nav_about">À propos</a>
     </div>
-    <a href="about.html" class="nav-about" data-i="nav_about">À propos</a>
-    <a href="index.html" class="back" data-i="back">← Retour au site</a>
+    <div class="nav-right">
+      <div class="lang-toggle">
+        <button class="lang-btn active" onclick="setLang('fr')">FR</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="/#hero" class="nav-cta" data-i="nav_cta">Rejoindre la liste</a>
+    </div>
   </div>
 </nav>
 
@@ -131,6 +161,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 const t = {
   fr: {
     back:"← Retour au site",
+    nav_features:"Fonctionnalités",nav_eu:"Souveraineté",nav_how:"Comment ça marche",nav_faq:"FAQ",nav_cta:"Rejoindre la liste",
     promo:"Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →",
     nav_about:"À propos",
     title:"Politique de confidentialité",
@@ -156,6 +187,7 @@ const t = {
   },
   en: {
     back:"← Back to site",
+    nav_features:"Features",nav_eu:"EU sovereignty",nav_how:"How it works",nav_faq:"FAQ",nav_cta:"Join waitlist",
     promo:"Early access — launching July 2026 · Join the waitlist →",
     nav_about:"About",
     title:"Privacy Policy",
@@ -199,6 +231,10 @@ function setLang(lang){
   if(p!=='en'&&p!=='fr'){try{p=localStorage.getItem('txLang')}catch(e){p=null}}
   if(p==='en'||p==='fr')setLang(p);
 })();
+</script>
+<script>
+function toggleNav(btn){var n=btn.closest('nav');var o=n.classList.toggle('nav-open');btn.setAttribute('aria-expanded',o?'true':'false');}
+document.querySelectorAll('nav .nav-collapse a').forEach(function(a){a.addEventListener('click',function(){var n=a.closest('nav');if(n){n.classList.remove('nav-open');var b=n.querySelector('.nav-burger');if(b)b.setAttribute('aria-expanded','false');}});});
 </script>
 </body>
 </html>
