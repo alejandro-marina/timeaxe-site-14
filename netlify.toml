@@ -9,6 +9,17 @@
     X-XSS-Protection = "1; mode=block"
     Content-Security-Policy = "default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self' https://*.sibforms.com; form-action 'self' https://*.sibforms.com; manifest-src 'self'; base-uri 'self'; frame-ancestors 'none'; object-src 'none'"
 
+# Long-cache static assets (fonts + vendored JS libs). They currently inherit
+# Netlify's default "max-age=0, must-revalidate", so every visit re-validates
+# them. These filenames are stable, so cache them for a year.
+# CAVEAT: filenames are NOT content-hashed. If you ever change a file in
+# /assets/ (new GSAP version, new font), RENAME it (or append ?v=2) — otherwise
+# clients keep the cached copy for up to a year and won't see the update.
+[[headers]]
+  for = "/assets/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
 # Serve the web manifest with the correct MIME (otherwise Netlify sends
 # application/octet-stream, which nosniff would reject for PWA install)
 [[headers]]
