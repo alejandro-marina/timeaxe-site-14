@@ -5,8 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
-<!-- STAGED preload for the display font (uncomment once bricolage-grotesque-800-normal.woff2 is in assets/fonts/):
-<link rel="preload" href="assets/fonts/bricolage-grotesque-800-normal.woff2" as="font" type="font/woff2" crossorigin> -->
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
 <title>Logiciel de planning IA pour restaurants et hôtels | Timeaxe AI</title>
 <meta name="description" content="Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — conformes au droit du travail français, avec moins d'heures supplémentaires et moins d'épuisement.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
@@ -86,14 +85,9 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
-/* Display headings use Bricolage Grotesque, self-hosted (EU-sovereign, no third-party fetch).
-   STAGED: drop bricolage-grotesque-{700,800}.woff2 into assets/fonts/, then uncomment the
-   @font-face rules below and the <link rel="preload"> in <head>. Until then, headings
-   gracefully fall back to Inter via the 'Bricolage Grotesque','Inter' font stack. */
-/*
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/bricolage-grotesque-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/bricolage-grotesque-800-normal.woff2') format('woff2')}
-*/
+/* Display headings: Bricolage Grotesque, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'); falls back to Inter. */
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/bricolage-grotesque-700.woff2') format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/bricolage-grotesque-800.woff2') format('woff2')}
 </style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}

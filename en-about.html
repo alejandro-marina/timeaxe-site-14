@@ -1,8 +1,7 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<!-- STAGED preload (uncomment once bricolage-grotesque-800-normal.woff2 is in /assets/fonts/):
-<link rel="preload" href="/assets/fonts/bricolage-grotesque-800-normal.woff2" as="font" type="font/woff2" crossorigin> -->
+<link rel="preload" href="/assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
 <title>About — Timeaxe AI | Built by hospitality professionals</title>
 <meta name="description" content="Timeaxe AI was born from 10+ years in kitchens, dining rooms and luxury hospitality. Discover why four founders from the industry set out to reinvent staff scheduling.">
 <link rel="canonical" href="https://timeaxeai.com/en/about">
@@ -83,12 +82,9 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
-/* Display headings use Bricolage Grotesque, self-hosted (EU-sovereign, no third-party fetch).
-   STAGED: drop bricolage-grotesque-{700,800}.woff2 into /assets/fonts/, then uncomment below + the preload in <head>. Falls back to Inter until then. */
-/*
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-800-normal.woff2') format('woff2')}
-*/
+/* Display headings: Bricolage Grotesque, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'); falls back to Inter. */
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-700.woff2') format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-800.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 .promo-bar{background:#12294d;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
 .promo-bar a{display:block;padding:7px 12px;font-size:clamp(10px,2.7vw,12.5px);line-height:1.35;color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}

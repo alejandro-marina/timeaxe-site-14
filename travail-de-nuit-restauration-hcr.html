@@ -12,8 +12,7 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#1D3A67">
-<!-- STAGED preload (uncomment once bricolage-grotesque-800-normal.woff2 is in assets/fonts/):
-<link rel="preload" href="assets/fonts/bricolage-grotesque-800-normal.woff2" as="font" type="font/woff2" crossorigin> -->
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Timeaxe AI">
 <meta property="og:locale" content="fr_FR">
@@ -71,12 +70,9 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
-/* Display headings use Bricolage Grotesque, self-hosted (EU-sovereign, no third-party fetch).
-   STAGED: drop bricolage-grotesque-{700,800}.woff2 into assets/fonts/, then uncomment below + the preload in <head>. Falls back to Inter until then. */
-/*
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/bricolage-grotesque-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/bricolage-grotesque-800-normal.woff2') format('woff2')}
-*/
+/* Display headings: Bricolage Grotesque, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'); falls back to Inter. */
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/bricolage-grotesque-700.woff2') format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/bricolage-grotesque-800.woff2') format('woff2')}
 :root{
   --navy:#1D3A67;--blue-600:#3B7DE0;--blue-500:#5A93E6;--blue-400:#98ADD4;
   --blue-50:#F7F7F8;--blue-100:#F2F2F2;--blue-200:#EAF0F9;
