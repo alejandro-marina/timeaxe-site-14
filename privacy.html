@@ -9,7 +9,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#eff6ff">
+<meta name="theme-color" content="#F7F7F8">
 <link rel="manifest" href="site.webmanifest">
 <link rel="canonical" href="https://timeaxeai.com/privacy">
 <script type="application/ld+json">
@@ -29,39 +29,47 @@
 <meta name="twitter:title" content="Politique de confidentialité — Timeaxe AI">
 <meta name="twitter:description" content="Les données que nous collectons, pourquoi, et vos droits RGPD.">
 <meta name="twitter:image" content="https://timeaxeai.com/og-image.png">
+<!-- STAGED preload (uncomment once bricolage-grotesque-800-normal.woff2 is in assets/fonts/):
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800-normal.woff2" as="font" type="font/woff2" crossorigin> -->
 <style>
 @font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
+/* Display headings use Bricolage Grotesque, self-hosted (EU-sovereign, no third-party fetch).
+   STAGED: drop bricolage-grotesque-{700,800}.woff2 into assets/fonts/, then uncomment below + the preload in <head>. Falls back to Inter until then. */
+/*
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/bricolage-grotesque-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/bricolage-grotesque-800-normal.woff2') format('woff2')}
+*/
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-.promo-bar{background:#0c1a33;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
+.promo-bar{background:#12294d;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
 .promo-bar a{display:block;padding:7px 12px;font-size:clamp(10px,2.7vw,12.5px);line-height:1.35;color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .promo-bar a:hover{color:#fff}
 .nav-about{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap}
 .nav-about:hover{color:#fff}
-:root{--blue-deep:#070f1f;--blue-500:#3b82f6;--blue-600:#2563eb;--blue-400:#60a5fa;--blue-100:#dbeafe;--blue-50:#eff6ff;--text:#0a1628;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0}
-body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(7,15,31,0.92);backdrop-filter:blur(16px)}
+:root{--blue-deep:#1D3A67;--blue-500:#5A93E6;--blue-600:#3B7DE0;--blue-400:#98ADD4;--blue-100:#F2F2F2;--blue-50:#F7F7F8;--text:#1a1a1a;--text2:#5a5a5a;--muted:#9a9a9a;--border:#E6E6E6}
+body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(29,58,103,0.85);backdrop-filter:blur(16px)}
 .nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:19px;color:#fff;text-decoration:none;display:inline-flex;align-items:center;letter-spacing:-.4px}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-logo span{color:var(--blue-400)}
 .nav-right{display:flex;align-items:center;gap:12px}
-.lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px}
-.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:100px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:4px}
+.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:999px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
 .lang-btn.active{background:var(--blue-600);color:#fff}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s;white-space:nowrap}
 .nav-links a:hover{color:#fff}
-.nav-cta{background:var(--blue-600);color:#fff;padding:9px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;white-space:nowrap}
-.nav-cta:hover{background:#1d4ed8}
+.nav-cta{background:var(--blue-600);color:#fff;padding:9px 22px;border-radius:999px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;white-space:nowrap}
+.nav-cta:hover{background:#2F6BC7}
 .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;background:transparent;border:0;cursor:pointer;padding:9px;flex-shrink:0;margin-left:auto}
 .nav-burger span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:transform .25s,opacity .2s}
 .nav-collapse{display:flex;flex:1;align-items:center;justify-content:space-between;margin-left:32px;gap:16px}
 @media(max-width:860px){
   .nav-burger{display:flex}
-  .nav-collapse{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;margin:0;background:#0a1628;border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 24px 40px rgba(0,0,0,0.4);padding:6px 1.25rem 18px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .3s ease,opacity .25s,visibility .25s}
+  .nav-collapse{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;margin:0;background:#274777;border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 24px 40px rgba(0,0,0,0.4);padding:6px 1.25rem 18px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .3s ease,opacity .25s,visibility .25s}
   nav.nav-open .nav-collapse{max-height:85vh;opacity:1;visibility:visible}
   .nav-collapse .nav-links{flex-direction:column;align-items:stretch;gap:0;width:100%}
   .nav-collapse .nav-links a{padding:13px 4px;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.85)}
@@ -75,9 +83,9 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .back{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none}
 .back:hover{color:#fff}
 main{max-width:720px;margin:0 auto;padding:64px 2rem 96px}
-h1{font-family:'Inter',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
+h1{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:36px;font-weight:800;letter-spacing:-1px;margin-bottom:8px}
 .updated{font-size:13px;color:var(--text2);margin-bottom:40px}
-h2{font-family:'Inter',sans-serif;font-size:19px;font-weight:800;letter-spacing:-.3px;margin:36px 0 12px}
+h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:19px;font-weight:800;letter-spacing:-.3px;margin:36px 0 12px}
 p,li{font-size:15px;color:var(--text2)}
 ul{padding-left:22px;margin:10px 0}
 li{margin-bottom:6px}

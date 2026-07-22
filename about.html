@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<!-- STAGED preload (uncomment once bricolage-grotesque-800-normal.woff2 is in assets/fonts/):
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800-normal.woff2" as="font" type="font/woff2" crossorigin> -->
 <title>À propos — Timeaxe AI | Construit par des professionnels de l'hôtellerie</title>
 <meta name="description" content="Timeaxe AI est né de plus de 10 ans passés en cuisine, en salle et en hôtellerie de luxe. Découvrez pourquoi quatre fondateurs du secteur ont décidé de réinventer la planification des équipes.">
 <link rel="canonical" href="https://timeaxeai.com/about">
@@ -17,7 +19,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#070f1f">
+<meta name="theme-color" content="#1D3A67">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Timeaxe AI">
 <meta property="og:locale" content="fr_FR">
@@ -61,21 +63,27 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
+/* Display headings use Bricolage Grotesque, self-hosted (EU-sovereign, no third-party fetch).
+   STAGED: drop bricolage-grotesque-{700,800}.woff2 into assets/fonts/, then uncomment below + the preload in <head>. Falls back to Inter until then. */
+/*
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/bricolage-grotesque-700-normal.woff2') format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/bricolage-grotesque-800-normal.woff2') format('woff2')}
+*/
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-.promo-bar{background:#0c1a33;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
+.promo-bar{background:#12294d;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
 .promo-bar a{display:block;padding:7px 12px;font-size:clamp(10px,2.7vw,12.5px);line-height:1.35;color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .promo-bar a:hover{color:#fff}
 :root{
-  --blue-deep:#070f1f;--blue-600:#2563eb;--blue-500:#3b82f6;--blue-400:#60a5fa;
-  --blue-200:#bfdbfe;--blue-100:#dbeafe;--blue-50:#eff6ff;
-  --text:#0a1628;--text2:#475569;--muted:#94a3b8;--border:#e2e8f0;
+  --blue-deep:#1D3A67;--blue-600:#3B7DE0;--blue-500:#5A93E6;--blue-400:#98ADD4;
+  --blue-200:#EAF0F9;--blue-100:#F2F2F2;--blue-50:#F7F7F8;
+  --text:#1a1a1a;--text2:#5a5a5a;--muted:#9a9a9a;--border:#E6E6E6;
   --radius-lg:18px;--radius-xl:28px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
 /* NAV */
-nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;padding-top:env(safe-area-inset-top);background:rgba(7,15,31,0.92);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
+nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;padding-top:env(safe-area-inset-top);background:rgba(29,58,103,0.85);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
@@ -87,13 +95,13 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .nav-links a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s;white-space:nowrap}
 .nav-links a:hover{color:#fff}
 .nav-cta{background:var(--blue-600);color:#fff;padding:9px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;white-space:nowrap}
-.nav-cta:hover{background:#1d4ed8}
+.nav-cta:hover{background:#2F6BC7}
 .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;background:transparent;border:0;cursor:pointer;padding:9px;flex-shrink:0;margin-left:auto}
 .nav-burger span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:transform .25s,opacity .2s}
 .nav-collapse{display:flex;flex:1;align-items:center;justify-content:space-between;margin-left:32px;gap:16px}
 @media(max-width:860px){
   .nav-burger{display:flex}
-  .nav-collapse{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;margin:0;background:#0a1628;border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 24px 40px rgba(0,0,0,0.4);padding:6px 1.25rem 18px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .3s ease,opacity .25s,visibility .25s}
+  .nav-collapse{position:absolute;top:100%;left:0;right:0;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:0;margin:0;background:#274777;border-bottom:1px solid rgba(255,255,255,0.08);box-shadow:0 24px 40px rgba(0,0,0,0.4);padding:6px 1.25rem 18px;max-height:0;overflow:hidden;opacity:0;visibility:hidden;transition:max-height .3s ease,opacity .25s,visibility .25s}
   nav.nav-open .nav-collapse{max-height:85vh;opacity:1;visibility:visible}
   .nav-collapse .nav-links{flex-direction:column;align-items:stretch;gap:0;width:100%}
   .nav-collapse .nav-links a{padding:13px 4px;font-size:15px;border-bottom:1px solid rgba(255,255,255,0.07);color:rgba(255,255,255,0.85)}
@@ -112,9 +120,9 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(96,165,250,0.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%)}
 .ab-hero-orb{position:absolute;width:500px;height:500px;background:rgba(37,99,235,0.22);border-radius:50%;filter:blur(80px);top:-150px;left:50%;transform:translateX(-50%);pointer-events:none}
 .ab-hero-inner{position:relative;z-index:2}
-.ab-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:#93c5fd;font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:24px}
-.ab-hero h1{font-family:'Inter',sans-serif;font-size:clamp(34px,5.5vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:#fff;margin-bottom:18px;max-width:760px;margin-left:auto;margin-right:auto}
-.ab-hero h1 span{background:linear-gradient(120deg,var(--blue-400),#a5f3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ab-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:#D3DCEC;font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:24px}
+.ab-hero h1{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(34px,5.5vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:#fff;margin-bottom:18px;max-width:760px;margin-left:auto;margin-right:auto}
+.ab-hero h1 span{background:linear-gradient(120deg,var(--blue-400),var(--blue-200));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ab-hero p{font-size:17px;color:rgba(255,255,255,0.55);max-width:540px;margin:0 auto}
 
 /* BODY */
@@ -122,7 +130,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-section{margin-bottom:52px}
 .ab-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:18px;display:flex;align-items:center;gap:10px}
 .ab-label::after{content:'';flex:1;height:1px;background:var(--border)}
-.ab-section h2{font-family:'Inter',sans-serif;font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-0.5px;color:var(--text);margin-bottom:18px;line-height:1.2}
+.ab-section h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-0.5px;color:var(--text);margin-bottom:18px;line-height:1.2}
 .ab-section p{font-size:16px;color:var(--text2);margin-bottom:18px}
 .ab-section p strong{color:var(--text);font-weight:600}
 .ab-pullquote{font-family:'Inter',sans-serif;font-size:clamp(20px,3.2vw,26px);font-weight:700;letter-spacing:-.6px;color:var(--blue-600);line-height:1.3;padding:8px 0 8px 22px;border-left:3px solid var(--blue-500);margin:28px 0}
@@ -138,8 +146,8 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 /* FOUNDERS */
 .ab-founders{border:1px solid var(--border);border-radius:var(--radius-xl);padding:32px;background:linear-gradient(180deg,var(--blue-50),#fff)}
 .ab-founder{display:flex;gap:18px;align-items:flex-start}
-.ab-founder-badge{width:52px;height:52px;border-radius:14px;background:var(--blue-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ab-founder-badge svg rect{fill:var(--blue-400)}
+.ab-founder-badge{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 24px rgba(59,125,224,0.30)}
+.ab-founder-badge svg rect{fill:#fff}
 .ab-founder-name{font-family:'Inter',sans-serif;font-size:19px;font-weight:800;color:var(--text);letter-spacing:-.3px}
 .ab-founder-role{font-size:13px;font-weight:600;color:var(--blue-600);margin-bottom:8px}
 .ab-founder p{font-size:14px;color:var(--text2);margin:0}
@@ -153,19 +161,19 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 
 /* RECOGNITION */
 .ab-recognition{display:flex;gap:16px;align-items:center;border:1px solid var(--blue-200);border-radius:var(--radius-lg);padding:20px 22px;background:linear-gradient(135deg,var(--blue-50),#fff);margin-top:8px}
-.ab-recognition .medal{width:46px;height:46px;border-radius:12px;background:var(--blue-deep);display:flex;align-items:center;justify-content:center;flex-shrink:0}
-.ab-recognition .medal svg{width:24px;height:24px;stroke:var(--blue-400);fill:none;stroke-width:2}
+.ab-recognition .medal{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 24px rgba(59,125,224,0.30)}
+.ab-recognition .medal svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}
 .ab-recognition .r-title{font-family:'Inter',sans-serif;font-size:16px;font-weight:800;color:var(--text);letter-spacing:-.3px;margin-bottom:2px}
 .ab-recognition .r-sub{font-size:13px;color:var(--text2)}
 
 /* CTA */
-.ab-cta{background:var(--blue-deep);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;margin:8px auto 56px;max-width:720px;position:relative;overflow:hidden}
-.ab-cta::before{content:'';position:absolute;width:400px;height:400px;background:rgba(37,99,235,0.2);border-radius:50%;filter:blur(70px);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none}
-.ab-cta h2{font-family:'Inter',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.8px;color:#fff;margin-bottom:10px;position:relative;z-index:1}
-.ab-cta h2 span{background:linear-gradient(120deg,var(--blue-400),#a5f3fc);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.ab-cta p{font-size:15px;color:rgba(255,255,255,0.5);margin-bottom:28px;position:relative;z-index:1}
-.ab-cta a{display:inline-block;background:var(--blue-500);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;box-shadow:0 4px 24px rgba(59,130,246,0.4);transition:background .15s,transform .15s;position:relative;z-index:1}
-.ab-cta a:hover{background:var(--blue-600);transform:translateY(-2px)}
+.ab-cta{background:linear-gradient(135deg,#EAF0F9 0%,#DCE6F4 100%);border:1px solid var(--border);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;margin:8px auto 56px;max-width:720px;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(29,58,103,0.08)}
+.ab-cta::before{content:'';position:absolute;width:400px;height:400px;background:rgba(59,125,224,0.10);border-radius:50%;filter:blur(70px);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none}
+.ab-cta h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.8px;color:var(--blue-deep);margin-bottom:10px;position:relative;z-index:1}
+.ab-cta h2 span{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ab-cta p{font-size:15px;color:var(--text2);margin-bottom:28px;position:relative;z-index:1}
+.ab-cta a{display:inline-block;background:var(--blue-600);color:#fff;padding:14px 32px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;box-shadow:0 4px 24px rgba(59,125,224,0.35);transition:background .15s,transform .15s;position:relative;z-index:1}
+.ab-cta a:hover{background:#2F6BC7;transform:translateY(-2px)}
 
 footer{background:var(--blue-deep);border-top:1px solid rgba(255,255,255,0.05);padding:24px 2.5rem calc(24px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center}
 footer p{font-size:13px;color:rgba(255,255,255,0.55)}
@@ -268,11 +276,11 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
         <p data-i="v1_p">Vous ne devriez pas passer vos soirées à assembler un planning. Timeaxe le génère pour vous en quelques secondes — vous gardez le contrôle, l'IA fait le gros du travail.</p>
       </div>
       <div class="ab-value">
-        <h3><span class="dot" style="background:#10b981"></span><span data-i="v2_h">Conforme par conception</span></h3>
+        <h3><span class="dot" style="background:#1D9E75"></span><span data-i="v2_h">Conforme par conception</span></h3>
         <p data-i="v2_p">Le droit du travail français et la convention collective HCR ne sont pas une option que l'on coche. Ils sont intégrés au cœur du moteur de planification, dès le départ.</p>
       </div>
       <div class="ab-value">
-        <h3><span class="dot" style="background:#8b5cf6"></span><span data-i="v3_h">100&nbsp;% européen, RGPD natif</span></h3>
+        <h3><span class="dot" style="background:var(--blue-deep)"></span><span data-i="v3_h">100&nbsp;% européen, RGPD natif</span></h3>
         <p data-i="v3_p">Vos données et celles de vos équipes restent en Europe, hébergées sur une infrastructure européenne, dans le respect du RGPD et du cadre de la CNIL.</p>
       </div>
     </div>
