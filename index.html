@@ -5,13 +5,14 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <link rel="preload" href="assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
 <title>Logiciel de planning IA pour restaurants et hôtels | Timeaxe AI</title>
 <meta name="description" content="Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — conformes au droit du travail français, avec moins d'heures supplémentaires et moins d'épuisement.">
 <link rel="icon" type="image/svg+xml" href="favicon.svg">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16.png">
 <link rel="apple-touch-icon" href="apple-touch-icon.png">
-<meta name="theme-color" content="#070f1f">
+<meta name="theme-color" content="#1D3A67">
 <link rel="manifest" href="site.webmanifest">
 <link rel="canonical" href="https://timeaxeai.com/">
 <link rel="alternate" hreflang="fr-FR" href="https://timeaxeai.com/">
@@ -73,7 +74,7 @@
       "inLanguage": ["fr-FR", "en"],
       "description": "Logiciel de planning par IA pour restaurants et hôtels : génération automatique de plannings du personnel conformes à la convention HCR et à la durée légale de 35 heures.",
       "publisher": { "@id": "https://timeaxeai.com/#organization" },
-      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder", "description": "Accès anticipé gratuit via liste d'attente ; tarifs communiqués au lancement (juillet 2026)" }
+      "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR", "availability": "https://schema.org/PreOrder", "description": "Accès anticipé gratuit via liste d'attente ; tarifs communiqués au lancement (septembre 2026)" }
     }
   ]
 }
@@ -84,29 +85,32 @@
 @font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
 @font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
+/* Display headings: Bricolage Grotesque, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'); falls back to Inter. */
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/bricolage-grotesque-700.woff2') format('woff2')}
+@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/bricolage-grotesque-800.woff2') format('woff2')}
 </style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-.promo-bar{position:fixed;top:0;left:0;right:0;z-index:201;background:#0c1a33;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
+.promo-bar{position:fixed;top:0;left:0;right:0;z-index:201;background:#12294d;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
 .promo-bar a{display:block;line-height:32px;padding:0 12px;font-size:clamp(10px,2.7vw,12.5px);color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .promo-bar a:hover{color:#fff}
 .nav-about{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap}
 .nav-about:hover{color:#fff}
 :root{
-  --blue-deep:#070f1f;--blue-night:#0a1628;--blue-900:#0d1f3c;--blue-800:#1a3560;
-  --blue-600:#2563eb;--blue-500:#3b82f6;--blue-400:#60a5fa;
-  --blue-300:#93c5fd;--blue-200:#bfdbfe;--blue-100:#dbeafe;--blue-50:#eff6ff;
-  --cyan:#a5f3fc;
-  --text-primary:#0a1628;--text-secondary:#475569;--text-muted:#94a3b8;--border:#e2e8f0;
-  --radius-sm:8px;--radius-md:12px;--radius-lg:18px;--radius-xl:28px;
+  --blue-deep:#1D3A67;--blue-night:#274777;--blue-900:#3E5F9B;--blue-800:#6482BC;
+  --blue-600:#3B7DE0;--blue-500:#5A93E6;--blue-400:#98ADD4;
+  --blue-300:#D3DCEC;--blue-200:#EAF0F9;--blue-100:#F2F2F2;--blue-50:#F7F7F8;
+  --cyan:#1D9E75;
+  --text-primary:#1a1a1a;--text-secondary:#5a5a5a;--text-muted:#9a9a9a;--border:#E6E6E6;
+  --radius-sm:8px;--radius-md:14px;--radius-lg:18px;--radius-xl:28px;
 }
 html{scroll-behavior:auto;scroll-padding-top:110px}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
-body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--text-primary);background:#fff;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--text-primary);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden}
 
 /* NAV */
-nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 max(2.5rem,env(safe-area-inset-left)) 0 max(2.5rem,env(safe-area-inset-right));height:64px;background:rgba(7,15,31,0.82);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
+nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 max(2.5rem,env(safe-area-inset-left)) 0 max(2.5rem,env(safe-area-inset-right));height:64px;background:rgba(29,58,103,0.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
 .nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
@@ -119,7 +123,7 @@ nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-in
 .lang-btn.active{background:var(--blue-600);color:#fff}
 .nav-cta{background:var(--blue-600);color:#fff;padding:9px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;white-space:nowrap}
 .nav-logo{flex-shrink:0}
-.nav-cta:hover{background:#1d4ed8}
+.nav-cta:hover{background:#2F6BC7}
 .nav-burger{display:none;flex-direction:column;justify-content:center;gap:5px;width:42px;height:42px;background:transparent;border:0;cursor:pointer;padding:9px;flex-shrink:0;margin-left:auto}
 .nav-burger span{display:block;height:2px;width:100%;background:#fff;border-radius:2px;transition:transform .25s,opacity .2s}
 .nav-collapse{display:flex;flex:1;align-items:center;justify-content:space-between;margin-left:32px;gap:16px}
@@ -141,29 +145,29 @@ nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-in
 .magnetic{will-change:transform;transition:transform .25s cubic-bezier(.2,.7,.3,1)}
 
 /* HERO */
-.hero{min-height:100vh;min-height:100svh;background:var(--blue-deep);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:163px 2rem 100px;position:relative;overflow:hidden;text-align:center}
+.hero{min-height:100vh;min-height:100svh;background:linear-gradient(180deg,#1D3A67 0%,#274777 30%,#3E5F9B 50%,#6482BC 68%,#98ADD4 82%,#D3DCEC 92%,rgba(247,247,248,0) 100%) top center / 100% 800px no-repeat,#F7F7F8;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:163px 2rem 100px;position:relative;overflow:hidden;text-align:center}
 #heroCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(96,165,250,0.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 50% 45%,black 30%,transparent 100%);pointer-events:none}
 .hero-inner{position:relative;z-index:2;max-width:880px;margin:0 auto}
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:var(--blue-300);font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:34px}
 .badge-dot{width:6px;height:6px;background:var(--blue-400);border-radius:50%;flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-h1{font-family:'Inter',sans-serif;font-size:clamp(38px,6.5vw,76px);font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:26px}
+h1{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(38px,6.5vw,76px);font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:26px}
 h1 .w{display:inline-block;white-space:pre}
-h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-200) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:18px;color:rgba(255,255,255,0.58);max-width:580px;margin:0 auto 46px;line-height:1.7}
 .hero-form{display:flex;gap:10px;max-width:470px;margin:0 auto 14px;justify-content:center}
 .hero-form input[type="email"]{flex:1;height:54px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:#fff;outline:none;transition:border-color .15s,background .15s}
 .hero-form input::placeholder{color:rgba(255,255,255,0.32)}
 .hero-form input:focus{border-color:var(--blue-400);background:rgba(255,255,255,0.09)}
-.btn-primary{height:54px;padding:0 30px;background:var(--blue-500);color:#fff;border:none;border-radius:100px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;white-space:nowrap;box-shadow:0 4px 28px rgba(59,130,246,0.45);transition:background .2s,box-shadow .2s}
-.btn-primary:hover{background:var(--blue-600);box-shadow:0 10px 36px rgba(59,130,246,0.55)}
+.btn-primary{height:54px;padding:0 30px;background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;white-space:nowrap;box-shadow:0 4px 28px rgba(59,125,224,0.40);transition:background .2s,box-shadow .2s}
+.btn-primary:hover{background:#2F6BC7;box-shadow:0 10px 36px rgba(59,125,224,0.50)}
 .form-note{font-size:13px;color:rgba(255,255,255,0.32)}
 .cred-strip{background:#fff;padding:36px 2rem 34px;text-align:center}
 .cred-strip p{display:inline-block;max-width:720px;text-align:center;font-size:13.5px;line-height:1.6;color:var(--text-secondary);background:var(--blue-50);border:1px solid var(--blue-100);border-radius:100px;padding:18px 24px}
 .cred-strip a{color:var(--blue-600);font-weight:600;text-decoration:none;white-space:nowrap}
 .cred-strip a:hover{text-decoration:underline}
-.feat-divider{max-width:1100px;width:calc(100% - 3rem);margin:36px auto 0;border:none;border-top:1px solid rgba(96,165,250,0.22)}
+.feat-divider{max-width:1100px;width:calc(100% - 3rem);margin:36px auto 0;border:none;border-top:1px solid var(--border)}
 .name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
 .name-input::placeholder{color:rgba(255,255,255,0.28)}
 .name-input:focus{border-color:var(--blue-400);background:rgba(255,255,255,0.08)}
@@ -182,43 +186,43 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .success-msg{display:none;align-items:center;justify-content:center;gap:8px;background:rgba(59,130,246,0.14);border:1px solid rgba(96,165,250,0.3);color:var(--blue-300);font-size:14px;font-weight:500;padding:15px 28px;border-radius:100px;max-width:470px;margin:0 auto}
 
 /* SCHEDULE CARD */
-.schedule-card{position:relative;z-index:2;background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-xl);padding:26px;max-width:760px;margin:64px auto 0;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);will-change:transform}
+.schedule-card{position:relative;z-index:2;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:26px;max-width:760px;margin:64px auto 0;box-shadow:0 8px 24px rgba(29,58,103,0.08);will-change:transform}
 .sc-header{display:flex;align-items:center;justify-content:space-between;margin-bottom:20px;flex-wrap:wrap;gap:8px}
-.sc-title{font-size:13px;font-weight:600;color:rgba(255,255,255,0.62)}
+.sc-title{font-size:13px;font-weight:600;color:var(--text-secondary)}
 .sc-meta{display:flex;gap:8px}
-.sc-pill{font-size:11px;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:100px}
-.sc-pill.ai{background:var(--blue-500);color:#fff}
-.sc-pill.time{background:rgba(255,255,255,0.07);color:rgba(255,255,255,0.42)}
+.sc-pill{font-size:11px;font-weight:600;letter-spacing:.05em;padding:4px 11px;border-radius:999px}
+.sc-pill.ai{background:var(--blue-600);color:#fff}
+.sc-pill.time{background:var(--blue-100);color:var(--text-muted)}
 .sg{display:grid;grid-template-columns:90px repeat(7,1fr);gap:5px}
-.sg-h{font-size:10px;font-weight:600;color:rgba(255,255,255,0.32);text-align:center;padding:4px 0}
-.sg-name{font-size:11px;color:rgba(255,255,255,0.52);font-weight:500;display:flex;align-items:center}
+.sg-h{font-size:10px;font-weight:600;color:var(--text-muted);text-align:center;padding:4px 0}
+.sg-name{font-size:11px;color:var(--text-secondary);font-weight:500;display:flex;align-items:center}
 .sg-c{border-radius:5px;height:28px;transition:background .5s,box-shadow .5s,border-color .5s}
-.sched-notif{position:absolute;top:64px;right:20px;width:300px;background:#0d1f3c;border:1px solid rgba(96,165,250,0.35);border-radius:14px;padding:16px 18px;text-align:left;box-shadow:0 18px 50px rgba(0,0,0,0.5);opacity:0;transform:translateY(-10px) scale(.97);transition:opacity .4s,transform .4s;pointer-events:none;z-index:5}
+.sched-notif{position:absolute;top:64px;right:20px;width:300px;background:#fff;border:1px solid var(--border);border-radius:14px;padding:16px 18px;text-align:left;box-shadow:0 18px 50px rgba(29,58,103,0.18);opacity:0;transform:translateY(-10px) scale(.97);transition:opacity .4s,transform .4s;pointer-events:none;z-index:5}
 .sched-notif.show{opacity:1;transform:translateY(0) scale(1)}
 .sn-head{display:flex;align-items:center;gap:7px;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#fca5a5;margin-bottom:8px}
 .sn-dot{width:7px;height:7px;border-radius:50%;background:#ef4444;animation:pulse 1.4s infinite;flex-shrink:0}
-.sn-body{font-size:12.5px;line-height:1.55;color:rgba(255,255,255,0.75);margin-bottom:12px}
-.sn-body strong{color:#fff}
+.sn-body{font-size:12.5px;line-height:1.55;color:var(--text-secondary);margin-bottom:12px}
+.sn-body strong{color:var(--text-primary)}
 .sn-actions{display:flex;justify-content:flex-end}
-.sn-confirm{background:var(--blue-500);color:#fff;border:none;border-radius:100px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif;padding:7px 16px;cursor:default;transition:transform .15s,background .15s}
-.sn-confirm.pressed{transform:scale(.94);background:var(--blue-600)}
-.sched-toast{position:absolute;bottom:18px;left:50%;transform:translate(-50%,12px);display:flex;align-items:center;gap:8px;background:rgba(74,222,128,0.12);border:1px solid rgba(74,222,128,0.35);color:#4ade80;font-size:12px;font-weight:600;padding:9px 18px;border-radius:100px;opacity:0;transition:opacity .4s,transform .4s;pointer-events:none;white-space:nowrap;z-index:5}
+.sn-confirm{background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif;padding:7px 16px;cursor:default;transition:transform .15s,background .15s}
+.sn-confirm.pressed{transform:scale(.94);background:var(--blue-500)}
+.sched-toast{position:absolute;bottom:18px;left:50%;transform:translate(-50%,12px);display:flex;align-items:center;gap:8px;background:#E7F6F0;border:1px solid #B7E3D4;color:var(--cyan);font-size:12px;font-weight:600;padding:9px 18px;border-radius:999px;opacity:0;transition:opacity .4s,transform .4s;pointer-events:none;white-space:nowrap;z-index:5}
 .sched-toast.show{opacity:1;transform:translate(-50%,0)}
-.sg-c.off{background:rgba(255,255,255,0.035);border:1px solid rgba(255,255,255,0.05)}
-.sg-c.on{background:rgba(59,130,246,0.24);border:1px solid rgba(96,165,250,0.18)}
-.sg-c.peak{background:var(--blue-500);box-shadow:0 0 12px rgba(59,130,246,0.45)}
+.sg-c.off{background:var(--blue-100);border:1px solid var(--border)}
+.sg-c.on{background:#DCE6F4;border:1px solid var(--blue-300)}
+.sg-c.peak{background:var(--blue-600);box-shadow:0 0 12px rgba(59,125,224,0.35)}
 .sc-footer{margin-top:16px;display:flex;gap:16px;align-items:center;flex-wrap:wrap}
-.sc-legend{display:flex;align-items:center;gap:5px;font-size:11px;color:rgba(255,255,255,0.32)}
+.sc-legend{display:flex;align-items:center;gap:5px;font-size:11px;color:var(--text-muted)}
 .sc-legend-dot{width:10px;height:10px;border-radius:3px}
-.overtime-tag{margin-left:auto;font-size:11px;font-weight:600;color:#4ade80;background:rgba(74,222,128,0.09);border:1px solid rgba(74,222,128,0.18);padding:4px 12px;border-radius:100px}
+.overtime-tag{margin-left:auto;font-size:11px;font-weight:600;color:var(--cyan);background:#E7F6F0;border:1px solid #B7E3D4;padding:4px 12px;border-radius:999px}
 
 /* MARQUEE */
-.marquee-wrap{background:var(--blue-deep);border-top:1px solid rgba(255,255,255,0.05);padding:20px 0;overflow:hidden}
+.marquee-wrap{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;overflow:hidden}
 .marquee{display:flex;gap:64px;width:max-content;animation:scroll 28s linear infinite}
 .marquee-wrap:hover .marquee{animation-play-state:paused}
 @keyframes scroll{to{transform:translateX(-50%)}}
-.m-item{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:rgba(255,255,255,0.55);white-space:nowrap}
-.m-item svg{width:15px;height:15px;stroke:var(--blue-400);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
+.m-item{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:var(--text-secondary);white-space:nowrap}
+.m-item svg{width:15px;height:15px;stroke:var(--blue-600);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 
 /* STATS */
 .stats-section{background:#fff;border-bottom:1px solid var(--border);padding:44px 2rem;display:flex;justify-content:center}
@@ -232,27 +236,27 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 /* GENERIC SECTIONS */
 .section{max-width:980px;margin:0 auto;padding:104px 2rem}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-500);margin-bottom:14px}
-.section-h2{font-family:'Inter',sans-serif;font-size:clamp(25px,4.2vw,42px);font-weight:800;letter-spacing:-1.2px;line-height:1.08;margin-bottom:56px;color:var(--blue-deep);max-width:560px;overflow-wrap:break-word;hyphens:auto}
+.section-h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(25px,4.2vw,42px);font-weight:800;letter-spacing:-1.2px;line-height:1.08;margin-bottom:56px;color:var(--blue-deep);max-width:560px;overflow-wrap:break-word;hyphens:auto}
 
 /* HORIZONTAL FEATURES */
-.hfeat{background:var(--blue-deep);position:relative;overflow:hidden}
+.hfeat{background:var(--blue-50);position:relative;overflow:hidden;border-top:1px solid var(--border)}
 .hfeat-head{max-width:980px;margin:0 auto;padding:104px 2rem 0}
-.hfeat-head .eyebrow{color:var(--blue-400)}
-.hfeat-head .section-h2{color:#fff;margin-bottom:0}
+.hfeat-head .eyebrow{color:var(--blue-600)}
+.hfeat-head .section-h2{color:var(--blue-deep);margin-bottom:0}
 .hfeat-track-wrap{overflow:hidden;padding:64px 0 104px}
 .hfeat-track{display:flex;gap:24px;padding:0 max(2rem,calc((100vw - 980px)/2));width:max-content;will-change:transform}
-.hcard{width:min(420px,82vw);flex-shrink:0;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);border-radius:var(--radius-xl);padding:42px 38px;position:relative;overflow:hidden}
-.hcard::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(59,130,246,0.25),transparent 70%);filter:blur(30px)}
-.hcard-num{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-400);margin-bottom:26px}
-.h-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;margin-bottom:24px;box-shadow:0 8px 24px rgba(37,99,235,0.4)}
+.hcard{width:min(420px,82vw);flex-shrink:0;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:42px 38px;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(29,58,103,0.08)}
+.hcard::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(59,125,224,0.08),transparent 70%);filter:blur(30px)}
+.hcard-num{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-600);margin-bottom:26px}
+.h-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;margin-bottom:24px;box-shadow:0 8px 24px rgba(59,125,224,0.30)}
 .h-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.hcard h3{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:#fff;margin-bottom:12px;letter-spacing:-.4px}
-.hcard p{font-size:14.5px;color:rgba(255,255,255,0.55);line-height:1.75}
-.hcard .f-stat{display:inline-block;font-size:13px;font-weight:600;color:var(--blue-300);background:rgba(59,130,246,0.14);padding:5px 14px;border-radius:100px;margin-top:20px;border:1px solid rgba(96,165,250,0.25)}
-.hfeat-hint{text-align:center;font-size:12px;color:rgba(255,255,255,0.55);padding-bottom:32px;letter-spacing:.06em;text-transform:uppercase}
+.hcard h3{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--blue-deep);margin-bottom:12px;letter-spacing:-.4px}
+.hcard p{font-size:14.5px;color:var(--text-secondary);line-height:1.75}
+.hcard .f-stat{display:inline-block;font-size:13px;font-weight:600;color:var(--blue-600);background:var(--blue-200);padding:5px 14px;border-radius:999px;margin-top:20px;border:1px solid var(--blue-300)}
+.hfeat-hint{text-align:center;font-size:12px;color:var(--text-muted);padding-bottom:32px;letter-spacing:.06em;text-transform:uppercase}
 
 /* EU SECTION (light) */
-.eu-section{background:linear-gradient(180deg,#fff 0%,#f4f8ff 45%,#eef5ff 100%);position:relative;overflow:hidden;padding:104px 2rem;border-top:1px solid var(--border)}
+.eu-section{background:linear-gradient(180deg,#fff 0%,#F7F7F8 45%,#EAF0F9 100%);position:relative;overflow:hidden;padding:104px 2rem;border-top:1px solid var(--border)}
 .eu-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(37,99,235,0.06) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 75% 90% at 50% 30%,black,transparent)}
 .eu-inner{max-width:980px;margin:0 auto;position:relative;z-index:2}
 .eu-stars{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--blue-200);color:var(--blue-600);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:20px;box-shadow:0 4px 18px rgba(37,99,235,0.1)}
@@ -265,10 +269,10 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .eu-icon{width:40px;height:40px;border-radius:var(--radius-md);background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(37,99,235,0.3)}
 .eu-icon svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .eu-card p{font-size:14px;color:var(--text-secondary);line-height:1.7}
-.eu-banner{display:flex;align-items:center;gap:18px;background:linear-gradient(120deg,var(--blue-deep),var(--blue-900));border-radius:var(--radius-lg);padding:24px 30px;box-shadow:0 16px 44px rgba(10,22,40,0.25)}
+.eu-banner{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,#EAF0F9 0%,#DCE6F4 100%);border:1px solid var(--blue-200);border-radius:var(--radius-lg);padding:24px 30px;box-shadow:0 8px 24px rgba(29,58,103,0.08)}
 .eu-banner-flag{font-size:32px;flex-shrink:0}
-.eu-banner p{font-size:14px;color:rgba(255,255,255,0.72);line-height:1.65}
-.eu-banner strong{color:#fff;font-weight:600}
+.eu-banner p{font-size:14px;color:var(--text-secondary);line-height:1.65}
+.eu-banner strong{color:var(--blue-deep);font-weight:600}
 
 /* LAW */
 .law-section{background:#fff;padding:104px 2rem}
@@ -291,7 +295,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .step{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:38px 32px;transition:transform .25s,box-shadow .25s}
 .step:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(59,130,246,0.1)}
-.step-num{font-family:'Inter',sans-serif;font-size:52px;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--blue-500),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:20px}
+.step-num{font-family:'Inter',sans-serif;font-size:52px;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:20px}
 .step h3{font-family:'Inter',sans-serif;font-size:18px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;letter-spacing:-.3px}
 .step p{font-size:14px;color:var(--text-secondary);line-height:1.7}
 
@@ -309,23 +313,31 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--cyan) 8
 .li-dot::after{content:'';width:5px;height:5px;background:var(--blue-500);border-radius:50%}
 
 /* CTA */
-.bottom-cta-wrap{background:var(--blue-deep);position:relative;overflow:hidden}
-#ctaCanvas{position:absolute;inset:0;width:100%;height:100%}
+.bottom-cta-wrap{background:linear-gradient(180deg,#F7F7F8 0%,#EAF0F9 100%);position:relative;overflow:hidden;border-top:1px solid var(--border)}
+#ctaCanvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
 .bottom-cta{position:relative;z-index:2;text-align:center;padding:110px 2rem;max-width:700px;margin:0 auto}
-.bottom-cta h2{font-family:'Inter',sans-serif;font-size:clamp(32px,5.2vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.02;color:#fff;margin-bottom:18px}
-.bottom-cta h2 span{background:linear-gradient(120deg,var(--blue-400),var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.bottom-cta>p{font-size:17px;color:rgba(255,255,255,0.5);margin-bottom:42px}
+.bottom-cta h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(32px,5.2vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.02;color:var(--blue-deep);margin-bottom:18px}
+.bottom-cta h2 span{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.bottom-cta>p{font-size:17px;color:var(--text-secondary);margin-bottom:42px}
 .bottom-form{display:flex;gap:10px;max-width:470px;margin:0 auto 14px;justify-content:center}
-.bottom-form input[type="email"]{flex:1;height:54px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:#fff;outline:none;transition:border-color .15s}
-.bottom-form input::placeholder{color:rgba(255,255,255,0.3)}
-.bottom-form input:focus{border-color:var(--blue-400)}
-.bottom-note{font-size:13px;color:rgba(255,255,255,0.3);margin-top:12px}
+.bottom-form input[type="email"]{flex:1;height:54px;background:#fff;border:1px solid var(--border);border-radius:999px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:var(--text-primary);outline:none;transition:border-color .15s}
+.bottom-form input::placeholder{color:var(--text-muted)}
+.bottom-form input:focus{border-color:var(--blue-500)}
+.bottom-note{font-size:13px;color:var(--text-muted);margin-top:12px}
+/* bottom CTA is now light — re-skin the shared dark form controls for a light surface */
+.bottom-cta .name-input{background:#fff;border:1px solid var(--border);color:var(--text-primary)}
+.bottom-cta .name-input::placeholder{color:var(--text-muted)}
+.bottom-cta .name-input:focus{border-color:var(--blue-500);background:#fff}
+.bottom-cta .consent-row input{border-color:var(--border);background:#fff}
+.bottom-cta .consent-row label{color:var(--text-secondary)}
+.bottom-cta .consent-row a{color:var(--blue-600)}
+.bottom-cta .success-msg{background:#E7F6F0;border:1px solid #B7E3D4;color:var(--cyan)}
 
 footer{background:var(--blue-deep);border-top:1px solid rgba(255,255,255,0.05);padding:26px 2.5rem calc(26px + env(safe-area-inset-bottom));display:flex;justify-content:space-between;align-items:center}
 footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 
 /* MODAL */
-.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(7,15,31,0.6);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
+.modal-overlay{position:fixed;inset:0;z-index:500;background:rgba(29,58,103,0.5);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px);display:flex;align-items:center;justify-content:center;padding:1.5rem;opacity:0;visibility:hidden;transition:opacity .25s,visibility .25s}
 .modal-overlay.open{opacity:1;visibility:visible}
 .modal{position:relative;background:#fff;border-radius:var(--radius-xl);max-width:440px;width:100%;padding:40px 36px 32px;text-align:center;box-shadow:0 30px 80px rgba(7,15,31,0.4);transform:translateY(20px) scale(.97);transition:transform .3s cubic-bezier(.2,.7,.3,1);overflow:hidden}
 .modal-overlay.open .modal{transform:translateY(0) scale(1)}
@@ -335,14 +347,14 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 .modal-close svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round}
 .modal-icon{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 24px rgba(37,99,235,0.35);position:relative;z-index:1}
 .modal-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.modal h3{font-family:'Inter',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.6px;color:var(--blue-deep);margin-bottom:8px;position:relative;z-index:1}
+.modal h3{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.6px;color:var(--blue-deep);margin-bottom:8px;position:relative;z-index:1}
 .modal>div>p{font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:24px;position:relative;z-index:1}
 .modal-form{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;position:relative;z-index:1}
 .modal-form input{height:50px;border:1.5px solid var(--border);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:var(--text-primary);outline:none;transition:border-color .15s;text-align:center}
 .modal-form input::placeholder{color:var(--text-muted)}
 .modal-form input:focus{border-color:var(--blue-400)}
-.modal-form button{height:50px;background:var(--blue-500);color:#fff;border:none;border-radius:100px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .2s;box-shadow:0 4px 20px rgba(59,130,246,0.4)}
-.modal-form button:hover{background:var(--blue-600)}
+.modal-form button{height:50px;background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .2s;box-shadow:0 4px 20px rgba(59,125,224,0.35)}
+.modal-form button:hover{background:#2F6BC7}
 .modal-perks{display:flex;flex-direction:column;gap:10px;text-align:left;position:relative;z-index:1}
 .modal-perk{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-secondary)}
 .modal-perk-check{width:20px;height:20px;border-radius:50%;background:var(--blue-50);display:flex;align-items:center;justify-content:center;flex-shrink:0}
@@ -364,7 +376,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .lang-btn{padding:4px 8px;font-size:11px}
   .nav-cta{padding:7px 12px;font-size:12px}
   .nav-right{gap:6px}
-  .hero{padding:143px 1.25rem 70px}
+  .hero{padding:143px 1.25rem 70px;background-size:100% 1080px,auto}
   h1{letter-spacing:-.8px;font-size:clamp(34px,9.5vw,48px);line-height:1.1}
   .hero-form,.bottom-form{flex-direction:column;align-items:center}
   .hero-form input[type="email"],.bottom-form input[type="email"]{width:100%;text-align:center}
@@ -397,7 +409,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 </head>
 <body>
 
-<div class="promo-bar"><a href="#hero" data-i="promo">Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →</a></div>
+<div class="promo-bar"><a href="#hero" data-i="promo">Accès anticipé — lancement septembre 2026 · Rejoignez la liste d'attente →</a></div>
 <nav>
   <a href="#" class="nav-logo" onclick="(window.__lenis?window.__lenis.scrollTo(0):window.scrollTo({top:0,behavior:'smooth'}));return false;"><svg class="logo-mark" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M8 21 L14 9" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/><path d="M13 9.6 L12.2 4.4 C17.2 3.7 20 6.8 19.2 11.3 C16.8 11.6 14.7 11 13 9.6 Z" fill="var(--blue-500)"/><path d="M15.4 7.8 V6 M15.4 7.8 L16.9 8.4" stroke="#fff" stroke-width="1.1" stroke-linecap="round"/></svg>TIMEAXE <span>AI</span></a>
   <button class="nav-burger" aria-label="Menu" aria-expanded="false" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
@@ -466,9 +478,9 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
         <div class="sg-c on"></div><div class="sg-c peak"></div><div class="sg-c on"></div><div class="sg-c peak"></div><div class="sg-c on"></div><div class="sg-c off"></div><div class="sg-c on"></div>
       </div>
       <div class="sc-footer">
-        <div class="sc-legend"><div class="sc-legend-dot" style="background:rgba(59,130,246,0.25)"></div><span data-i="leg_on">Planifié</span></div>
-        <div class="sc-legend"><div class="sc-legend-dot" style="background:#3b82f6"></div><span data-i="leg_peak">Pic d'activité</span></div>
-        <div class="sc-legend"><div class="sc-legend-dot" style="background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.1)"></div><span data-i="leg_off">Repos</span></div>
+        <div class="sc-legend"><div class="sc-legend-dot" style="background:#DCE6F4"></div><span data-i="leg_on">Planifié</span></div>
+        <div class="sc-legend"><div class="sc-legend-dot" style="background:var(--blue-600)"></div><span data-i="leg_peak">Pic d'activité</span></div>
+        <div class="sc-legend"><div class="sc-legend-dot" style="background:var(--blue-100);border:1px solid var(--border)"></div><span data-i="leg_off">Repos</span></div>
         <span class="overtime-tag" data-i="no_overtime">✓ Aucun conflit d'heures supp.</span>
       </div>
 
@@ -535,8 +547,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
         <div class="hcard-num">02</div>
         <div class="h-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
         <h3 data-i="f2_h">Réduit la masse salariale</h3>
-        <p data-i="f2_p">Timeaxe apprend vos périodes les plus chargées et adapte les effectifs avec précision. Plus de sureffectif en semaine creuse, ni de manque le week-end.</p>
-        <span class="f-stat" data-i="f2_stat">Jusqu'à 23% d'heures supp. en moins</span>
+        <p data-i="f2_p"><strong>Vous ne payez que le temps réellement travaillé.</strong> Tolérance de pointage à l'arrivée et au départ : un café pris 10 minutes avant le shift ne devient pas des heures payées. Timeaxe apprend vos périodes les plus chargées et adapte les effectifs avec précision. Plus de sureffectif en semaine creuse, ni de manque le week-end. Suivez le coût estimé de chaque planning par rapport à votre budget hebdomadaire.</p>
+        <span class="f-stat" data-i="f2_stat">Ajuste les effectifs à votre activité réelle</span>
       </div>
       <div class="hcard">
         <div class="hcard-num">03</div>
@@ -628,7 +640,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
       <div class="step" data-anim="up">
         <div class="step-num">01</div>
         <h3 data-i="step1_h">Configurez votre établissement</h3>
-        <p data-i="step1_p">Importez votre liste d'employés, définissez les postes, les disponibilités et les horaires d'ouverture. Cinq minutes — une seule fois.</p>
+        <p data-i="step1_p">Importez votre liste d'employés, définissez les postes, les disponibilités et les horaires d'ouverture. Environ deux minutes — une seule fois. Vos employés rejoignent l'équipe par simple invitation e-mail, en deux minutes.</p>
       </div>
       <div class="step" data-anim="up">
         <div class="step-num">02</div>
@@ -638,7 +650,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
       <div class="step" data-anim="up">
         <div class="step-num">03</div>
         <h3 data-i="step3_h">Vérifiez et publiez</h3>
-        <p data-i="step3_p">Ajustez si besoin, puis publiez. Les employés reçoivent leur planning automatiquement. Toutes les semaines, sans effort.</p>
+        <p data-i="step3_p">Ajustez si besoin, puis publiez. Rien n'est publié sans votre validation. Les employés reçoivent ensuite leur planning automatiquement, chaque semaine.</p>
       </div>
     </div>
   </div>
@@ -674,9 +686,9 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div style="background:var(--blue-50);border-top:1px solid var(--blue-100);border-bottom:1px solid var(--blue-100);padding:72px 2rem;text-align:center">
   <div style="max-width:560px;margin:0 auto">
     <p style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:14px" data-i="faq_eyebrow">Questions fréquentes</p>
-    <h2 style="font-family:'Inter',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--blue-deep);margin-bottom:16px" data-i="faq_title">Vous avez des questions sur Timeaxe AI ?</h2>
+    <h2 style="font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--blue-deep);margin-bottom:16px" data-i="faq_title">Vous avez des questions sur Timeaxe AI ?</h2>
     <p style="font-size:16px;color:var(--text-secondary);margin-bottom:32px" data-i="faq_sub">Lancement, tarifs, fonctionnalités, liste d'attente — on a les réponses.</p>
-    <a href="faq.html" style="display:inline-block;background:var(--blue-deep);color:#fff;padding:14px 32px;border-radius:100px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'" data-i="faq_btn">Voir la FAQ</a>
+    <a href="faq.html" style="display:inline-block;background:var(--blue-600);color:#fff;padding:14px 32px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'" data-i="faq_btn">Voir la FAQ</a>
   </div>
 </div>
 
@@ -754,8 +766,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 /* ============ TRANSLATIONS ============ */
 const translations = {
   fr: {
-    nav_features:"Fonctionnalités",nav_eu:"Souveraineté",nav_faq:"FAQ",nav_how:"Comment ça marche",nav_cta:"Rejoindre la liste",promo:"Accès anticipé — lancement juillet 2026 · Rejoignez la liste d'attente →",nav_about:"À propos",nav_resources:"Ressources",
-    badge:"Ouverture de l'accès anticipé en juillet 2026",
+    nav_features:"Fonctionnalités",nav_eu:"Souveraineté",nav_faq:"FAQ",nav_how:"Comment ça marche",nav_cta:"Rejoindre la liste",promo:"Accès anticipé — lancement septembre 2026 · Rejoignez la liste d'attente →",nav_about:"À propos",nav_resources:"Ressources",
+    badge:"Ouverture de l'accès anticipé en septembre 2026",
     h1a:"La planification qui",h1b:"pense à votre place",
     hero_sub:"Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — moins d'heures supplémentaires, moins d'épuisement, et des heures rendues à vos managers chaque semaine.",
     cta_hero:"Accès anticipé gratuit",success:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt.",
@@ -777,7 +789,7 @@ const translations = {
     s1:"de planning manuel, chaque semaine",s2:"conforme à la convention HCR & aux 35h",s3:"pour générer un planning complet",s4:"tableur nécessaire",
     feat_eyebrow:"Ce que ça fait",feat_h2:"Trois problèmes. Résolus automatiquement.",
     f1_h:"Libère les managers",f1_p:"Fini les tableurs, les fils WhatsApp et la panique du lundi. Décrivez votre équipe et vos horaires — Timeaxe construit le planning instantanément.",f1_stat:"Planning en secondes, pas en heures",
-    f2_h:"Réduit la masse salariale",f2_p:"Timeaxe apprend vos périodes les plus chargées et adapte les effectifs avec précision. Plus de sureffectif en semaine creuse, ni de manque le week-end.",f2_stat:"Ajuste les effectifs à votre activité réelle",
+    f2_h:"Réduit la masse salariale",f2_p:"<strong>Vous ne payez que le temps réellement travaillé.</strong> Tolérance de pointage à l'arrivée et au départ : un café pris 10 minutes avant le shift ne devient pas des heures payées. Timeaxe apprend vos périodes les plus chargées et adapte les effectifs avec précision. Plus de sureffectif en semaine creuse, ni de manque le week-end. Suivez le coût estimé de chaque planning par rapport à votre budget hebdomadaire.",f2_stat:"Ajuste les effectifs à votre activité réelle",
     f3_h:"Fidélise votre équipe",f3_p:"L'IA détecte les signaux d'épuisement avant qu'ils deviennent une démission. Elle surveille les heures, signale les surcharges et équilibre les roulements.",f3_stat:"Détectez le burn-out avant qu'il soit trop tard",
     f4_h:"Garantit la conformité",f4_p:"35h, repos obligatoires, Convention HCR : chaque planning est vérifié contre le droit du travail français avant publication.",f4_stat:"Conformité vérifiée à chaque planning",
     hint:"Faites défiler ou balayez →",
@@ -795,9 +807,9 @@ const translations = {
     law_note:"<strong>Important :</strong> Timeaxe AI facilite la conformité mais ne remplace pas un conseil juridique. Les règles peuvent varier selon vos accords d'entreprise ou de branche. En cas de doute, consultez votre juriste ou l'inspection du travail.",
     law_resources:"Ressources gratuites : <a href='/calculateur-heures-supplementaires-hcr' style='color:var(--blue-600);font-weight:600'>Calculateur d'heures supplémentaires HCR</a> · <a href='/travail-de-nuit-restauration-hcr' style='color:var(--blue-600);font-weight:600'>Travail de nuit en restauration (HCR)</a>",
     how_eyebrow:"Comment ça marche",how_h2:"Dites-nous vos équipes et vos horaires.<br>On s'occupe du reste.",
-    step1_h:"Configurez votre établissement",step1_p:"Importez votre liste d'employés, définissez les postes, les disponibilités et les horaires d'ouverture. Cinq minutes — une seule fois.",
+    step1_h:"Configurez votre établissement",step1_p:"Importez votre liste d'employés, définissez les postes, les disponibilités et les horaires d'ouverture. Environ deux minutes — une seule fois. Vos employés rejoignent l'équipe par simple invitation e-mail, en deux minutes.",
     step2_h:"L'IA construit votre planning",step2_p:"Timeaxe analyse les données historiques, anticipe les pics d'affluence et génère un planning conforme au droit du travail en quelques secondes.",
-    step3_h:"Vérifiez et publiez",step3_p:"Ajustez si besoin, puis publiez. Les employés reçoivent leur planning automatiquement. Toutes les semaines, sans effort.",
+    step3_h:"Vérifiez et publiez",step3_p:"Ajustez si besoin, puis publiez. Rien n'est publié sans votre validation. Les employés reçoivent ensuite leur planning automatiquement, chaque semaine.",
     who_eyebrow:"Pour qui",who_h2:"Conçu pour l'hôtellerie-restauration.",
     q1_ey:"Restaurants",
     q1_l1:"Salle et cuisine planifiées au même endroit",q1_l2:"Gère les coupures et les couverts variables automatiquement",q1_l3:"Signale quand quelqu'un enchaîne trop de fermetures de suite",
@@ -813,8 +825,8 @@ const translations = {
     modal_ok_title:"Vous y êtes !",modal_ok_sub:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt."
   },
   en: {
-    nav_features:"Features",nav_eu:"EU sovereignty",nav_faq:"FAQ",nav_how:"How it works",nav_cta:"Join waitlist",promo:"Early access — launching July 2026 · Join the waitlist →",nav_about:"About",nav_resources:"Resources",
-    badge:"Early access opens July 2026",
+    nav_features:"Features",nav_eu:"EU sovereignty",nav_faq:"FAQ",nav_how:"How it works",nav_cta:"Join waitlist",promo:"Early access — launching September 2026 · Join the waitlist →",nav_about:"About",nav_resources:"Resources",
+    badge:"Early access opens September 2026",
     h1a:"Scheduling that",h1b:"thinks for you",
     hero_sub:"Timeaxe AI builds perfect staff schedules for restaurants and hotels in seconds — less overtime, less burnout, and hours given back to your managers every week.",
     cta_hero:"Get early access",success:"You're on the list — we'll be in touch soon.",
@@ -836,7 +848,7 @@ const translations = {
     s1:"of manual scheduling, every week",s2:"compliant with the HCR agreement & 35h",s3:"to generate a full schedule",s4:"spreadsheets needed",
     feat_eyebrow:"What it does",feat_h2:"Three problems. Solved automatically.",
     f1_h:"Saves manager time",f1_p:"No more spreadsheets, WhatsApp threads, or last-minute panic. Describe your team and hours — Timeaxe builds the schedule instantly.",f1_stat:"Schedule in seconds, not hours",
-    f2_h:"Reduces labour costs",f2_p:"Timeaxe learns your busiest periods and staffs them precisely. No more overstaffing quiet weekdays or scrambling on Saturday nights.",f2_stat:"Matches staffing to real demand",
+    f2_h:"Reduces labour costs",f2_p:"<strong>You only pay for time that's actually worked.</strong> Smart clock-in grace and clock-out buffers — an early coffee doesn't become paid hours. Timeaxe learns your busiest periods and staffs them precisely. No more overstaffing quiet weekdays or scrambling on Saturday nights. Track each schedule's estimated cost against your weekly budget.",f2_stat:"Matches staffing to real demand",
     f3_h:"Keeps staff happy",f3_p:"The AI detects burnout risk before it becomes a resignation. It tracks hours, flags overworked staff, and balances workloads fairly.",f3_stat:"Detect burnout before people quit",
     f4_h:"Guarantees compliance",f4_p:"35h week, mandatory rest, HCR agreement: every schedule is checked against French labour law before publishing.",f4_stat:"Compliance checked on every schedule",
     hint:"Scroll or swipe →",
@@ -854,9 +866,9 @@ const translations = {
     law_note:"<strong>Important:</strong> Timeaxe AI facilitates compliance but does not replace legal counsel. Rules may vary depending on your company or branch agreements. If in doubt, consult your legal advisor or the labour inspectorate.",
     law_resources:"Free resources: <a href='/calculateur-heures-supplementaires-hcr' style='color:var(--blue-600);font-weight:600'>HCR overtime calculator</a> · <a href='/travail-de-nuit-restauration-hcr' style='color:var(--blue-600);font-weight:600'>Night work in restaurants (HCR)</a>",
     how_eyebrow:"How it works",how_h2:"Tell us your staff and hours.<br>We handle the rest.",
-    step1_h:"Set up your venue",step1_p:"Import your staff list, set roles, availability, and opening hours. Takes about five minutes — just once.",
+    step1_h:"Set up your venue",step1_p:"Import your staff list, set roles, availability, and opening hours. About two minutes — just once. Employees join by email invite in two minutes.",
     step2_h:"AI builds your schedule",step2_p:"Timeaxe analyses historical data, predicts peak periods, and generates a labour-law-compliant schedule in seconds.",
-    step3_h:"Review and publish",step3_p:"Make any tweaks you want, then publish. Staff get notified automatically. Every week, effortlessly.",
+    step3_h:"Review and publish",step3_p:"Make any tweaks you want, then publish. Nothing goes live until you approve it. Staff are notified automatically, every week.",
     who_eyebrow:"Who it's for",who_h2:"Built for hospitality, front to back.",
     q1_ey:"Restaurants",
     q1_l1:"Front-of-house and kitchen scheduling in one place",q1_l2:"Handles split shifts and variable covers automatically",q1_l3:"Flags when someone's working too many closes in a row",
@@ -946,7 +958,7 @@ function fireConfetti(){
   const ctx=c.getContext('2d');
   const dpr=Math.min(window.devicePixelRatio||1,2);
   c.width=innerWidth*dpr;c.height=innerHeight*dpr;ctx.scale(dpr,dpr);
-  const colors=['#3b82f6','#60a5fa','#a5f3fc','#2563eb','#ffffff','#ffd75e'];
+  const colors=['#3B7DE0','#5A93E6','#98ADD4','#D3DCEC','#ffffff','#ffd75e'];
   const N=innerWidth<720?80:140;
   const parts=[];
   for(let i=0;i<N;i++){
