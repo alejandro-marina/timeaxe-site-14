@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<link rel="preload" href="/assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>About — Timeaxe AI | Built by hospitality professionals</title>
-<meta name="description" content="Timeaxe AI was born from 10+ years in kitchens, dining rooms and luxury hospitality. Discover why four founders from the industry set out to reinvent staff scheduling.">
+<meta name="description" content="Timeaxe AI was born from 10+ years in kitchens, dining rooms and luxury hospitality. Discover why one industry insider set out to reinvent staff scheduling.">
 <link rel="canonical" href="https://timeaxeai.com/en/about">
 <link rel="alternate" hreflang="fr-FR" href="https://timeaxeai.com/about">
 <link rel="alternate" hreflang="en" href="https://timeaxeai.com/en/about">
@@ -40,7 +40,7 @@
 <meta property="og:locale:alternate" content="fr_FR">
 <meta property="og:url" content="https://timeaxeai.com/en/about">
 <meta property="og:title" content="About — Timeaxe AI">
-<meta property="og:description" content="Built by people from the trade — four founders from hospitality and luxury who set out to reinvent staff scheduling.">
+<meta property="og:description" content="Built by someone from the trade — a hospitality and luxury insider who set out to reinvent staff scheduling.">
 <meta property="og:image" content="https://timeaxeai.com/og-image.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -77,35 +77,34 @@
 }
 </script>
 <style>
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
-/* Display headings: Bricolage Grotesque, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'); falls back to Inter. */
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-700.woff2') format('woff2')}
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-800.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2')}
+/* Unified display + body typeface: Plus Jakarta Sans, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'). */
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 .promo-bar{background:#12294d;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
 .promo-bar a{display:block;padding:7px 12px;font-size:clamp(10px,2.7vw,12.5px);line-height:1.35;color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
 .promo-bar a:hover{color:#fff}
 :root{
+  --font-sans:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
   --blue-deep:#1D3A67;--blue-600:#3B7DE0;--blue-500:#5A93E6;--blue-400:#98ADD4;
   --blue-200:#EAF0F9;--blue-100:#F2F2F2;--blue-50:#F7F7F8;
   --text:#1a1a1a;--text2:#5a5a5a;--muted:#9a9a9a;--border:#E6E6E6;
   --radius-lg:18px;--radius-xl:28px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--font-sans);font-size:16px;line-height:1.7;color:var(--text);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden;opacity:0;transition:opacity .3s ease}
 
 /* NAV */
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;padding-top:env(safe-area-inset-top);background:rgba(29,58,103,0.85);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
+.nav-logo{font-family:var(--font-sans);font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
 .nav-right{display:flex;align-items:center;gap:12px}
 .lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px}
-.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:100px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:100px;border:none;background:transparent;cursor:pointer;font-family:var(--font-sans);transition:all .2s}
 .lang-btn.active{background:var(--blue-600);color:#fff}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s;white-space:nowrap}
@@ -137,7 +136,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-hero-orb{position:absolute;width:500px;height:500px;background:rgba(37,99,235,0.22);border-radius:50%;filter:blur(80px);top:-150px;left:50%;transform:translateX(-50%);pointer-events:none}
 .ab-hero-inner{position:relative;z-index:2}
 .ab-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:#D3DCEC;font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:24px}
-.ab-hero h1{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(34px,5.5vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:#fff;margin-bottom:18px;max-width:760px;margin-left:auto;margin-right:auto}
+.ab-hero h1{font-family:var(--font-sans);font-size:clamp(34px,5.5vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:#fff;margin-bottom:18px;max-width:760px;margin-left:auto;margin-right:auto}
 .ab-hero h1 span{background:linear-gradient(120deg,var(--blue-400),var(--blue-200));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ab-hero p{font-size:17px;color:rgba(255,255,255,0.55);max-width:540px;margin:0 auto}
 
@@ -146,16 +145,16 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-section{margin-bottom:52px}
 .ab-label{font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:18px;display:flex;align-items:center;gap:10px}
 .ab-label::after{content:'';flex:1;height:1px;background:var(--border)}
-.ab-section h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-0.5px;color:var(--text);margin-bottom:18px;line-height:1.2}
+.ab-section h2{font-family:var(--font-sans);font-size:clamp(24px,4vw,32px);font-weight:800;letter-spacing:-0.5px;color:var(--text);margin-bottom:18px;line-height:1.2}
 .ab-section p{font-size:16px;color:var(--text2);margin-bottom:18px}
 .ab-section p strong{color:var(--text);font-weight:600}
-.ab-pullquote{font-family:'Inter',sans-serif;font-size:clamp(20px,3.2vw,26px);font-weight:700;letter-spacing:-.6px;color:var(--blue-600);line-height:1.3;padding:8px 0 8px 22px;border-left:3px solid var(--blue-500);margin:28px 0}
+.ab-pullquote{font-family:var(--font-sans);font-size:clamp(20px,3.2vw,26px);font-weight:700;letter-spacing:-.6px;color:var(--blue-600);line-height:1.3;padding:8px 0 8px 22px;border-left:3px solid var(--blue-500);margin:28px 0}
 
 /* VALUES */
 .ab-values{display:grid;grid-template-columns:1fr;gap:14px;margin-top:8px}
 .ab-value{border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 24px;transition:border-color .2s,box-shadow .2s}
 .ab-value:hover{border-color:var(--blue-200);box-shadow:0 4px 24px rgba(37,99,235,0.08)}
-.ab-value h3{font-family:'Inter',sans-serif;font-size:17px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:10px}
+.ab-value h3{font-family:var(--font-sans);font-size:17px;font-weight:700;color:var(--text);margin-bottom:6px;display:flex;align-items:center;gap:10px}
 .ab-value .dot{width:9px;height:9px;border-radius:3px;flex-shrink:0}
 .ab-value p{font-size:14px;color:var(--text2);margin:0}
 
@@ -164,7 +163,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-founder{display:flex;gap:18px;align-items:flex-start}
 .ab-founder-badge{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 8px 24px rgba(59,125,224,0.30)}
 .ab-founder-badge svg rect{fill:#fff}
-.ab-founder-name{font-family:'Inter',sans-serif;font-size:19px;font-weight:800;color:var(--text);letter-spacing:-.3px}
+.ab-founder-name{font-family:var(--font-sans);font-size:19px;font-weight:800;color:var(--text);letter-spacing:-.3px}
 .ab-founder-role{font-size:13px;font-weight:600;color:var(--blue-600);margin-bottom:8px}
 .ab-founder p{font-size:14px;color:var(--text2);margin:0}
 .ab-cofounder{margin-top:20px;padding-top:20px;border-top:1px solid var(--border);font-size:14px;color:var(--text2)}
@@ -179,13 +178,13 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-recognition{display:flex;gap:16px;align-items:center;border:1px solid var(--blue-200);border-radius:var(--radius-lg);padding:20px 22px;background:linear-gradient(135deg,var(--blue-50),#fff);margin-top:8px}
 .ab-recognition .medal{width:46px;height:46px;border-radius:12px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(59,125,224,0.30)}
 .ab-recognition .medal svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:2}
-.ab-recognition .r-title{font-family:'Inter',sans-serif;font-size:16px;font-weight:800;color:var(--text);letter-spacing:-.3px;margin-bottom:2px}
+.ab-recognition .r-title{font-family:var(--font-sans);font-size:16px;font-weight:800;color:var(--text);letter-spacing:-.3px;margin-bottom:2px}
 .ab-recognition .r-sub{font-size:13px;color:var(--text2)}
 
 /* CTA */
 .ab-cta{background:linear-gradient(135deg,#EAF0F9 0%,#DCE6F4 100%);border:1px solid var(--border);box-shadow:0 8px 24px rgba(29,58,103,0.08);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;margin:8px auto 56px;max-width:720px;position:relative;overflow:hidden}
 .ab-cta::before{content:'';position:absolute;width:400px;height:400px;background:rgba(59,125,224,0.08);border-radius:50%;filter:blur(70px);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none}
-.ab-cta h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:28px;font-weight:800;letter-spacing:-.8px;color:var(--blue-deep);margin-bottom:10px;position:relative;z-index:1}
+.ab-cta h2{font-family:var(--font-sans);font-size:28px;font-weight:800;letter-spacing:-.8px;color:var(--blue-deep);margin-bottom:10px;position:relative;z-index:1}
 .ab-cta h2 span{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ab-cta p{font-size:15px;color:var(--text2);margin-bottom:28px;position:relative;z-index:1}
 .ab-cta a{display:inline-block;background:var(--blue-600);color:#fff;padding:14px 32px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;box-shadow:0 4px 24px rgba(59,125,224,0.35);transition:background .15s,transform .15s;position:relative;z-index:1}
@@ -208,6 +207,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
   footer{flex-direction:column;gap:6px;text-align:center;padding-bottom:calc(18px + env(safe-area-inset-bottom))}
 }
 </style>
+<noscript><style>body{opacity:1!important}</style></noscript>
 </head>
 <body>
 
@@ -225,8 +225,8 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
     </div>
     <div class="nav-right">
       <div class="lang-toggle">
-        <button class="lang-btn" onclick="location.href='/about'">FR</button>
-        <button class="lang-btn active" onclick="location.href='/en/about'">EN</button>
+        <button class="lang-btn" onclick="goLang('/about')">FR</button>
+        <button class="lang-btn active" onclick="goLang('/en/about')">EN</button>
       </div>
       <a href="/en#hero" class="nav-cta" data-i="nav_cta">Join waitlist</a>
     </div>
@@ -254,19 +254,18 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
   </div>
 
   <div class="ab-section">
-    <div class="ab-label" data-i="founders_label">The founding team</div>
+    <div class="ab-label" data-i="founders_label">Founder</div>
     <div class="ab-founders">
       <div class="ab-founder">
         <div class="ab-founder-badge" aria-hidden="true">
           <svg width="30" height="30" viewBox="0 0 30 30"><rect x="6" y="8" width="14" height="3.4" rx="1.7"></rect><rect x="4" y="13.3" width="11" height="3.4" rx="1.7"></rect><rect x="9" y="18.6" width="9" height="3.4" rx="1.7"></rect></svg>
         </div>
         <div>
-          <div class="ab-founder-name">Aiden Mc Carron</div>
-          <div class="ab-founder-role" data-i="founder_role">CEO &amp; Developer</div>
+          <div class="ab-founder-name">Aiden Mc Carron Fité</div>
+          <div class="ab-founder-role" data-i="founder_role">President &amp; CTO</div>
           <p data-i="founder_bio">From the floor as much as from the code. Aiden led teams across hospitality and luxury before taking the lead on building Timeaxe AI — so the product is shaped by someone who lived the problem, not just coded a solution.</p>
         </div>
       </div>
-      <div class="ab-cofounder" data-i="cofounder">Timeaxe AI is built by <strong>four founders</strong>: two from hospitality and two from luxury and high-end fashion. Together they bring years spent in kitchens, on the floor, in hotels and in the great fashion houses — across Paris, Switzerland and Italy. It's that dual standard, operational and creative, that shapes every product decision.</div>
     </div>
   </div>
 
@@ -278,7 +277,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
       </div>
       <div>
         <div class="r-title" data-i="reco_title">15th at the Global Innovation Show — Hong Kong</div>
-        <div class="r-sub" data-i="reco_sub">The Global Innovation Show (GIS) was held at AsiaWorld-Expo, Hong Kong, on December 2–3 2025, co-hosted by SVIEF (Silicon Valley Innovation &amp; Entrepreneurship Forum) and benchmarked as the 'Asian version of CES.' It gathered 500+ investors and 1,000+ global buyers. Timeaxe AI ranked 15th in the pitch competition, among 900+ startups.</div>
+        <div class="r-sub" data-i="reco_sub">The Global Innovation Show (GIS) was held at AsiaWorld-Expo, Hong Kong, on December 2–3 2025, co-hosted by SVIEF (Silicon Valley Innovation &amp; Entrepreneurship Forum) and benchmarked as the 'Asian version of CES.' It gathered 500+ investors and 1,000+ global buyers. Timeaxe AI ranked 15th overall out of 900+ startups — and proudly the 1st Western company.</div>
       </div>
     </div>
   </div>
@@ -318,7 +317,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 </div>
 
 <footer>
-  <p>© 2026 Timeaxe AI 🇪🇺</p>
+  <p>© 2026 TIMEAXE AI SAS 🇪🇺</p>
   <p><a href="/privacy" data-i="footer_privacy">Privacy</a> · <a href="/legal" data-i="footer_legal">Legal notice</a> · <a href="mailto:bonjour@timeaxeai.com" style="color:inherit">bonjour@timeaxeai.com</a></p>
 </footer>
 
@@ -337,13 +336,12 @@ const t = {
     story_p2:"Partout, le même constat revenait : <strong>les managers passaient des heures à construire les plannings</strong> — et malgré tout ce temps, les erreurs humaines persistaient. Un repos non respecté, une heure supplémentaire oubliée, un service en sous-effectif un samedi soir.",
     pullquote:"Nous avons essayé les outils existants dans nos propres établissements. Aucun ne nous a jamais convaincus.",
     story_p3:"Alors nous avons décidé de régler le problème nous-mêmes — en construisant l'outil que nous aurions voulu avoir derrière le comptoir. Un outil qui fait le travail à votre place, et qui respecte le droit du travail français par conception.",
-    founders_label:"L'équipe fondatrice",
-    founder_role:"CEO & Développeur",
+    founders_label:"Le fondateur",
+    founder_role:"Président & CTO",
     founder_bio:"Issu du terrain comme du code. Aiden a dirigé des équipes dans l'hôtellerie-restauration et le luxe avant de prendre en main le développement de Timeaxe AI — pour que le produit soit pensé par quelqu'un qui a vécu le problème, pas seulement codé une solution.",
-    cofounder:"Timeaxe AI est porté par <strong>quatre fondateurs</strong> : deux issus de l'hôtellerie-restauration et deux du luxe et de la mode haut de gamme. Ensemble, ils cumulent des années passées en cuisine, en salle, dans les hôtels et dans les grandes maisons — entre Paris, la Suisse et l'Italie. C'est cette double exigence, opérationnelle et créative, qui façonne chaque décision produit.",
     reco_label:"Reconnaissance",
     reco_title:"15ᵉ au Global Innovation Show — Hong Kong",
-    reco_sub:"Le Global Innovation Show (GIS) s'est tenu à l'AsiaWorld-Expo de Hong Kong les 2–3 décembre 2025, co-organisé par le SVIEF (Silicon Valley Innovation &amp; Entrepreneurship Forum) et présenté comme le « CES asiatique ». L'événement a réuni plus de 500 investisseurs et plus de 1 000 acheteurs internationaux. Timeaxe AI s'y est classé 15ᵉ du concours de pitch, parmi plus de 900 startups.",
+    reco_sub:"Le Global Innovation Show (GIS) s'est tenu à l'AsiaWorld-Expo de Hong Kong les 2–3 décembre 2025, co-organisé par le SVIEF (Silicon Valley Innovation &amp; Entrepreneurship Forum) et présenté comme le « CES asiatique ». L'événement a réuni plus de 500 investisseurs et plus de 1 000 acheteurs internationaux. Timeaxe AI s'y est classé 15ᵉ au classement général parmi plus de 900 startups — et fièrement la 1ʳᵉ entreprise occidentale.",
     values_label:"Ce en quoi nous croyons",
     v1_h:"L'IA fait le travail",
     v1_p:"Vous ne devriez pas passer vos soirées à assembler un planning. Timeaxe le génère pour vous en quelques secondes — vous gardez le contrôle, l'IA fait le gros du travail.",
@@ -372,13 +370,12 @@ const t = {
     story_p2:"Everywhere, the same thing kept happening: <strong>managers spent hours building the schedule</strong> — and despite all that time, human errors still slipped through. A rest period missed, an overtime hour forgotten, a Saturday night left understaffed.",
     pullquote:"We tried the existing tools in our own venues. None of them ever felt right.",
     story_p3:"So we decided to fix it ourselves — by building the tool we'd have wanted behind the counter. One that does the work for you, and respects French labour law by design.",
-    founders_label:"The founding team",
-    founder_role:"CEO & Developer",
+    founders_label:"Founder",
+    founder_role:"President & CTO",
     founder_bio:"From the floor as much as from the code. Aiden led teams across hospitality and luxury before taking the lead on building Timeaxe AI — so the product is shaped by someone who lived the problem, not just coded a solution.",
-    cofounder:"Timeaxe AI is built by <strong>four founders</strong>: two from hospitality and two from luxury and high-end fashion. Together they bring years spent in kitchens, on the floor, in hotels and in the great fashion houses — across Paris, Switzerland and Italy. It's that dual standard, operational and creative, that shapes every product decision.",
     reco_label:"Recognition",
     reco_title:"15th at the Global Innovation Show — Hong Kong",
-    reco_sub:"The Global Innovation Show (GIS) was held at AsiaWorld-Expo, Hong Kong, on December 2–3 2025, co-hosted by SVIEF (Silicon Valley Innovation &amp; Entrepreneurship Forum) and benchmarked as the 'Asian version of CES.' It gathered 500+ investors and 1,000+ global buyers. Timeaxe AI ranked 15th in the pitch competition, among 900+ startups.",
+    reco_sub:"The Global Innovation Show (GIS) was held at AsiaWorld-Expo, Hong Kong, on December 2–3 2025, co-hosted by SVIEF (Silicon Valley Innovation &amp; Entrepreneurship Forum) and benchmarked as the 'Asian version of CES.' It gathered 500+ investors and 1,000+ global buyers. Timeaxe AI ranked 15th overall out of 900+ startups — and proudly the 1st Western company.",
     values_label:"What we believe",
     v1_h:"The AI does the work",
     v1_p:"You shouldn't spend your evenings assembling a schedule. Timeaxe generates it for you in seconds — you stay in control, the AI does the heavy lifting.",
@@ -419,4 +416,17 @@ document.querySelectorAll('nav .nav-collapse a').forEach(function(a){a.addEventL
 </script>
 
 
+<script>
+/* smooth language-switch transition: fade out before navigating away, fade in on load */
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm){document.body.style.transition='none'}
+  requestAnimationFrame(function(){document.body.style.opacity='1'});
+})();
+function goLang(url){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){location.href=url;return}
+  document.body.style.opacity='0';
+  setTimeout(function(){location.href=url},300);
+}
+</script>
 </body></html>

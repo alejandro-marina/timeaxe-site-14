@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<link rel="preload" href="assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin>
 <title>Mentions légales — Timeaxe AI</title>
 <meta name="description" content="Mentions légales du site timeaxeai.com : éditeur, hébergeur et informations légales.">
 <link rel="canonical" href="https://timeaxeai.com/legal">
@@ -30,14 +30,12 @@
 <meta name="twitter:description" content="Éditeur, hébergeur et informations légales du site timeaxeai.com.">
 <meta name="twitter:image" content="https://timeaxeai.com/og-image.png">
 <style>
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
-/* Display headings: Bricolage Grotesque, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'); falls back to Inter. */
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/bricolage-grotesque-700.woff2') format('woff2')}
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/bricolage-grotesque-800.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url('assets/fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url('assets/fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('assets/fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('assets/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2')}
+/* Unified display + body typeface: Plus Jakarta Sans, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'). */
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('assets/fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2')}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 .promo-bar{background:#12294d;border-bottom:1px solid rgba(255,255,255,0.08);text-align:center;padding-top:env(safe-area-inset-top)}
 .promo-bar a{display:block;padding:7px 12px;font-size:clamp(10px,2.7vw,12.5px);line-height:1.35;color:rgba(255,255,255,0.82);text-decoration:none;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
@@ -45,20 +43,21 @@
 .nav-about{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap}
 .nav-about:hover{color:#fff}
 :root{
+  --font-sans:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
   --blue-deep:#1D3A67;--blue-600:#3B7DE0;--blue-500:#5A93E6;--blue-400:#98ADD4;
   --blue-200:#EAF0F9;--blue-100:#F2F2F2;--blue-50:#F7F7F8;
   --text:#1a1a1a;--text2:#5a5a5a;--muted:#9a9a9a;--border:#E6E6E6;
   --radius-lg:18px;--radius-xl:28px;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.7;color:var(--text);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--font-sans);font-size:16px;line-height:1.7;color:var(--text);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden;opacity:0;transition:opacity .3s ease}
 nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;padding-top:env(safe-area-inset-top);background:rgba(29,58,103,0.85);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
+.nav-logo{font-family:var(--font-sans);font-weight:800;font-size:17px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
 .nav-right{display:flex;align-items:center;gap:12px}
 .lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:999px;padding:4px}
-.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:999px;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif;transition:all .2s}
+.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:999px;border:none;background:transparent;cursor:pointer;font-family:var(--font-sans);transition:all .2s}
 .lang-btn.active{background:var(--blue-600);color:#fff}
 .nav-links{display:flex;gap:28px;align-items:center}
 .nav-links a{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;transition:color .15s;white-space:nowrap}
@@ -85,11 +84,11 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .back:hover{color:#fff}
 .legal-hero{background:var(--blue-deep);padding:64px 2rem 56px;text-align:center;position:relative;overflow:hidden}
 .legal-hero::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(96,165,250,0.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 50% 50%,black 30%,transparent 100%)}
-.legal-hero h1{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(30px,5vw,44px);font-weight:800;letter-spacing:-0.5px;color:#fff;position:relative;z-index:2}
+.legal-hero h1{font-family:var(--font-sans);font-size:clamp(30px,5vw,44px);font-weight:800;letter-spacing:-0.5px;color:#fff;position:relative;z-index:2}
 .legal-body{max-width:680px;margin:0 auto;padding:56px 2rem 80px}
 .legal-block{margin-bottom:36px;padding-bottom:36px;border-bottom:1px solid var(--border)}
 .legal-block:last-child{border-bottom:none}
-.legal-block h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-600);margin-bottom:14px}
+.legal-block h2{font-family:var(--font-sans);font-size:13px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--blue-600);margin-bottom:14px}
 .legal-block p{font-size:15px;color:var(--text2);margin-bottom:8px}
 .legal-block p strong{color:var(--text);font-weight:600}
 .legal-block a{color:var(--blue-600);text-decoration:underline}
@@ -105,6 +104,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
   footer{flex-direction:column;gap:6px;text-align:center;padding-bottom:calc(18px + env(safe-area-inset-bottom))}
 }
 </style>
+<noscript><style>body{opacity:1!important}</style></noscript>
 </head>
 <body>
 
@@ -138,13 +138,15 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 
   <div class="legal-block">
     <h2 data-i="editor_h">Éditeur du site</h2>
-    <p data-i="editor_p1">Le site <strong>timeaxeai.com</strong> est édité par Timeaxe AI, projet porté par Aiden Mc Carron.</p>
+    <p data-i="editor_p1">Le site <strong>timeaxeai.com</strong> est édité par <strong>TIMEAXE AI SAS</strong>.</p>
+    <p data-i="editor_p_dp">Directeur de la publication : <strong>Aiden Mc Carron Fité</strong>, Président de TIMEAXE AI SAS.</p>
     <p data-i="editor_p2">Contact : <a href="mailto:bonjour@timeaxeai.com">bonjour@timeaxeai.com</a></p>
   </div>
 
   <div class="legal-block">
-    <h2 data-i="status_h">Statut juridique</h2>
-    <p data-i="status_p">Société en cours d'immatriculation. Les informations légales complètes (forme juridique, numéro SIREN, capital social et adresse du siège) seront publiées sur cette page dès l'immatriculation effective de la société.</p>
+    <h2 data-i="status_h">Statut juridique et immatriculation</h2>
+    <p data-i="status_p">TIMEAXE AI SAS est une société par actions simplifiée (SAS) au capital social de 200,00&nbsp;€, immatriculée au Registre du Commerce et des Sociétés (RCS) de Paris sous le numéro <strong>108 752 452 R.C.S. Paris</strong>.</p>
+    <p data-i="status_p_address">Siège social : 10 rue de Duras, 75008 Paris, France.</p>
   </div>
 
   <div class="legal-block">
@@ -167,7 +169,7 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
 </div>
 
 <footer>
-  <p>© 2026 Timeaxe AI 🇪🇺</p>
+  <p>© 2026 TIMEAXE AI SAS 🇪🇺</p>
   <p><a href="privacy.html" data-i="footer_privacy">Confidentialité</a> · <a href="about.html" data-i="footer_about">À propos</a> · <a href="mailto:bonjour@timeaxeai.com" style="color:inherit">bonjour@timeaxeai.com</a></p>
 </footer>
 
@@ -180,10 +182,12 @@ const t = {
     nav_about:"À propos",
     title:"Mentions légales",
     editor_h:"Éditeur du site",
-    editor_p1:"Le site <strong>timeaxeai.com</strong> est édité par Timeaxe AI, projet porté par Aiden Mc Carron.",
+    editor_p1:"Le site <strong>timeaxeai.com</strong> est édité par <strong>TIMEAXE AI SAS</strong>.",
+    editor_p_dp:"Directeur de la publication : <strong>Aiden Mc Carron Fité</strong>, Président de TIMEAXE AI SAS.",
     editor_p2:"Contact : <a href='mailto:bonjour@timeaxeai.com'>bonjour@timeaxeai.com</a>",
-    status_h:"Statut juridique",
-    status_p:"Société en cours d'immatriculation. Les informations légales complètes (forme juridique, numéro SIREN, capital social et adresse du siège) seront publiées sur cette page dès l'immatriculation effective de la société.",
+    status_h:"Statut juridique et immatriculation",
+    status_p:"TIMEAXE AI SAS est une société par actions simplifiée (SAS) au capital social de 200,00&nbsp;€, immatriculée au Registre du Commerce et des Sociétés (RCS) de Paris sous le numéro <strong>108 752 452 R.C.S. Paris</strong>.",
+    status_p_address:"Siège social : 10 rue de Duras, 75008 Paris, France.",
     host_h:"Hébergement",
     host_p1:"Le site est hébergé par <strong>Netlify, Inc.</strong>",
     host_p2:"512 2nd Street, Suite 200, San Francisco, CA 94107, États-Unis — <a href='https://www.netlify.com' target='_blank' rel='noopener'>netlify.com</a>",
@@ -202,10 +206,12 @@ const t = {
     nav_about:"About",
     title:"Legal notice",
     editor_h:"Site publisher",
-    editor_p1:"The site <strong>timeaxeai.com</strong> is published by Timeaxe AI, a project led by Aiden Mc Carron.",
+    editor_p1:"The site <strong>timeaxeai.com</strong> is published by <strong>TIMEAXE AI SAS</strong>.",
+    editor_p_dp:"Publication director: <strong>Aiden Mc Carron Fité</strong>, President of TIMEAXE AI SAS.",
     editor_p2:"Contact: <a href='mailto:bonjour@timeaxeai.com'>bonjour@timeaxeai.com</a>",
-    status_h:"Legal status",
-    status_p:"Company in the process of registration. Full legal information (legal form, registration number, share capital and registered address) will be published on this page as soon as the company is officially registered.",
+    status_h:"Legal status and registration",
+    status_p:"TIMEAXE AI SAS is a French simplified joint-stock company (SAS) with a share capital of &euro;200.00, registered with the Paris Trade and Companies Register (RCS) under number <strong>108 752 452 R.C.S. Paris</strong>.",
+    status_p_address:"Registered office: 10 rue de Duras, 75008 Paris, France.",
     host_h:"Hosting",
     host_p1:"The site is hosted by <strong>Netlify, Inc.</strong>",
     host_p2:"512 2nd Street, Suite 200, San Francisco, CA 94107, USA — <a href='https://www.netlify.com' target='_blank' rel='noopener'>netlify.com</a>",
@@ -236,6 +242,19 @@ if(_p==='en'||_p==='fr')setLang(_p);
 <script>
 function toggleNav(btn){var n=btn.closest('nav');var o=n.classList.toggle('nav-open');btn.setAttribute('aria-expanded',o?'true':'false');}
 document.querySelectorAll('nav .nav-collapse a').forEach(function(a){a.addEventListener('click',function(){var n=a.closest('nav');if(n){n.classList.remove('nav-open');var b=n.querySelector('.nav-burger');if(b)b.setAttribute('aria-expanded','false');}});});
+</script>
+<script>
+/* smooth language-switch transition: fade out before navigating away, fade in on load */
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm){document.body.style.transition='none'}
+  requestAnimationFrame(function(){document.body.style.opacity='1'});
+})();
+function goLang(url){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){location.href=url;return}
+  document.body.style.opacity='0';
+  setTimeout(function(){location.href=url},300);
+}
 </script>
 </body>
 </html>

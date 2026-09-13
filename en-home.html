@@ -1,9 +1,8 @@
 <!DOCTYPE html><html lang="en"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-<link rel="preload" href="/assets/fonts/inter-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="/assets/fonts/inter-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin="">
-<link rel="preload" href="/assets/fonts/bricolage-grotesque-800.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin="">
+<link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2" as="font" type="font/woff2" crossorigin="">
 <title>AI staff scheduling software for restaurants &amp; hotels | Timeaxe AI</title>
 <meta name="description" content="Timeaxe AI builds perfect staff schedules for your restaurants and hotels in seconds — compliant with French labour law, with less overtime, less burnout, and hours handed back to your managers every week.">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -98,14 +97,12 @@
 }
 </script>
 <style>
-@font-face{font-family:'Inter';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/inter-latin-400-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/inter-latin-500-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/inter-latin-600-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/inter-latin-700-normal.woff2') format('woff2')}
-@font-face{font-family:'Inter';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/inter-latin-800-normal.woff2') format('woff2')}
-/* Display headings: Bricolage Grotesque, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'); falls back to Inter. */
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-700.woff2') format('woff2')}
-@font-face{font-family:'Bricolage Grotesque';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/bricolage-grotesque-800.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:400;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-400-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:500;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-500-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:600;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-600-normal.woff2') format('woff2')}
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:700;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-700-normal.woff2') format('woff2')}
+/* Unified display + body typeface: Plus Jakarta Sans, self-hosted (EU-sovereign, same-origin per CSP font-src 'self'). */
+@font-face{font-family:'Plus Jakarta Sans';font-style:normal;font-weight:800;font-display:swap;src:url('/assets/fonts/plus-jakarta-sans-latin-800-normal.woff2') format('woff2')}
 </style>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
@@ -115,6 +112,7 @@
 .nav-about{font-size:14px;color:rgba(255,255,255,0.6);text-decoration:none;white-space:nowrap}
 .nav-about:hover{color:#fff}
 :root{
+  --font-sans:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
   --blue-deep:#1D3A67;--blue-night:#274777;--blue-900:#3E5F9B;--blue-800:#6482BC;
   --blue-600:#3B7DE0;--blue-500:#5A93E6;--blue-400:#98ADD4;
   --blue-300:#D3DCEC;--blue-200:#EAF0F9;--blue-100:#F2F2F2;--blue-50:#F7F7F8;
@@ -125,11 +123,11 @@
 html{scroll-behavior:auto;scroll-padding-top:110px}
 html.lenis,html.lenis body{height:auto}
 .lenis.lenis-smooth{scroll-behavior:auto!important}
-body{font-family:'Inter',system-ui,sans-serif;font-size:16px;line-height:1.6;color:var(--text-primary);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body{font-family:var(--font-sans);font-size:16px;line-height:1.6;color:var(--text-primary);background:var(--blue-50);-webkit-font-smoothing:antialiased;overflow-x:hidden;opacity:0;transition:opacity .3s ease}
 
 /* NAV */
 nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-index:200;display:flex;align-items:center;justify-content:space-between;padding:0 max(2.5rem,env(safe-area-inset-left)) 0 max(2.5rem,env(safe-area-inset-right));height:64px;background:rgba(29,58,103,0.85);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);border-bottom:1px solid rgba(255,255,255,0.06)}
-.nav-logo{font-family:'Inter',sans-serif;font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
+.nav-logo{font-family:var(--font-sans);font-weight:800;font-size:18px;color:#fff;text-decoration:none;letter-spacing:.5px;text-transform:uppercase;display:inline-flex;align-items:center}
 .nav-logo span{color:#fff;background:var(--blue-600);padding:2px 8px;border-radius:6px;font-size:12px;letter-spacing:.08em;vertical-align:middle;margin-left:2px}
 .logo-mark{width:22px;height:22px;margin-right:8px;flex-shrink:0}
 .nav-links{display:flex;gap:28px;align-items:center}
@@ -137,7 +135,7 @@ nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-in
 .nav-links a:hover{color:#fff}
 .nav-right{display:flex;align-items:center;gap:12px;flex-shrink:0}
 .lang-toggle{display:flex;gap:2px;background:rgba(255,255,255,0.07);border:1px solid rgba(255,255,255,0.1);border-radius:100px;padding:4px}
-.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:100px;transition:all .2s;border:none;background:transparent;cursor:pointer;font-family:'Inter',sans-serif}
+.lang-btn{font-size:12px;font-weight:600;color:rgba(255,255,255,0.6);padding:4px 11px;border-radius:100px;transition:all .2s;border:none;background:transparent;cursor:pointer;font-family:var(--font-sans)}
 .lang-btn.active{background:var(--blue-600);color:#fff}
 .nav-cta{background:var(--blue-600);color:#fff;padding:9px 22px;border-radius:100px;font-size:14px;font-weight:500;text-decoration:none;display:inline-block;white-space:nowrap}
 .nav-logo{flex-shrink:0}
@@ -170,15 +168,15 @@ nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-in
 .hero-badge{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:var(--blue-300);font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:34px}
 .badge-dot{width:6px;height:6px;background:var(--blue-400);border-radius:50%;flex-shrink:0}
 @keyframes pulse{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.5;transform:scale(.8)}}
-h1{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(38px,6.5vw,76px);font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:26px}
+h1{font-family:var(--font-sans);font-size:clamp(38px,6.5vw,76px);font-weight:800;line-height:1.05;letter-spacing:-1px;color:#fff;margin-bottom:26px}
 h1 .w{display:inline-block;white-space:pre}
 h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-200) 80%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .hero-sub{font-size:18px;color:rgba(255,255,255,0.58);max-width:580px;margin:0 auto 46px;line-height:1.7}
 .hero-form{display:flex;gap:10px;max-width:470px;margin:0 auto 14px;justify-content:center}
-.hero-form input[type="email"]{flex:1;height:54px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:#fff;outline:none;transition:border-color .15s,background .15s}
+.hero-form input[type="email"]{flex:1;height:54px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);border-radius:100px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:#fff;outline:none;transition:border-color .15s,background .15s}
 .hero-form input::placeholder{color:rgba(255,255,255,0.32)}
 .hero-form input:focus{border-color:var(--blue-400);background:rgba(255,255,255,0.09)}
-.btn-primary{height:54px;padding:0 30px;background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;white-space:nowrap;box-shadow:0 4px 28px rgba(59,125,224,0.40);transition:background .2s,box-shadow .2s}
+.btn-primary{height:54px;padding:0 30px;background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:600;font-family:var(--font-sans);cursor:pointer;white-space:nowrap;box-shadow:0 4px 28px rgba(59,125,224,0.40);transition:background .2s,box-shadow .2s}
 .btn-primary:hover{background:#2F6BC7;box-shadow:0 10px 36px rgba(59,125,224,0.50)}
 .form-note{font-size:13px;color:rgba(255,255,255,0.32)}
 .cred-strip{background:#fff;padding:36px 2rem 34px;text-align:center}
@@ -186,7 +184,33 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .cred-strip a{color:var(--blue-600);font-weight:600;text-decoration:none;white-space:nowrap}
 .cred-strip a:hover{text-decoration:underline}
 .feat-divider{max-width:1100px;width:calc(100% - 3rem);margin:36px auto 0;border:none;border-top:1px solid var(--border)}
-.name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
+/* APP SHOWCASE (3D PHONE) */
+.phone-showcase{background:linear-gradient(180deg,var(--blue-deep) 0%,var(--blue-night) 100%);position:relative;overflow:hidden;padding:120px 2rem}
+.phone-showcase::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.06) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 70% 80% at 50% 40%,black,transparent)}
+.phone-glow{position:absolute;top:10%;left:50%;width:600px;height:600px;transform:translateX(-50%);background:radial-gradient(circle,rgba(90,147,230,0.35),transparent 65%);filter:blur(40px);z-index:0}
+.phone-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.phone-copy .eyebrow{color:var(--blue-400)}
+.phone-copy .section-h2{color:#fff;margin-bottom:18px}
+.phone-copy>p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:440px}
+.phone-stage{perspective:1600px;display:flex;justify-content:center}
+.phone-frame{width:270px;height:560px;background:linear-gradient(160deg,#1c1c1e,#050506);border-radius:48px;padding:12px;position:relative;box-shadow:0 40px 100px rgba(0,0,0,0.5);transform:none;transform-style:preserve-3d;will-change:transform}
+.phone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:96px;height:24px;background:#050506;border-radius:14px;z-index:3}
+.phone-screen{width:100%;height:100%;background:var(--blue-50);border-radius:36px;overflow:hidden;position:relative;display:flex;flex-direction:column}
+.phone-screen-head{background:var(--blue-deep);color:#fff;padding:34px 20px 16px;font-size:12px;font-weight:700}
+.phone-screen-head span{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}
+.phone-sg{padding:14px 12px;display:grid;grid-template-columns:26px repeat(7,1fr);gap:3px;align-content:start}
+.phone-sg-h{font-size:7px;text-align:center;color:var(--text-muted);font-weight:700}
+.phone-sg-name{font-size:8px;color:var(--text-secondary);display:flex;align-items:center;font-weight:600}
+.phone-sg-c{height:16px;border-radius:3px;background:var(--blue-100)}
+.phone-sg-c.on{background:#DCE6F4}
+.phone-sg-c.peak{background:var(--blue-600)}
+.phone-action{margin:auto 12px 16px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px 14px;box-shadow:0 8px 24px rgba(29,58,103,0.15);display:flex;align-items:center;gap:10px}
+.phone-action-icon{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.phone-action-icon svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.phone-action-txt{font-size:11px;font-weight:700;color:var(--blue-deep)}
+.phone-action-sub{font-size:9.5px;color:var(--text-muted)}
+
+.name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
 .name-input::placeholder{color:rgba(255,255,255,0.28)}
 .name-input:focus{border-color:var(--blue-400);background:rgba(255,255,255,0.08)}
 .consent-row{display:flex;align-items:flex-start;gap:9px;max-width:470px;margin:0 auto 14px;text-align:left;cursor:pointer}
@@ -222,7 +246,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .sn-body{font-size:12.5px;line-height:1.55;color:var(--text-secondary);margin-bottom:12px}
 .sn-body strong{color:var(--text-primary)}
 .sn-actions{display:flex;justify-content:flex-end}
-.sn-confirm{background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:12px;font-weight:600;font-family:'Inter',sans-serif;padding:7px 16px;cursor:default;transition:transform .15s,background .15s}
+.sn-confirm{background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:12px;font-weight:600;font-family:var(--font-sans);padding:7px 16px;cursor:default;transition:transform .15s,background .15s}
 .sn-confirm.pressed{transform:scale(.94);background:var(--blue-500)}
 .sched-toast{position:absolute;bottom:18px;left:50%;transform:translate(-50%,12px);display:flex;align-items:center;gap:8px;background:#E7F6F0;border:1px solid #B7E3D4;color:var(--cyan);font-size:12px;font-weight:600;padding:9px 18px;border-radius:999px;opacity:0;transition:opacity .4s,transform .4s;pointer-events:none;white-space:nowrap;z-index:5}
 .sched-toast.show{opacity:1;transform:translate(-50%,0)}
@@ -247,31 +271,29 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .stats-inner{display:flex;max-width:960px;width:100%}
 .stat{flex:1;text-align:center;padding:0 24px;border-right:1px solid var(--border)}
 .stat:last-child{border-right:none}
-.stat-num{font-family:'Inter',sans-serif;font-size:40px;font-weight:800;color:var(--blue-deep);letter-spacing:-1px;line-height:1}
+.stat-num{font-family:var(--font-sans);font-size:40px;font-weight:800;color:var(--blue-deep);letter-spacing:-1px;line-height:1}
 .stat-num span{color:var(--blue-500)}
 .stat-label{font-size:13px;color:var(--text-muted);margin-top:6px}
 
 /* GENERIC SECTIONS */
 .section{max-width:980px;margin:0 auto;padding:104px 2rem}
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-500);margin-bottom:14px}
-.section-h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(25px,4.2vw,42px);font-weight:800;letter-spacing:-1.2px;line-height:1.08;margin-bottom:56px;color:var(--blue-deep);max-width:560px;overflow-wrap:break-word;hyphens:auto}
+.section-h2{font-family:var(--font-sans);font-size:clamp(25px,4.2vw,42px);font-weight:800;letter-spacing:-1.2px;line-height:1.08;margin-bottom:56px;color:var(--blue-deep);max-width:560px;overflow-wrap:break-word;hyphens:auto}
 
 /* HORIZONTAL FEATURES */
 .hfeat{background:var(--blue-50);position:relative;overflow:hidden;border-top:1px solid var(--border)}
 .hfeat-head{max-width:980px;margin:0 auto;padding:104px 2rem 0}
 .hfeat-head .eyebrow{color:var(--blue-600)}
 .hfeat-head .section-h2{color:var(--blue-deep);margin-bottom:0}
-.hfeat-track-wrap{overflow:hidden;padding:64px 0 104px}
-.hfeat-track{display:flex;gap:24px;padding:0 max(2rem,calc((100vw - 980px)/2));width:max-content;will-change:transform}
-.hcard{width:min(420px,82vw);flex-shrink:0;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:42px 38px;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(29,58,103,0.08)}
+.hfeat-stack{max-width:720px;margin:0 auto;padding:64px 2rem 104px;display:flex;flex-direction:column;gap:24px}
+.hcard{width:100%;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:42px 38px;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(29,58,103,0.08)}
 .hcard::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(59,125,224,0.08),transparent 70%);filter:blur(30px)}
-.hcard-num{font-family:'Inter',sans-serif;font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-600);margin-bottom:26px}
+.hcard-num{font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-600);margin-bottom:26px}
 .h-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;margin-bottom:24px;box-shadow:0 8px 24px rgba(59,125,224,0.30)}
 .h-icon svg{width:24px;height:24px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.hcard h3{font-family:'Inter',sans-serif;font-size:22px;font-weight:700;color:var(--blue-deep);margin-bottom:12px;letter-spacing:-.4px}
+.hcard h3{font-family:var(--font-sans);font-size:22px;font-weight:700;color:var(--blue-deep);margin-bottom:12px;letter-spacing:-.4px}
 .hcard p{font-size:14.5px;color:var(--text-secondary);line-height:1.75}
 .hcard .f-stat{display:inline-block;font-size:13px;font-weight:600;color:var(--blue-600);background:var(--blue-200);padding:5px 14px;border-radius:999px;margin-top:20px;border:1px solid var(--blue-300)}
-.hfeat-hint{text-align:center;font-size:12px;color:var(--text-muted);padding-bottom:32px;letter-spacing:.06em;text-transform:uppercase}
 
 /* EU SECTION (light) */
 .eu-section{background:linear-gradient(180deg,#fff 0%,#F7F7F8 45%,#EAF0F9 100%);position:relative;overflow:hidden;padding:104px 2rem;border-top:1px solid var(--border)}
@@ -283,7 +305,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .eu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:28px}
 .eu-card{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:30px;transition:transform .25s,box-shadow .25s,border-color .25s;box-shadow:0 2px 10px rgba(15,40,80,0.04)}
 .eu-card:hover{transform:translateY(-4px);border-color:var(--blue-300);box-shadow:0 16px 40px rgba(37,99,235,0.12)}
-.eu-card h3{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;display:flex;align-items:center;gap:12px;letter-spacing:-.2px}
+.eu-card h3{font-family:var(--font-sans);font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;display:flex;align-items:center;gap:12px;letter-spacing:-.2px}
 .eu-icon{width:40px;height:40px;border-radius:var(--radius-md);background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(37,99,235,0.3)}
 .eu-icon svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
 .eu-card p{font-size:14px;color:var(--text-secondary);line-height:1.7}
@@ -298,7 +320,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .law-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .law-card{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:30px;transition:transform .25s,box-shadow .25s}
 .law-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(59,130,246,0.1)}
-.law-card h3{font-family:'Inter',sans-serif;font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:8px;letter-spacing:-.2px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.law-card h3{font-family:var(--font-sans);font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:8px;letter-spacing:-.2px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
 .law-tag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--blue-500);color:#fff;padding:3px 8px;border-radius:4px}
 .law-card p{font-size:14px;color:var(--text-secondary);line-height:1.65}
 .law-note{margin-top:26px;background:var(--blue-50);border:1px solid var(--blue-200);border-radius:var(--radius-md);padding:18px 22px;display:flex;gap:14px;align-items:flex-start}
@@ -313,8 +335,8 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .step{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:38px 32px;transition:transform .25s,box-shadow .25s}
 .step:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(59,130,246,0.1)}
-.step-num{font-family:'Inter',sans-serif;font-size:52px;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:20px}
-.step h3{font-family:'Inter',sans-serif;font-size:18px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;letter-spacing:-.3px}
+.step-num{font-family:var(--font-sans);font-size:52px;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:20px}
+.step h3{font-family:var(--font-sans);font-size:18px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;letter-spacing:-.3px}
 .step p{font-size:14px;color:var(--text-secondary);line-height:1.7}
 
 /* QUOTES */
@@ -324,7 +346,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .quote-card{border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:36px;background:#fff;transition:transform .25s,box-shadow .25s}
 .quote-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(59,130,246,0.1)}
 .quote-eyebrow{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
-.quote-card blockquote{font-family:'Inter',sans-serif;font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.3px;color:var(--blue-deep);margin-bottom:22px}
+.quote-card blockquote{font-family:var(--font-sans);font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.3px;color:var(--blue-deep);margin-bottom:22px}
 .quote-card ul{list-style:none;display:flex;flex-direction:column;gap:10px}
 .quote-card li{font-size:14px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:10px}
 .li-dot{width:16px;height:16px;border-radius:50%;background:var(--blue-50);border:1px solid var(--blue-200);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px}
@@ -334,11 +356,11 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .bottom-cta-wrap{background:linear-gradient(180deg,#F7F7F8 0%,#EAF0F9 100%);position:relative;overflow:hidden;border-top:1px solid var(--border)}
 #ctaCanvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
 .bottom-cta{position:relative;z-index:2;text-align:center;padding:110px 2rem;max-width:700px;margin:0 auto}
-.bottom-cta h2{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(32px,5.2vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.02;color:var(--blue-deep);margin-bottom:18px}
+.bottom-cta h2{font-family:var(--font-sans);font-size:clamp(32px,5.2vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.02;color:var(--blue-deep);margin-bottom:18px}
 .bottom-cta h2 span{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .bottom-cta>p{font-size:17px;color:var(--text-secondary);margin-bottom:42px}
 .bottom-form{display:flex;gap:10px;max-width:470px;margin:0 auto 14px;justify-content:center}
-.bottom-form input[type="email"]{flex:1;height:54px;background:#fff;border:1px solid var(--border);border-radius:999px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:var(--text-primary);outline:none;transition:border-color .15s}
+.bottom-form input[type="email"]{flex:1;height:54px;background:#fff;border:1px solid var(--border);border-radius:999px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:var(--text-primary);outline:none;transition:border-color .15s}
 .bottom-form input::placeholder{color:var(--text-muted)}
 .bottom-form input:focus{border-color:var(--blue-500)}
 .bottom-note{font-size:13px;color:var(--text-muted);margin-top:12px}
@@ -365,13 +387,13 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 .modal-close svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:2.2;stroke-linecap:round}
 .modal-icon{width:56px;height:56px;border-radius:16px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;margin:0 auto 20px;box-shadow:0 8px 24px rgba(37,99,235,0.35);position:relative;z-index:1}
 .modal-icon svg{width:26px;height:26px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.modal h3{font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:24px;font-weight:800;letter-spacing:-.6px;color:var(--blue-deep);margin-bottom:8px;position:relative;z-index:1}
+.modal h3{font-family:var(--font-sans);font-size:24px;font-weight:800;letter-spacing:-.6px;color:var(--blue-deep);margin-bottom:8px;position:relative;z-index:1}
 .modal>div>p{font-size:14px;color:var(--text-secondary);line-height:1.6;margin-bottom:24px;position:relative;z-index:1}
 .modal-form{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;position:relative;z-index:1}
-.modal-form input{height:50px;border:1.5px solid var(--border);border-radius:100px;padding:0 22px;font-size:16px;font-family:'Inter',sans-serif;color:var(--text-primary);outline:none;transition:border-color .15s;text-align:center}
+.modal-form input{height:50px;border:1.5px solid var(--border);border-radius:100px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:var(--text-primary);outline:none;transition:border-color .15s;text-align:center}
 .modal-form input::placeholder{color:var(--text-muted)}
 .modal-form input:focus{border-color:var(--blue-400)}
-.modal-form button{height:50px;background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:600;font-family:'Inter',sans-serif;cursor:pointer;transition:background .2s;box-shadow:0 4px 20px rgba(59,125,224,0.35)}
+.modal-form button{height:50px;background:var(--blue-600);color:#fff;border:none;border-radius:999px;font-size:15px;font-weight:600;font-family:var(--font-sans);cursor:pointer;transition:background .2s;box-shadow:0 4px 20px rgba(59,125,224,0.35)}
 .modal-form button:hover{background:#2F6BC7}
 .modal-perks{display:flex;flex-direction:column;gap:10px;text-align:left;position:relative;z-index:1}
 .modal-perk{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--text-secondary)}
@@ -383,7 +405,10 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 .modal-success p{font-size:14px;color:var(--text-secondary)}
 
 @media(max-width:720px){
-  .steps,.quotes-grid,.law-grid,.eu-grid{grid-template-columns:1fr}
+  .steps,.quotes-grid,.law-grid,.eu-grid,.phone-inner{grid-template-columns:1fr}
+  .phone-inner{gap:40px;text-align:center}
+  .phone-copy>p{margin:0 auto}
+  .phone-frame{width:230px;height:480px}
   .stats-inner{flex-wrap:wrap}
   .stat{flex:1 1 45%;padding:12px 8px;border-right:none}
   .stat-num{font-size:28px}
@@ -411,19 +436,16 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .sc-footer{gap:10px}
   .sc-legend{font-size:9px}
   .overtime-tag{font-size:9px;margin-left:0}
-  /* horizontal features: native swipe with snap */
-  .hfeat-track-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;scroll-snap-type:x mandatory;scrollbar-width:none}
-  .hfeat-track-wrap::-webkit-scrollbar{display:none}
-  .hfeat-track{padding:0 1.25rem}
   .sched-notif{width:auto;left:12px;right:12px;top:46px}
   .sched-toast{white-space:normal;text-align:center;width:max-content;max-width:92%}
-  .hcard{scroll-snap-align:center;padding:32px 26px}
+  .hcard{padding:32px 26px}
   footer{flex-direction:column;gap:6px;text-align:center}
 }
 @media(prefers-reduced-motion:reduce){
   *{animation:none!important;transition:none!important}
 }
 </style>
+<noscript><style>body{opacity:1!important}</style></noscript>
 </head>
 <body>
 
@@ -441,8 +463,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
     </div>
     <div class="nav-right">
       <div class="lang-toggle">
-        <button class="lang-btn" onclick="location.href='/'">FR</button>
-        <button class="lang-btn active" onclick="location.href='/en'">EN</button>
+        <button class="lang-btn" onclick="goLang('/')">FR</button>
+        <button class="lang-btn active" onclick="goLang('/en')">EN</button>
       </div>
       <a href="#" class="nav-cta magnetic" onclick="goWaitlist();return false;" data-i="nav_cta">Join waitlist</a>
     </div>
@@ -542,7 +564,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 </div>
 
 <div class="cred-strip">
-  <p data-i="reco_line">Ranked 15th at the Global Innovation Show in Hong Kong, among 900+ startups. <a href="/en/about">Read our story →</a></p>
+  <p data-i="reco_line">Ranked 15th overall out of 900+ startups at the Global Innovation Show in Hong Kong — and proudly the 1st Western company. <a href="/en/about">Read our story →</a></p>
 </div>
 
 <!-- HORIZONTAL FEATURES -->
@@ -551,40 +573,71 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
     <p class="eyebrow" data-anim="up" data-i="feat_eyebrow">What it does</p>
     <h2 class="section-h2" data-anim="up" data-i="feat_h2">Three problems. Solved automatically.</h2>
   </div>
-  <div class="hfeat-track-wrap" id="hTrackWrap">
-    <div class="hfeat-track" id="hTrack">
-      <div class="hcard">
+  <div class="hfeat-stack">
+      <div class="hcard" data-anim="up">
         <div class="hcard-num">01</div>
         <div class="h-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
         <h3 data-i="f1_h">Saves manager time</h3>
         <p data-i="f1_p">No more spreadsheets, WhatsApp threads, or last-minute panic. Describe your team and hours — Timeaxe builds the schedule instantly.</p>
         <span class="f-stat" data-i="f1_stat">Schedule in seconds, not hours</span>
       </div>
-      <div class="hcard">
+      <div class="hcard" data-anim="up">
         <div class="hcard-num">02</div>
         <div class="h-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
         <h3 data-i="f2_h">Reduces labour costs</h3>
         <p data-i="f2_p"><strong>You only pay for time that's actually worked.</strong> Smart clock-in grace and clock-out buffers — an early coffee doesn't become paid hours. Timeaxe learns your busiest periods and staffs them precisely. No more overstaffing quiet weekdays or scrambling on Saturday nights. Track each schedule's estimated cost against your weekly budget.</p>
         <span class="f-stat" data-i="f2_stat">Matches staffing to real demand</span>
       </div>
-      <div class="hcard">
+      <div class="hcard" data-anim="up">
         <div class="hcard-num">03</div>
         <div class="h-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
         <h3 data-i="f3_h">Keeps staff happy</h3>
         <p data-i="f3_p">The AI detects burnout risk before it becomes a resignation. It tracks hours, flags overworked staff, and balances workloads fairly.</p>
         <span class="f-stat" data-i="f3_stat">Detect burnout before people quit</span>
       </div>
-      <div class="hcard">
+      <div class="hcard" data-anim="up">
         <div class="hcard-num">04</div>
         <div class="h-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
         <h3 data-i="f4_h">Guarantees compliance</h3>
         <p data-i="f4_p">35h week, mandatory rest, HCR agreement: every schedule is checked against French labour law before publishing.</p>
         <span class="f-stat" data-i="f4_stat">Compliance checked on every schedule</span>
       </div>
+  </div>
+  <hr class="feat-divider">
+</div>
+
+<!-- APP SHOWCASE -->
+<div class="phone-showcase" id="app">
+  <div class="phone-glow"></div>
+  <div class="phone-inner">
+    <div class="phone-copy">
+      <p class="eyebrow" data-anim="up" data-i="phone_eyebrow">The Timeaxe AI app</p>
+      <h2 class="section-h2" data-anim="up" data-i="phone_h2">Your team's schedule, in every pocket.</h2>
+      <p data-anim="up" data-i="phone_p">Your team checks their schedule, requests time off, or swaps a shift in one tap — synced in real time with the manager's schedule.</p>
+    </div>
+    <div class="phone-stage" id="phoneStage">
+      <div class="phone-frame" id="phoneFrame">
+        <div class="phone-notch"></div>
+        <div class="phone-screen">
+          <div class="phone-screen-head">Le Grand Bistrot<span data-i="phone_week">Week of June 16</span></div>
+          <div class="phone-sg">
+            <div></div><div class="phone-sg-h">M</div><div class="phone-sg-h">T</div><div class="phone-sg-h">W</div><div class="phone-sg-h">T</div><div class="phone-sg-h">F</div><div class="phone-sg-h">S</div><div class="phone-sg-h">S</div>
+            <div class="phone-sg-name">SK</div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div><div class="phone-sg-c peak"></div><div class="phone-sg-c peak"></div><div class="phone-sg-c"></div>
+            <div class="phone-sg-name">MR</div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c peak"></div><div class="phone-sg-c peak"></div>
+            <div class="phone-sg-name">YT</div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c peak"></div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div><div class="phone-sg-c peak"></div>
+            <div class="phone-sg-name">AM</div><div class="phone-sg-c peak"></div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div>
+          </div>
+          <div class="phone-action">
+            <div class="phone-action-icon"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"></path><path d="M3 11V9a4 4 0 0 1 4-4h14"></path><path d="M7 23l-4-4 4-4"></path><path d="M21 13v2a4 4 0 0 1-4 4H3"></path></svg></div>
+            <div>
+              <div class="phone-action-txt" data-i="phone_action">Swap a shift</div>
+              <div class="phone-action-sub" data-i="phone_action_sub">Sarah K. → Sunday</div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <p class="hfeat-hint" data-i="hint">Scroll or swipe →</p>
-  <hr class="feat-divider">
 </div>
 
 <!-- EU -->
@@ -702,7 +755,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div style="background:var(--blue-50);border-top:1px solid var(--blue-100);border-bottom:1px solid var(--blue-100);padding:72px 2rem;text-align:center">
   <div style="max-width:560px;margin:0 auto">
     <p style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:14px" data-i="faq_eyebrow">Frequently asked questions</p>
-    <h2 style="font-family:'Bricolage Grotesque','Inter',sans-serif;font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--blue-deep);margin-bottom:16px" data-i="faq_title">Got questions about Timeaxe AI?</h2>
+    <h2 style="font-family:var(--font-sans);font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--blue-deep);margin-bottom:16px" data-i="faq_title">Got questions about Timeaxe AI?</h2>
     <p style="font-size:16px;color:var(--text-secondary);margin-bottom:32px" data-i="faq_sub">Launch, pricing, features, waitlist — we have the answers.</p>
     <a href="/en/faq" style="display:inline-block;background:var(--blue-600);color:#fff;padding:14px 32px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'" data-i="faq_btn">View the FAQ</a>
   </div>
@@ -732,7 +785,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 </div>
 
 <footer>
-  <p>© 2026 Timeaxe AI — <span data-i="footer_eu">Proudly European</span> 🇪🇺</p>
+  <p>© 2026 TIMEAXE AI SAS — <span data-i="footer_eu">Proudly European</span> 🇪🇺</p>
   <p><a href="/en/about" style="color:rgba(255,255,255,0.55);text-decoration:underline" data-i="footer_about">About</a> · <a href="/en/faq" style="color:rgba(255,255,255,0.55);text-decoration:underline" data-i="footer_faq">FAQ</a> · <a href="/privacy" style="color:rgba(255,255,255,0.55);text-decoration:underline" data-i="footer_privacy">Privacy</a> · <a href="/legal" style="color:rgba(255,255,255,0.55);text-decoration:underline" data-i="footer_legal">Legal</a> · <a href="mailto:bonjour@timeaxeai.com" style="color:rgba(255,255,255,0.55);text-decoration:underline">bonjour@timeaxeai.com</a></p>
 </footer>
 
@@ -788,7 +841,7 @@ const translations = {
     hero_sub:"Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — moins d'heures supplémentaires, moins d'épuisement, et des heures rendues à vos managers chaque semaine.",
     cta_hero:"Accès anticipé gratuit",success:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt.",
     form_note:"Sans carte bancaire · Sans spam · <a href='/privacy' style='color:inherit;text-decoration:underline'>Politique de confidentialité</a>",
-    reco_line:"Classés 15ᵉ au Global Innovation Show de Hong Kong, parmi 900+ startups. <a href='about.html'>Découvrez notre histoire →</a>",
+    reco_line:"Classés 15ᵉ au classement général parmi plus de 900 startups au Global Innovation Show de Hong Kong — et fièrement la 1ʳᵉ entreprise occidentale. <a href='about.html'>Découvrez notre histoire →</a>",
     sc_title:"Semaine du 16 juin 2026 — Le Grand Bistrot",sc_time:"Généré en 2,4s",sc_ai:"Optimisé par IA",
     d_mon:"Lun",d_tue:"Mar",d_wed:"Mer",d_thu:"Jeu",d_fri:"Ven",d_sat:"Sam",d_sun:"Dim",
     leg_on:"Planifié",leg_peak:"Pic d'activité",leg_off:"Repos",no_overtime:"✓ Aucun conflit d'heures supp.",
@@ -808,7 +861,8 @@ const translations = {
     f2_h:"Réduit la masse salariale",f2_p:"<strong>Vous ne payez que le temps réellement travaillé.</strong> Tolérance de pointage à l'arrivée et au départ : un café pris 10 minutes avant le shift ne devient pas des heures payées. Timeaxe apprend vos périodes les plus chargées et adapte les effectifs avec précision. Plus de sureffectif en semaine creuse, ni de manque le week-end. Suivez le coût estimé de chaque planning par rapport à votre budget hebdomadaire.",f2_stat:"Ajuste les effectifs à votre activité réelle",
     f3_h:"Fidélise votre équipe",f3_p:"L'IA détecte les signaux d'épuisement avant qu'ils deviennent une démission. Elle surveille les heures, signale les surcharges et équilibre les roulements.",f3_stat:"Détectez le burn-out avant qu'il soit trop tard",
     f4_h:"Garantit la conformité",f4_p:"35h, repos obligatoires, Convention HCR : chaque planning est vérifié contre le droit du travail français avant publication.",f4_stat:"Conformité vérifiée à chaque planning",
-    hint:"Faites défiler ou balayez →",
+    phone_eyebrow:"L'app Timeaxe AI",phone_h2:"Le planning de votre équipe, dans toutes les poches.",phone_p:"Vos équipes consultent leur planning, posent une indisponibilité ou échangent un shift en un tap — synchronisé en temps réel avec le planning manager.",
+    phone_week:"Semaine du 16 juin",phone_action:"Échanger un shift",phone_action_sub:"Sarah K. → dimanche",
     eu_badge:"Souveraineté européenne",eu_h2:"100% européen.<br><span class='grad'>De bout en bout.</span>",
     eu1_h:"Hébergement cloud européen",eu1_p:"Vos données sont hébergées exclusivement chez des fournisseurs cloud européens, sur des serveurs situés dans l'Union européenne. Elles ne quittent jamais le territoire européen.",
     eu2_h:"Paiements européens",eu2_p:"Notre infrastructure de paiement repose uniquement sur des prestataires européens. Vos transactions et données bancaires restent sous juridiction européenne.",
@@ -846,7 +900,7 @@ const translations = {
     hero_sub:"Timeaxe AI builds perfect staff schedules for restaurants and hotels in seconds — less overtime, less burnout, and hours given back to your managers every week.",
     cta_hero:"Get early access",success:"You're on the list — we'll be in touch soon.",
     form_note:"No credit card · No spam · <a href='/privacy' style='color:inherit;text-decoration:underline'>Privacy policy</a>",
-    reco_line:"Ranked 15th at the Global Innovation Show in Hong Kong, among 900+ startups. <a href='about.html'>Read our story →</a>",
+    reco_line:"Ranked 15th overall out of 900+ startups at the Global Innovation Show in Hong Kong — and proudly the 1st Western company. <a href='about.html'>Read our story →</a>",
     sc_title:"Week of 16 June 2026 — The Grand Bistrot",sc_time:"Generated in 2.4s",sc_ai:"AI optimised",
     d_mon:"Mon",d_tue:"Tue",d_wed:"Wed",d_thu:"Thu",d_fri:"Fri",d_sat:"Sat",d_sun:"Sun",
     leg_on:"Scheduled",leg_peak:"Peak shift",leg_off:"Day off",no_overtime:"✓ No overtime conflicts",
@@ -866,7 +920,8 @@ const translations = {
     f2_h:"Reduces labour costs",f2_p:"<strong>You only pay for time that's actually worked.</strong> Smart clock-in grace and clock-out buffers — an early coffee doesn't become paid hours. Timeaxe learns your busiest periods and staffs them precisely. No more overstaffing quiet weekdays or scrambling on Saturday nights. Track each schedule's estimated cost against your weekly budget.",f2_stat:"Matches staffing to real demand",
     f3_h:"Keeps staff happy",f3_p:"The AI detects burnout risk before it becomes a resignation. It tracks hours, flags overworked staff, and balances workloads fairly.",f3_stat:"Detect burnout before people quit",
     f4_h:"Guarantees compliance",f4_p:"35h week, mandatory rest, HCR agreement: every schedule is checked against French labour law before publishing.",f4_stat:"Compliance checked on every schedule",
-    hint:"Scroll or swipe →",
+    phone_eyebrow:"The Timeaxe AI app",phone_h2:"Your team's schedule, in every pocket.",phone_p:"Your team checks their schedule, requests time off, or swaps a shift in one tap — synced in real time with the manager's schedule.",
+    phone_week:"Week of June 16",phone_action:"Swap a shift",phone_action_sub:"Sarah K. → Sunday",
     eu_badge:"European sovereignty",eu_h2:"100% European.<br><span class='grad'>End to end.</span>",
     eu1_h:"European cloud hosting",eu1_p:"Your data is hosted exclusively with European cloud providers, on servers located within the European Union. It never leaves European territory.",
     eu2_h:"European payments",eu2_p:"Our payment infrastructure relies solely on European providers. Your transactions and banking data remain under European jurisdiction.",
@@ -1232,21 +1287,13 @@ window.addEventListener('load',()=>{
         scrollTrigger:{trigger:el,start:'top 86%',toggleActions:'play none none none'}});
     });
 
-    /* horizontal features */
-    const track=document.getElementById('hTrack');
-    const wrap=document.getElementById('hTrackWrap');
-    function hDist(){return Math.max(0,track.scrollWidth-wrap.clientWidth)}
-    if(window.innerWidth>720){
-      gsap.to(track,{x:()=>-hDist(),ease:'none',
-        scrollTrigger:{trigger:wrap,start:'top 25%',end:()=>'+='+hDist(),scrub:1,pin:'.hfeat',anticipatePin:1,invalidateOnRefresh:true}});
-      gsap.from('.hcard',{opacity:0,y:50,stagger:.12,duration:.8,ease:'power3.out',
-        scrollTrigger:{trigger:wrap,start:'top 70%'}});
-    } else {
-      wrap.style.overflowX='auto';
-    }
-  } else {
-    /* no GSAP or reduced motion: ensure horizontal track scrollable on touch */
-    document.getElementById('hTrackWrap').style.overflowX='auto';
+    /* app showcase: 3D phone rotates upright + scales toward camera on scroll */
+    gsap.set('#phoneFrame',{transformPerspective:1600,transformOrigin:'50% 100%'});
+    gsap.fromTo('#phoneFrame',
+      {rotateX:50,scale:.75,y:80},
+      {rotateX:0,scale:1,y:0,ease:'none',
+        scrollTrigger:{trigger:'#phoneStage',start:'top 95%',end:'top 30%',scrub:1}});
+
   }
 
   window.addEventListener('orientationchange',()=>{setTimeout(()=>{if(window.ScrollTrigger)ScrollTrigger.refresh()},300)});
@@ -1273,4 +1320,17 @@ document.querySelectorAll('nav .nav-collapse a').forEach(function(a){a.addEventL
 </script>
 
 
+<script>
+/* smooth language-switch transition: fade out before navigating away, fade in on load */
+(function(){
+  var rm = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(rm){document.body.style.transition='none'}
+  requestAnimationFrame(function(){document.body.style.opacity='1'});
+})();
+function goLang(url){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){location.href=url;return}
+  document.body.style.opacity='0';
+  setTimeout(function(){location.href=url},300);
+}
+</script>
 </body></html>
