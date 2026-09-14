@@ -192,12 +192,11 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .phone-copy .eyebrow{color:var(--blue-400)}
 .phone-copy .section-h2{color:#fff;margin-bottom:18px}
 .phone-copy>p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:440px}
-.phone-stage{perspective:1600px;display:flex;justify-content:center;position:relative;padding-bottom:60px}
-.phone-frame{width:280px;position:relative;z-index:1;transform:none;transform-style:preserve-3d;will-change:transform;filter:drop-shadow(0 40px 90px rgba(0,0,0,0.5))}
-.phone-frame img{display:block;width:100%;height:auto;border-radius:36px}
-.phone-hand{position:absolute;left:50%;bottom:-4px;width:340px;height:auto;transform:translateX(-50%);pointer-events:none;filter:drop-shadow(0 20px 30px rgba(0,0,0,0.35))}
-.phone-hand-back{z-index:0}
-.phone-hand-front{z-index:2}
+.phone-stage{display:flex;justify-content:center}
+.iphone-frame{width:280px;background:#0b0b0d;border-radius:48px;padding:12px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,0.45);transform:translateY(150px);opacity:0;transition:transform 1s ease,opacity 1s ease}
+.iphone-frame.is-visible{transform:translateY(0);opacity:1}
+.iphone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:96px;height:24px;background:#0b0b0d;border-radius:14px;z-index:2}
+.iphone-screen-img{display:block;width:100%;height:auto;aspect-ratio:9/19.5;border-radius:36px;background:#111}
 
 .name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
 .name-input::placeholder{color:rgba(255,255,255,0.28)}
@@ -402,8 +401,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .steps,.quotes-grid,.law-grid,.eu-grid,.phone-inner{grid-template-columns:1fr}
   .phone-inner{gap:40px;text-align:center}
   .phone-copy>p{margin:0 auto}
-  .phone-frame{width:220px}
-  .phone-hand{width:270px}
+  .iphone-frame{width:220px}
   .stats-inner{flex-wrap:wrap}
   .stat{flex:1 1 45%;padding:12px 8px;border-right:none}
   .stat-num{font-size:28px}
@@ -613,31 +611,10 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
       <p data-anim="up" data-i="phone_p">Your team checks their schedule, requests time off, or swaps a shift in one tap — synced in real time with the manager's schedule.</p>
     </div>
     <div class="phone-stage" id="phoneStage">
-      <svg class="phone-hand phone-hand-back" viewBox="0 0 360 440" aria-hidden="true">
-        <defs>
-          <linearGradient id="handGradBack" x1="0" y1="0" x2="0" y2="1">
-            <stop offset="0%" stop-color="#EAD0B2"/>
-            <stop offset="100%" stop-color="#C99B72"/>
-          </linearGradient>
-        </defs>
-        <path d="M78,205 Q60,180 90,160 Q120,145 180,145 Q240,145 270,160 Q300,180 282,205 Q310,250 300,310 Q292,370 250,400 Q210,422 180,422 Q150,422 110,400 Q68,370 60,310 Q50,250 78,205 Z" fill="url(#handGradBack)"/>
-      </svg>
-      <div class="phone-frame" id="phoneFrame">
-        <img src="/assets/img/app-phone-en.jpg" alt="Timeaxe AI app showing today's shift, upcoming events, and a clock-in button" width="793" height="1596" loading="lazy">
+      <div class="iphone-frame" id="iphoneFrame">
+        <div class="iphone-notch"></div>
+        <img src="./assets/img/app-ui.jpeg" alt="Timeaxe AI app showing today's shift, upcoming events, and a clock-in button" class="iphone-screen-img" loading="lazy">
       </div>
-      <svg class="phone-hand phone-hand-front" viewBox="0 0 360 440" aria-hidden="true">
-        <defs>
-          <linearGradient id="handGradFront" x1="0" y1="0" x2="1" y2="0.3">
-            <stop offset="0%" stop-color="#F0D6B8"/>
-            <stop offset="100%" stop-color="#D2A47A"/>
-          </linearGradient>
-        </defs>
-        <path d="M300,140 Q294,168 298,196" stroke="url(#handGradFront)" stroke-width="36" stroke-linecap="round" fill="none"/>
-        <path d="M307,222 Q301,252 306,282" stroke="url(#handGradFront)" stroke-width="34" stroke-linecap="round" fill="none"/>
-        <path d="M308,306 Q302,332 307,358" stroke="url(#handGradFront)" stroke-width="32" stroke-linecap="round" fill="none"/>
-        <path d="M301,380 Q297,398 300,416" stroke="url(#handGradFront)" stroke-width="28" stroke-linecap="round" fill="none"/>
-        <path d="M62,222 Q28,248 30,290" stroke="url(#handGradFront)" stroke-width="50" stroke-linecap="round" fill="none"/>
-      </svg>
     </div>
   </div>
 </div>
@@ -1288,13 +1265,6 @@ window.addEventListener('load',()=>{
         scrollTrigger:{trigger:el,start:'top 86%',toggleActions:'play none none none'}});
     });
 
-    /* app showcase: 3D phone rotates upright + scales toward camera on scroll */
-    gsap.set('#phoneFrame',{transformPerspective:1600,transformOrigin:'50% 100%'});
-    gsap.fromTo('#phoneFrame',
-      {rotateX:50,scale:.75,y:80},
-      {rotateX:0,scale:1,y:0,ease:'none',
-        scrollTrigger:{trigger:'#phoneStage',start:'top 95%',end:'top 30%',scrub:1}});
-
     /* cinematic heading reveal: SplitType word-split + staggered rise/fade */
     if(window.SplitType){
       document.querySelectorAll('h2').forEach(h=>{
@@ -1329,6 +1299,27 @@ function toggleNav(btn){var n=btn.closest('nav');var o=n.classList.toggle('nav-o
 document.querySelectorAll('nav .nav-collapse a').forEach(function(a){a.addEventListener('click',function(){var n=a.closest('nav');if(n){n.classList.remove('nav-open');var b=n.querySelector('.nav-burger');if(b)b.setAttribute('aria-expanded','false');}});});
 </script>
 
+
+<script>
+/* app showcase: lift the phone in from below when it scrolls into view */
+(function(){
+  var frame = document.getElementById('iphoneFrame');
+  if(!frame) return;
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches){
+    frame.classList.add('is-visible');
+    return;
+  }
+  var io = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        frame.classList.add('is-visible');
+        io.unobserve(frame);
+      }
+    });
+  }, {threshold:0.3});
+  io.observe(frame);
+})();
+</script>
 
 <script>
 /* bento card spotlight: track cursor per-card via --mouse-x/--mouse-y */
