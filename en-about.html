@@ -137,7 +137,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-hero-inner{position:relative;z-index:2}
 .ab-eyebrow{display:inline-flex;align-items:center;gap:8px;background:rgba(59,130,246,0.13);border:1px solid rgba(96,165,250,0.28);color:#D3DCEC;font-size:13px;font-weight:500;padding:6px 16px;border-radius:100px;margin-bottom:24px}
 .ab-hero h1{font-family:var(--font-sans);font-size:clamp(34px,5.5vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:#fff;margin-bottom:18px;max-width:760px;margin-left:auto;margin-right:auto}
-.ab-hero h1 span{background:linear-gradient(120deg,var(--blue-400),var(--blue-200));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ab-hero h1 span,.ab-hero h1 span *{background:linear-gradient(120deg,var(--blue-400),var(--blue-200));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ab-hero p{font-size:17px;color:rgba(255,255,255,0.55);max-width:540px;margin:0 auto}
 
 /* BODY */
@@ -185,7 +185,7 @@ nav{position:sticky;top:0;z-index:100;display:flex;align-items:center;justify-co
 .ab-cta{background:linear-gradient(135deg,#EAF0F9 0%,#DCE6F4 100%);border:1px solid var(--border);box-shadow:0 8px 24px rgba(29,58,103,0.08);border-radius:var(--radius-xl);padding:48px 40px;text-align:center;margin:8px auto 56px;max-width:720px;position:relative;overflow:hidden}
 .ab-cta::before{content:'';position:absolute;width:400px;height:400px;background:rgba(59,125,224,0.08);border-radius:50%;filter:blur(70px);top:-100px;left:50%;transform:translateX(-50%);pointer-events:none}
 .ab-cta h2{font-family:var(--font-sans);font-size:28px;font-weight:800;letter-spacing:-.8px;color:var(--blue-deep);margin-bottom:10px;position:relative;z-index:1}
-.ab-cta h2 span{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.ab-cta h2 span,.ab-cta h2 span *{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .ab-cta p{font-size:15px;color:var(--text2);margin-bottom:28px;position:relative;z-index:1}
 .ab-cta a{display:inline-block;background:var(--blue-600);color:#fff;padding:14px 32px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;box-shadow:0 4px 24px rgba(59,125,224,0.35);transition:background .15s,transform .15s;position:relative;z-index:1}
 .ab-cta a:hover{background:#2F6BC7;transform:translateY(-2px)}
@@ -321,6 +321,9 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
   <p><a href="/privacy" data-i="footer_privacy">Privacy</a> · <a href="/legal" data-i="footer_legal">Legal notice</a> · <a href="mailto:bonjour@timeaxeai.com" style="color:inherit">bonjour@timeaxeai.com</a></p>
 </footer>
 
+<script src="/assets/js/gsap.min.js" defer=""></script>
+<script src="/assets/js/ScrollTrigger.min.js" defer=""></script>
+<script src="/assets/js/split-type.min.js" defer=""></script>
 <script>
 const t = {
   fr:{
@@ -428,5 +431,18 @@ function goLang(url){
   document.body.style.opacity='0';
   setTimeout(function(){location.href=url},300);
 }
+</script>
+<script>
+window.addEventListener('load',function(){
+  var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(window.gsap && window.ScrollTrigger && window.SplitType && !reduceMotion){
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('h1, h2').forEach(function(h){
+      var split = new SplitType(h,{types:'words'});
+      gsap.from(split.words,{opacity:0,y:24,duration:.8,stagger:.05,ease:'power3.out',
+        scrollTrigger:{trigger:h,start:'top 85%',toggleActions:'play none none none'}});
+    });
+  }
+});
 </script>
 </body></html>

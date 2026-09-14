@@ -267,8 +267,12 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .hfeat-head{max-width:980px;margin:0 auto;padding:104px 2rem 0}
 .hfeat-head .eyebrow{color:var(--blue-600)}
 .hfeat-head .section-h2{color:var(--blue-deep);margin-bottom:0}
-.hfeat-stack{max-width:720px;margin:0 auto;padding:64px 2rem 104px;display:flex;flex-direction:column;gap:24px}
-.hcard{width:100%;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:42px 38px;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(29,58,103,0.08)}
+.hfeat-grid{max-width:980px;margin:0 auto;padding:64px 2rem 104px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+.hfeat-grid .hcard:nth-child(1),.hfeat-grid .hcard:nth-child(4){grid-column:span 2}
+.hcard{--mouse-x:50%;--mouse-y:50%;width:100%;background:#fff;border:1px solid var(--border);border-radius:var(--radius-lg);padding:42px 38px;position:relative;overflow:hidden;box-shadow:0 8px 24px rgba(29,58,103,0.08)}
+.hcard::before{content:'';position:absolute;inset:0;border-radius:inherit;padding:1px;background:radial-gradient(420px circle at var(--mouse-x) var(--mouse-y),var(--blue-500),transparent 70%);-webkit-mask:linear-gradient(#fff 0 0) content-box,linear-gradient(#fff 0 0);-webkit-mask-composite:xor;mask-composite:exclude;opacity:0;transition:opacity .4s ease;pointer-events:none}
+.hcard::after{content:'';position:absolute;inset:0;border-radius:inherit;background:radial-gradient(420px circle at var(--mouse-x) var(--mouse-y),rgba(59,125,224,0.10),transparent 65%);opacity:0;transition:opacity .4s ease;pointer-events:none}
+.hcard:hover::before,.hcard:hover::after{opacity:1}
 .hcard::before{content:'';position:absolute;top:-60px;right:-60px;width:200px;height:200px;background:radial-gradient(circle,rgba(59,125,224,0.08),transparent 70%);filter:blur(30px)}
 .hcard-num{font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-600);margin-bottom:26px}
 .h-icon{width:52px;height:52px;border-radius:14px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;margin-bottom:24px;box-shadow:0 8px 24px rgba(59,125,224,0.30)}
@@ -283,7 +287,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .eu-inner{max-width:980px;margin:0 auto;position:relative;z-index:2}
 .eu-stars{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--blue-200);color:var(--blue-600);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:20px;box-shadow:0 4px 18px rgba(37,99,235,0.1)}
 .eu-stars .star{color:#f5b301}
-.eu-inner .section-h2 .grad{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.eu-inner .section-h2 .grad,.eu-inner .section-h2 .grad *{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .eu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:28px}
 .eu-card{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:30px;transition:transform .25s,box-shadow .25s,border-color .25s;box-shadow:0 2px 10px rgba(15,40,80,0.04)}
 .eu-card:hover{transform:translateY(-4px);border-color:var(--blue-300);box-shadow:0 16px 40px rgba(37,99,235,0.12)}
@@ -339,7 +343,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 #ctaCanvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
 .bottom-cta{position:relative;z-index:2;text-align:center;padding:110px 2rem;max-width:700px;margin:0 auto}
 .bottom-cta h2{font-family:var(--font-sans);font-size:clamp(32px,5.2vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.02;color:var(--blue-deep);margin-bottom:18px}
-.bottom-cta h2 span{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.bottom-cta h2 span,.bottom-cta h2 span *{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .bottom-cta>p{font-size:17px;color:var(--text-secondary);margin-bottom:42px}
 .bottom-form{display:flex;gap:10px;max-width:470px;margin:0 auto 14px;justify-content:center}
 .bottom-form input[type="email"]{flex:1;height:54px;background:#fff;border:1px solid var(--border);border-radius:999px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:var(--text-primary);outline:none;transition:border-color .15s}
@@ -420,6 +424,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .overtime-tag{font-size:9px;margin-left:0}
   .sched-notif{width:auto;left:12px;right:12px;top:46px}
   .sched-toast{white-space:normal;text-align:center;width:max-content;max-width:92%}
+  .hfeat-grid{grid-template-columns:1fr}
+  .hfeat-grid .hcard:nth-child(1),.hfeat-grid .hcard:nth-child(4){grid-column:span 1}
   .hcard{padding:32px 26px}
   footer{flex-direction:column;gap:6px;text-align:center}
 }
@@ -554,9 +560,9 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div class="hfeat" id="features">
   <div class="hfeat-head">
     <p class="eyebrow" data-anim="up" data-i="feat_eyebrow">Ce que ça fait</p>
-    <h2 class="section-h2" data-anim="up" data-i="feat_h2">Trois problèmes. Résolus automatiquement.</h2>
+    <h2 class="section-h2" data-i="feat_h2">Trois problèmes. Résolus automatiquement.</h2>
   </div>
-  <div class="hfeat-stack">
+  <div class="hfeat-grid" id="hfeatGrid">
       <div class="hcard" data-anim="up">
         <div class="hcard-num">01</div>
         <div class="h-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
@@ -595,7 +601,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   <div class="phone-inner">
     <div class="phone-copy">
       <p class="eyebrow" data-anim="up" data-i="phone_eyebrow">L'app Timeaxe AI</p>
-      <h2 class="section-h2" data-anim="up" data-i="phone_h2">Le planning de votre équipe, dans toutes les poches.</h2>
+      <h2 class="section-h2" data-i="phone_h2">Le planning de votre équipe, dans toutes les poches.</h2>
       <p data-anim="up" data-i="phone_p">Vos équipes consultent leur planning, posent une indisponibilité ou échangent un shift en un tap — synchronisé en temps réel avec le planning manager.</p>
     </div>
     <div class="phone-stage" id="phoneStage">
@@ -627,7 +633,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div class="eu-section" id="eu">
   <div class="eu-inner">
     <div class="eu-stars" data-anim="up"><span class="star">★</span> <span data-i="eu_badge">Souveraineté européenne</span> <span class="star">★</span></div>
-    <h2 class="section-h2" data-anim="up" data-i="eu_h2">100% européen.<br><span class="grad">De bout en bout.</span></h2>
+    <h2 class="section-h2" data-i="eu_h2">100% européen.<br><span class="grad">De bout en bout.</span></h2>
     <div class="eu-grid">
       <div class="eu-card" data-anim="up">
         <h3><span class="eu-icon"><svg viewBox="0 0 24 24"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"/><path d="M8 16h.01"/><path d="M8 20h.01"/><path d="M12 18h.01"/><path d="M12 22h.01"/><path d="M16 16h.01"/><path d="M16 20h.01"/></svg></span><span data-i="eu1_h">Hébergement cloud européen</span></h3>
@@ -657,7 +663,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div class="law-section">
   <div class="law-inner">
     <p class="eyebrow" data-anim="up" data-i="law_eyebrow">Conformité droit du travail</p>
-    <h2 class="section-h2" data-anim="up" data-i="law_h2">Conçu pour respecter le droit français du travail — automatiquement.</h2>
+    <h2 class="section-h2" data-i="law_h2">Conçu pour respecter le droit français du travail — automatiquement.</h2>
     <div class="law-grid">
       <div class="law-card" data-anim="up">
         <h3><span data-i="law1_h">Durée légale de 35h</span> <span class="law-tag">Code du travail</span></h3>
@@ -688,7 +694,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div class="how-section" id="how">
   <div class="how-inner">
     <p class="eyebrow" data-anim="up" data-i="how_eyebrow">Comment ça marche</p>
-    <h2 class="section-h2" data-anim="up" data-i="how_h2">Dites-nous vos équipes et vos horaires.<br>On s'occupe du reste.</h2>
+    <h2 class="section-h2" data-i="how_h2">Dites-nous vos équipes et vos horaires.<br>On s'occupe du reste.</h2>
     <div class="steps">
       <div class="step" data-anim="up">
         <div class="step-num">01</div>
@@ -713,7 +719,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div class="quotes-section">
   <div class="quotes-inner">
     <p class="eyebrow" data-anim="up" data-i="who_eyebrow">Pour qui</p>
-    <h2 class="section-h2" data-anim="up" data-i="who_h2">Conçu pour l'hôtellerie-restauration.</h2>
+    <h2 class="section-h2" data-i="who_h2">Conçu pour l'hôtellerie-restauration.</h2>
     <div class="quotes-grid">
       <div class="quote-card" data-anim="up">
         <p class="quote-eyebrow" data-i="q1_ey">Restaurants</p>
@@ -749,7 +755,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div class="bottom-cta-wrap">
   <canvas id="ctaCanvas"></canvas>
   <div class="bottom-cta">
-    <h2 data-anim="up"><span data-i="cta_h2a">Soyez parmi</span><br><span data-i="cta_h2b">les <span>premiers</span>.</span></h2>
+    <h2><span data-i="cta_h2a">Soyez parmi</span><br><span data-i="cta_h2b">les <span>premiers</span>.</span></h2>
     <p data-anim="up" data-i="cta_sub">Nous ouvrons l'accès à un petit groupe d'établissements avant notre lancement public. Rejoignez la liste d'attente et passez en tête de file.</p>
     <input type="text" id="bottomName" class="name-input" data-anim="up" data-placeholder-fr="Nom complet ou entreprise" data-placeholder-en="Full name or company" placeholder="Nom complet ou entreprise" autocomplete="name"/>
     <div class="bottom-form" id="bottomForm" data-anim="up">
@@ -815,6 +821,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <script src="assets/js/gsap.min.js" defer></script>
 <script src="assets/js/ScrollTrigger.min.js" defer></script>
 <script src="assets/js/lenis.min.js" defer></script>
+<script src="assets/js/split-type.min.js" defer></script>
 <script>
 /* ============ TRANSLATIONS ============ */
 const translations = {
@@ -1243,7 +1250,7 @@ window.addEventListener('load',()=>{
 
   /* Lenis smooth scroll */
   if(window.Lenis && !reduceMotion){
-    const lenis=new Lenis({duration:1.1,smoothWheel:true});
+    const lenis=new Lenis({duration:1.3,easing:t=>Math.min(1,1.001-Math.pow(2,-10*t)),smoothWheel:true});
     window.__lenis=lenis;
     function raf(time){lenis.raf(time);requestAnimationFrame(raf)}
     requestAnimationFrame(raf);
@@ -1280,6 +1287,15 @@ window.addEventListener('load',()=>{
       {rotateX:0,scale:1,y:0,ease:'none',
         scrollTrigger:{trigger:'#phoneStage',start:'top 95%',end:'top 30%',scrub:1}});
 
+    /* cinematic heading reveal: SplitType word-split + staggered rise/fade */
+    if(window.SplitType){
+      document.querySelectorAll('h2').forEach(h=>{
+        const split=new SplitType(h,{types:'words'});
+        gsap.from(split.words,{opacity:0,y:24,duration:.8,stagger:.05,ease:'power3.out',
+          scrollTrigger:{trigger:h,start:'top 85%',toggleActions:'play none none none'}});
+      });
+    }
+
   }
 
   window.addEventListener('orientationchange',()=>{setTimeout(()=>{if(window.ScrollTrigger)ScrollTrigger.refresh()},300)});
@@ -1303,6 +1319,20 @@ window.addEventListener('load',()=>{
 <script>
 function toggleNav(btn){var n=btn.closest('nav');var o=n.classList.toggle('nav-open');btn.setAttribute('aria-expanded',o?'true':'false');}
 document.querySelectorAll('nav .nav-collapse a').forEach(function(a){a.addEventListener('click',function(){var n=a.closest('nav');if(n){n.classList.remove('nav-open');var b=n.querySelector('.nav-burger');if(b)b.setAttribute('aria-expanded','false');}});});
+</script>
+<script>
+/* bento card spotlight: track cursor per-card via --mouse-x/--mouse-y */
+(function(){
+  var hfeatGrid=document.getElementById('hfeatGrid');
+  if(!hfeatGrid)return;
+  hfeatGrid.addEventListener('mousemove',function(e){
+    var card=e.target.closest('.hcard');
+    if(!card)return;
+    var r=card.getBoundingClientRect();
+    card.style.setProperty('--mouse-x',(e.clientX-r.left)+'px');
+    card.style.setProperty('--mouse-y',(e.clientY-r.top)+'px');
+  });
+})();
 </script>
 <script>
 /* smooth language-switch transition: fade out before navigating away, fade in on load */

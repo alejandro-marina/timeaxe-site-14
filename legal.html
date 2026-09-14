@@ -173,6 +173,9 @@ footer a{color:rgba(255,255,255,0.55);text-decoration:underline}
   <p><a href="privacy.html" data-i="footer_privacy">Confidentialité</a> · <a href="about.html" data-i="footer_about">À propos</a> · <a href="mailto:bonjour@timeaxeai.com" style="color:inherit">bonjour@timeaxeai.com</a></p>
 </footer>
 
+<script src="assets/js/gsap.min.js" defer></script>
+<script src="assets/js/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/split-type.min.js" defer></script>
 <script>
 const t = {
   fr:{
@@ -255,6 +258,19 @@ function goLang(url){
   document.body.style.opacity='0';
   setTimeout(function(){location.href=url},300);
 }
+</script>
+<script>
+window.addEventListener('load',function(){
+  var reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(window.gsap && window.ScrollTrigger && window.SplitType && !reduceMotion){
+    gsap.registerPlugin(ScrollTrigger);
+    document.querySelectorAll('h1, h2').forEach(function(h){
+      var split = new SplitType(h,{types:'words'});
+      gsap.from(split.words,{opacity:0,y:24,duration:.8,stagger:.05,ease:'power3.out',
+        scrollTrigger:{trigger:h,start:'top 85%',toggleActions:'play none none none'}});
+    });
+  }
+});
 </script>
 </body>
 </html>
