@@ -167,30 +167,17 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .cred-strip a:hover{text-decoration:underline}
 .feat-divider{max-width:1100px;width:calc(100% - 3rem);margin:36px auto 0;border:none;border-top:1px solid var(--border)}
 /* APP SHOWCASE (3D PHONE) */
-.phone-showcase{background:linear-gradient(180deg,var(--blue-deep) 0%,var(--blue-night) 100%);position:relative;overflow:hidden;padding:120px 2rem}
+.phone-showcase{background:linear-gradient(180deg,var(--blue-deep) 0%,var(--blue-night) 100%);position:relative;padding:120px 2rem 40px}
 .phone-showcase::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.06) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 70% 80% at 50% 40%,black,transparent)}
 .phone-glow{position:absolute;top:10%;left:50%;width:600px;height:600px;transform:translateX(-50%);background:radial-gradient(circle,rgba(90,147,230,0.35),transparent 65%);filter:blur(40px);z-index:0}
 .phone-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .phone-copy .eyebrow{color:var(--blue-400)}
 .phone-copy .section-h2{color:#fff;margin-bottom:18px}
 .phone-copy>p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:440px}
-.phone-stage{perspective:1600px;display:flex;justify-content:center}
-.phone-frame{width:270px;height:560px;background:linear-gradient(160deg,#1c1c1e,#050506);border-radius:48px;padding:12px;position:relative;box-shadow:0 40px 100px rgba(0,0,0,0.5);transform:none;transform-style:preserve-3d;will-change:transform}
-.phone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:96px;height:24px;background:#050506;border-radius:14px;z-index:3}
-.phone-screen{width:100%;height:100%;background:var(--blue-50);border-radius:36px;overflow:hidden;position:relative;display:flex;flex-direction:column}
-.phone-screen-head{background:var(--blue-deep);color:#fff;padding:34px 20px 16px;font-size:12px;font-weight:700}
-.phone-screen-head span{display:block;font-size:10px;font-weight:500;opacity:.65;margin-top:2px}
-.phone-sg{padding:14px 12px;display:grid;grid-template-columns:26px repeat(7,1fr);gap:3px;align-content:start}
-.phone-sg-h{font-size:7px;text-align:center;color:var(--text-muted);font-weight:700}
-.phone-sg-name{font-size:8px;color:var(--text-secondary);display:flex;align-items:center;font-weight:600}
-.phone-sg-c{height:16px;border-radius:3px;background:var(--blue-100)}
-.phone-sg-c.on{background:#DCE6F4}
-.phone-sg-c.peak{background:var(--blue-600)}
-.phone-action{margin:auto 12px 16px;background:#fff;border:1px solid var(--border);border-radius:16px;padding:12px 14px;box-shadow:0 8px 24px rgba(29,58,103,0.15);display:flex;align-items:center;gap:10px}
-.phone-action-icon{width:30px;height:30px;border-radius:10px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.phone-action-icon svg{width:15px;height:15px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.phone-action-txt{font-size:11px;font-weight:700;color:var(--blue-deep)}
-.phone-action-sub{font-size:9.5px;color:var(--text-muted)}
+.phone-stage{display:flex;justify-content:center;perspective:1200px;overflow:visible}
+.iphone-frame{width:440px;position:relative;z-index:3;margin-bottom:-70px;transform-style:preserve-3d;transform-origin:50% 100%}
+.iphone-frame::before{content:'';position:absolute;top:50%;left:50%;width:130%;aspect-ratio:1/1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(125,180,255,0.45),transparent 70%);filter:blur(60px);z-index:-1;pointer-events:none}
+.iphone-screen-img{display:block;width:100%;height:auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,0.5)) drop-shadow(0 0 30px rgba(0,0,0,0.1))}
 
 .name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
 .name-input::placeholder{color:rgba(255,255,255,0.28)}
@@ -390,7 +377,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .steps,.quotes-grid,.law-grid,.eu-grid,.phone-inner{grid-template-columns:1fr}
   .phone-inner{gap:40px;text-align:center}
   .phone-copy>p{margin:0 auto}
-  .phone-frame{width:230px;height:480px}
+  .iphone-frame{width:260px;margin-bottom:0}
   .stats-inner{flex-wrap:wrap}
   .stat{flex:1 1 45%;padding:12px 8px;border-right:none}
   .stat-num{font-size:28px}
@@ -596,25 +583,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
       <p data-anim="up" data-i="phone_p">Vos équipes consultent leur planning, posent une indisponibilité ou échangent un shift en un tap — synchronisé en temps réel avec le planning manager.</p>
     </div>
     <div class="phone-stage" id="phoneStage">
-      <div class="phone-frame" id="phoneFrame">
-        <div class="phone-notch"></div>
-        <div class="phone-screen">
-          <div class="phone-screen-head">Le Grand Bistrot<span data-i="phone_week">Semaine du 16 juin</span></div>
-          <div class="phone-sg">
-            <div></div><div class="phone-sg-h">L</div><div class="phone-sg-h">M</div><div class="phone-sg-h">M</div><div class="phone-sg-h">J</div><div class="phone-sg-h">V</div><div class="phone-sg-h">S</div><div class="phone-sg-h">D</div>
-            <div class="phone-sg-name">SK</div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div><div class="phone-sg-c peak"></div><div class="phone-sg-c peak"></div><div class="phone-sg-c"></div>
-            <div class="phone-sg-name">MR</div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c peak"></div><div class="phone-sg-c peak"></div>
-            <div class="phone-sg-name">YT</div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c peak"></div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div><div class="phone-sg-c peak"></div>
-            <div class="phone-sg-name">AM</div><div class="phone-sg-c peak"></div><div class="phone-sg-c on"></div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div><div class="phone-sg-c"></div><div class="phone-sg-c on"></div>
-          </div>
-          <div class="phone-action">
-            <div class="phone-action-icon"><svg viewBox="0 0 24 24"><path d="M17 1l4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><path d="M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg></div>
-            <div>
-              <div class="phone-action-txt" data-i="phone_action">Échanger un shift</div>
-              <div class="phone-action-sub" data-i="phone_action_sub">Sarah K. → dimanche</div>
-            </div>
-          </div>
-        </div>
+      <div class="iphone-frame" id="iphoneFrame">
+        <img src="assets/img/full-phone-ui-fr.png" alt="Application Timeaxe AI affichant le service du jour, les événements à venir et le pointage d'arrivée" class="iphone-screen-img" width="381" height="783" loading="lazy">
       </div>
     </div>
   </div>
@@ -844,7 +814,6 @@ const translations = {
     f3_h:"Fidélise votre équipe",f3_p:"L'IA détecte les signaux d'épuisement avant qu'ils deviennent une démission. Elle surveille les heures, signale les surcharges et équilibre les roulements.",
     f4_h:"Garantit la conformité",f4_p:"35h, repos obligatoires, Convention HCR : chaque planning est vérifié contre le droit du travail français avant publication.",
     phone_eyebrow:"L'app Timeaxe AI",phone_h2:"Le planning de votre équipe, dans toutes les poches.",phone_p:"Vos équipes consultent leur planning, posent une indisponibilité ou échangent un shift en un tap — synchronisé en temps réel avec le planning manager.",
-    phone_week:"Semaine du 16 juin",phone_action:"Échanger un shift",phone_action_sub:"Sarah K. → dimanche",
     eu_badge:"Souveraineté européenne",eu_h2:"100% européen.<br><span class='grad'>De bout en bout.</span>",
     eu1_h:"Hébergement cloud européen",eu1_p:"Vos données sont hébergées exclusivement chez des fournisseurs cloud européens, sur des serveurs situés dans l'Union européenne. Elles ne quittent jamais le territoire européen.",
     eu2_h:"Paiements européens",eu2_p:"Notre infrastructure de paiement repose uniquement sur des prestataires européens. Vos transactions et données bancaires restent sous juridiction européenne.",
@@ -904,7 +873,6 @@ const translations = {
     f3_h:"Keeps staff happy",f3_p:"The AI detects burnout risk before it becomes a resignation. It tracks hours, flags overworked staff, and balances workloads fairly.",
     f4_h:"Guarantees compliance",f4_p:"35h week, mandatory rest, HCR agreement: every schedule is checked against French labour law before publishing.",
     phone_eyebrow:"The Timeaxe AI app",phone_h2:"Your team's schedule, in every pocket.",phone_p:"Your team checks their schedule, requests time off, or swaps a shift in one tap — synced in real time with the manager's schedule.",
-    phone_week:"Week of June 16",phone_action:"Swap a shift",phone_action_sub:"Sarah K. → Sunday",
     eu_badge:"European sovereignty",eu_h2:"100% European.<br><span class='grad'>End to end.</span>",
     eu1_h:"European cloud hosting",eu1_p:"Your data is hosted exclusively with European cloud providers, on servers located within the European Union. It never leaves European territory.",
     eu2_h:"European payments",eu2_p:"Our payment infrastructure relies solely on European providers. Your transactions and banking data remain under European jurisdiction.",
@@ -1271,12 +1239,15 @@ window.addEventListener('load',()=>{
         scrollTrigger:{trigger:el,start:'top 86%',toggleActions:'play none none none'}});
     });
 
-    /* app showcase: 3D phone rotates upright + scales toward camera on scroll */
-    gsap.set('#phoneFrame',{transformPerspective:1600,transformOrigin:'50% 100%'});
-    gsap.fromTo('#phoneFrame',
-      {rotateX:50,scale:.75,y:80},
-      {rotateX:0,scale:1,y:0,ease:'none',
-        scrollTrigger:{trigger:'#phoneStage',start:'top 95%',end:'top 30%',scrub:1}});
+    /* app showcase: phone physically tilts upright in 3D space as it scrolls into view */
+    gsap.set('#iphoneFrame',{transformPerspective:1200,transformOrigin:'50% 100%'});
+    gsap.fromTo('#iphoneFrame',
+      {rotateX:40,opacity:0,y:80},
+      {rotateX:0,opacity:1,y:0,ease:'none',
+        scrollTrigger:{trigger:'#phoneStage',start:'top 90%',end:'top 40%',scrub:1}});
+
+    /* app showcase: continuous gentle float while the phone is on screen */
+    gsap.to('.iphone-screen-img',{y:-10,duration:3,repeat:-1,yoyo:true,ease:'sine.inOut'});
 
     /* cinematic heading reveal: SplitType word-split + staggered rise/fade */
     if(window.SplitType){
