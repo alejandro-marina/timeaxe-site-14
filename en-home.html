@@ -185,16 +185,15 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .cred-strip a:hover{text-decoration:underline}
 .feat-divider{max-width:1100px;width:calc(100% - 3rem);margin:36px auto 0;border:none;border-top:1px solid var(--border)}
 /* APP SHOWCASE (3D PHONE) */
-.phone-showcase{background:linear-gradient(180deg,var(--blue-deep) 0%,var(--blue-night) 100%);position:relative;overflow:hidden;padding:120px 2rem}
+.phone-showcase{background:linear-gradient(180deg,var(--blue-deep) 0%,var(--blue-night) 100%);position:relative;padding:120px 2rem}
 .phone-showcase::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.06) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 70% 80% at 50% 40%,black,transparent)}
 .phone-glow{position:absolute;top:10%;left:50%;width:600px;height:600px;transform:translateX(-50%);background:radial-gradient(circle,rgba(90,147,230,0.35),transparent 65%);filter:blur(40px);z-index:0}
 .phone-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
 .phone-copy .eyebrow{color:var(--blue-400)}
 .phone-copy .section-h2{color:#fff;margin-bottom:18px}
 .phone-copy>p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:440px}
-.phone-stage{display:flex;justify-content:center;perspective:1800px}
-.iphone-frame{width:280px;position:relative;transform:translateY(150px) rotateY(-18deg) rotateX(4deg);opacity:0;transition:transform 1s ease,opacity 1s ease;transform-style:preserve-3d}
-.iphone-frame.is-visible{transform:translateY(0) rotateY(-18deg) rotateX(4deg);opacity:1}
+.phone-stage{display:flex;justify-content:center;perspective:1200px}
+.iphone-frame{width:280px;position:relative;transform-style:preserve-3d;transform-origin:50% 100%}
 .iphone-screen-img{display:block;width:100%;height:auto;filter:drop-shadow(18px 34px 30px rgba(0,0,0,0.45)) drop-shadow(0 14px 18px rgba(0,0,0,0.3))}
 
 .name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
@@ -1247,6 +1246,13 @@ window.addEventListener('load',()=>{
     /* parallax on schedule card */
     gsap.to('#scheduleCard',{yPercent:-14,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
 
+    /* app showcase: phone physically tilts upright in 3D space as it scrolls into view */
+    gsap.set('#iphoneFrame',{transformPerspective:1200,transformOrigin:'50% 100%'});
+    gsap.fromTo('#iphoneFrame',
+      {rotateX:40,opacity:0,y:80},
+      {rotateX:0,opacity:1,y:0,ease:'none',
+        scrollTrigger:{trigger:'#phoneStage',start:'top 90%',end:'top 40%',scrub:1}});
+
     /* generic scroll reveals */
     gsap.utils.toArray('[data-anim="up"]').forEach(el=>{
       gsap.from(el,{opacity:0,y:44,scale:.985,duration:.9,ease:'power3.out',
@@ -1287,27 +1293,6 @@ function toggleNav(btn){var n=btn.closest('nav');var o=n.classList.toggle('nav-o
 document.querySelectorAll('nav .nav-collapse a').forEach(function(a){a.addEventListener('click',function(){var n=a.closest('nav');if(n){n.classList.remove('nav-open');var b=n.querySelector('.nav-burger');if(b)b.setAttribute('aria-expanded','false');}});});
 </script>
 
-
-<script>
-/* app showcase: lift the phone in from below when it scrolls into view */
-(function(){
-  var frame = document.getElementById('iphoneFrame');
-  if(!frame) return;
-  if(matchMedia('(prefers-reduced-motion: reduce)').matches){
-    frame.classList.add('is-visible');
-    return;
-  }
-  var io = new IntersectionObserver(function(entries){
-    entries.forEach(function(entry){
-      if(entry.isIntersecting){
-        frame.classList.add('is-visible');
-        io.unobserve(frame);
-      }
-    });
-  }, {threshold:0.3});
-  io.observe(frame);
-})();
-</script>
 
 <script>
 /* smooth language-switch transition: fade out before navigating away, fade in on load */
