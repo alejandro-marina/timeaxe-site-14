@@ -193,10 +193,9 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .phone-copy .section-h2{color:#fff;margin-bottom:18px}
 .phone-copy>p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:440px}
 .phone-stage{display:flex;justify-content:center}
-.iphone-frame{width:280px;background:#0b0b0d;border-radius:48px;padding:12px;position:relative;box-shadow:0 30px 70px rgba(0,0,0,0.45);transform:translateY(150px);opacity:0;transition:transform 1s ease,opacity 1s ease}
+.iphone-frame{width:280px;position:relative;transform:translateY(150px);opacity:0;transition:transform 1s ease,opacity 1s ease;filter:drop-shadow(0 30px 60px rgba(0,0,0,0.45))}
 .iphone-frame.is-visible{transform:translateY(0);opacity:1}
-.iphone-notch{position:absolute;top:12px;left:50%;transform:translateX(-50%);width:96px;height:24px;background:#0b0b0d;border-radius:14px;z-index:2}
-.iphone-screen-img{display:block;width:100%;height:auto;aspect-ratio:9/19.5;border-radius:36px;background:#111}
+.iphone-screen-img{display:block;width:100%;height:auto;aspect-ratio:381/781;border-radius:28px;background:#111}
 
 .name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
 .name-input::placeholder{color:rgba(255,255,255,0.28)}
@@ -602,8 +601,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
     </div>
     <div class="phone-stage" id="phoneStage">
       <div class="iphone-frame" id="iphoneFrame">
-        <div class="iphone-notch"></div>
-        <img src="./assets/img/app-ui.jpeg" alt="Timeaxe AI app showing today's shift, upcoming events, and a clock-in button" class="iphone-screen-img" loading="lazy">
+        <img src="./assets/img/app-ui.jpeg" alt="Timeaxe AI app showing today's shift, upcoming events, and a clock-in button" class="iphone-screen-img" width="381" height="781" loading="lazy">
       </div>
     </div>
   </div>
