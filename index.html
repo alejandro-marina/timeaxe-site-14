@@ -256,6 +256,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .stat-num{font-family:var(--font-sans);font-size:40px;font-weight:800;color:var(--blue-deep);letter-spacing:-1px;line-height:1}
 .stat-num span{color:var(--blue-500)}
 .stat-label{font-size:13px;color:var(--text-muted);margin-top:6px}
+.stat-prefix{font-size:14px;font-weight:600;color:var(--text-muted);letter-spacing:normal;vertical-align:middle;margin-right:3px}
 
 /* GENERIC SECTIONS */
 .section{max-width:980px;margin:0 auto;padding:104px 2rem}
@@ -545,7 +546,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 
 <div class="stats-section">
   <div class="stats-inner">
-    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="8">8</span>h+</div><div class="stat-label" data-i="s1">de planning manuel, chaque semaine</div></div>
+    <div class="stat" data-anim="up"><div class="stat-num"><span class="stat-prefix" data-i="s1_prefix">Jusqu'à</span> <span data-count="8">8</span>h+</div><div class="stat-label" data-i="s1">économisées de planning manuel, chaque semaine</div></div>
     <div class="stat" data-anim="up"><div class="stat-num"><span data-count="100">100</span>%</div><div class="stat-label" data-i="s2">conforme à la convention HCR &amp; aux 35h</div></div>
     <div class="stat" data-anim="up"><div class="stat-num"><span data-count="2.4" data-decimal="1">2,4</span>s</div><div class="stat-label" data-i="s3">pour générer un planning complet</div></div>
     <div class="stat" data-anim="up"><div class="stat-num"><span>0</span></div><div class="stat-label" data-i="s4">tableur nécessaire</div></div>
@@ -846,7 +847,7 @@ const translations = {
     toast_txt:"Planning mis à jour — Sarah K. remplace Marco R. dimanche",
     m1:"100% RGPD",m2:"Hébergement 100% européen",m3:"Paiements européens",m4:"API européenne",m5:"Données chiffrées",
     m1b:"100% RGPD",m2b:"Hébergement 100% européen",m3b:"Paiements européens",m4b:"API européenne",m5b:"Données chiffrées",
-    s1:"de planning manuel, chaque semaine",s2:"conforme à la convention HCR & aux 35h",s3:"pour générer un planning complet",s4:"tableur nécessaire",
+    s1:"économisées de planning manuel, chaque semaine",s1_prefix:"Jusqu'à",s2:"conforme à la convention HCR & aux 35h",s3:"pour générer un planning complet",s4:"tableur nécessaire",
     feat_eyebrow:"Ce que ça fait",feat_h2:"Trois problèmes. Résolus automatiquement.",
     f1_h:"Libère les managers",f1_p:"Fini les tableurs, les fils WhatsApp et la panique du lundi. Décrivez votre équipe et vos horaires — Timeaxe construit le planning instantanément.",f1_stat:"Planning en secondes, pas en heures",
     f2_h:"Réduit la masse salariale",f2_p:"<strong>Vous ne payez que le temps réellement travaillé.</strong> Tolérance de pointage à l'arrivée et au départ : un café pris 10 minutes avant le shift ne devient pas des heures payées. Timeaxe apprend vos périodes les plus chargées et adapte les effectifs avec précision. Plus de sureffectif en semaine creuse, ni de manque le week-end. Suivez le coût estimé de chaque planning par rapport à votre budget hebdomadaire.",f2_stat:"Ajuste les effectifs à votre activité réelle",
@@ -906,7 +907,7 @@ const translations = {
     toast_txt:"Schedule updated — Sarah K. covers for Marco R. on Sunday",
     m1:"100% GDPR",m2:"100% European hosting",m3:"European payments",m4:"European API",m5:"Encrypted data",
     m1b:"100% GDPR",m2b:"100% European hosting",m3b:"European payments",m4b:"European API",m5b:"Encrypted data",
-    s1:"of manual scheduling, every week",s2:"compliant with the HCR agreement & 35h",s3:"to generate a full schedule",s4:"spreadsheets needed",
+    s1:"saved on manual scheduling, every week",s1_prefix:"Up to",s2:"compliant with the HCR agreement & 35h",s3:"to generate a full schedule",s4:"spreadsheets needed",
     feat_eyebrow:"What it does",feat_h2:"Three problems. Solved automatically.",
     f1_h:"Saves manager time",f1_p:"No more spreadsheets, WhatsApp threads, or last-minute panic. Describe your team and hours — Timeaxe builds the schedule instantly.",f1_stat:"Schedule in seconds, not hours",
     f2_h:"Reduces labour costs",f2_p:"<strong>You only pay for time that's actually worked.</strong> Smart clock-in grace and clock-out buffers — an early coffee doesn't become paid hours. Timeaxe learns your busiest periods and staffs them precisely. No more overstaffing quiet weekdays or scrambling on Saturday nights. Track each schedule's estimated cost against your weekly budget.",f2_stat:"Matches staffing to real demand",
