@@ -183,20 +183,6 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .cred-strip p{display:inline-block;max-width:720px;text-align:center;font-size:13.5px;line-height:1.6;color:var(--text-secondary);background:var(--blue-50);border:1px solid var(--blue-100);border-radius:100px;padding:18px 24px}
 .cred-strip a{color:var(--blue-600);font-weight:600;text-decoration:none;white-space:nowrap}
 .cred-strip a:hover{text-decoration:underline}
-.feat-divider{max-width:1100px;width:calc(100% - 3rem);margin:36px auto 0;border:none;border-top:1px solid var(--border)}
-/* APP SHOWCASE (3D PHONE) */
-.phone-showcase{background:linear-gradient(180deg,var(--blue-deep) 0%,var(--blue-night) 100%);position:relative;padding:120px 2rem 40px}
-.phone-showcase::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.06) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 70% 80% at 50% 40%,black,transparent)}
-.phone-glow{position:absolute;top:10%;left:50%;width:600px;height:600px;transform:translateX(-50%);background:radial-gradient(circle,rgba(90,147,230,0.35),transparent 65%);filter:blur(40px);z-index:0}
-.phone-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.phone-copy .eyebrow{color:var(--blue-400)}
-.phone-copy .section-h2{color:#fff;margin-bottom:18px}
-.phone-copy>p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:440px}
-.phone-stage{display:flex;justify-content:center;perspective:1200px;overflow:visible}
-.iphone-frame{width:440px;position:relative;z-index:3;margin-bottom:-70px;transform-style:preserve-3d;transform-origin:50% 100%}
-.iphone-frame::before{content:'';position:absolute;top:50%;left:50%;width:130%;aspect-ratio:1/1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(125,180,255,0.45),transparent 70%);filter:blur(60px);z-index:-1;pointer-events:none}
-.iphone-screen-img{display:block;width:100%;height:auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,0.5)) drop-shadow(0 0 30px rgba(0,0,0,0.1))}
-
 .name-input{display:block;width:100%;max-width:470px;margin:0 auto 10px;height:48px;background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.12);border-radius:100px;padding:0 22px;font-size:16px;font-family:var(--font-sans);color:#fff;outline:none;text-align:center;transition:border-color .15s,background .15s}
 .name-input::placeholder{color:rgba(255,255,255,0.28)}
 .name-input:focus{border-color:var(--blue-400);background:rgba(255,255,255,0.08)}
@@ -245,14 +231,6 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .sc-legend-dot{width:10px;height:10px;border-radius:3px}
 .overtime-tag{margin-left:auto;font-size:11px;font-weight:600;color:var(--cyan);background:#E7F6F0;border:1px solid #B7E3D4;padding:4px 12px;border-radius:999px}
 
-/* MARQUEE */
-.marquee-wrap{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:20px 0;overflow:hidden}
-.marquee{display:flex;gap:64px;width:max-content;animation:scroll 28s linear infinite}
-.marquee-wrap:hover .marquee{animation-play-state:paused}
-@keyframes scroll{to{transform:translateX(-50%)}}
-.m-item{display:flex;align-items:center;gap:9px;font-size:13px;font-weight:500;color:var(--text-secondary);white-space:nowrap}
-.m-item svg{width:15px;height:15px;stroke:var(--blue-600);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
-
 /* STATS */
 .stats-section{background:#fff;border-bottom:1px solid var(--border);padding:44px 2rem;display:flex;justify-content:center}
 .stats-inner{display:flex;max-width:960px;width:100%}
@@ -268,76 +246,36 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .eyebrow{font-size:12px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-500);margin-bottom:14px}
 .section-h2{font-family:var(--font-sans);font-size:clamp(25px,4.2vw,42px);font-weight:800;letter-spacing:-1.2px;line-height:1.08;margin-bottom:56px;color:var(--blue-deep);max-width:560px;overflow-wrap:break-word;hyphens:auto}
 
-/* FEATURES (bento grid) */
-.hfeat{background:var(--blue-50);position:relative;overflow:hidden;border-top:1px solid var(--border)}
-.hfeat-head{max-width:980px;margin:0 auto;padding:104px 2rem 0}
-.hfeat-head .eyebrow{color:var(--blue-600)}
-.hfeat-head .section-h2{color:var(--blue-deep);margin-bottom:0}
-.hfeat-grid{max-width:980px;margin:0 auto;padding:64px 2rem 104px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.hcard{display:flex;flex-direction:column;min-height:230px;background:#FAFBFD;border:1px solid rgba(29,58,103,0.09);border-radius:24px;padding:36px 34px;position:relative;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
-.hcard:hover{border-color:rgba(59,125,224,0.4);box-shadow:0 0 0 1px rgba(59,125,224,0.14),0 24px 48px -24px rgba(29,58,103,0.32);transform:translateY(-3px)}
-.hcard-num{font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-600);margin-bottom:22px}
-.h-icon{width:26px;height:26px;margin-bottom:20px}
-.h-icon svg{width:26px;height:26px;stroke:var(--blue-deep);fill:none;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
-.hcard h3{font-family:var(--font-sans);font-size:20px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;letter-spacing:-.3px}
-.hcard p{font-size:14.5px;color:var(--text-secondary);line-height:1.7}
+/* TRUST BAR */
+.trust-bar{background:#fff;border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:32px 2rem;text-align:center}
+.trust-bar-label{font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:18px}
+.trust-logos{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:760px;margin:0 auto}
+.trust-logo{font-size:13px;font-weight:600;color:var(--text-muted);background:var(--blue-50);border:1px dashed var(--border);border-radius:10px;padding:10px 22px;letter-spacing:.02em}
 
-/* EU SECTION (light) */
-.eu-section{background:linear-gradient(180deg,#fff 0%,#F7F7F8 45%,#EAF0F9 100%);position:relative;overflow:hidden;padding:104px 2rem;border-top:1px solid var(--border)}
-.eu-section::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(37,99,235,0.06) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 75% 90% at 50% 30%,black,transparent)}
-.eu-inner{max-width:980px;margin:0 auto;position:relative;z-index:2}
-.eu-stars{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--blue-200);color:var(--blue-600);font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:7px 18px;border-radius:100px;margin-bottom:20px;box-shadow:0 4px 18px rgba(37,99,235,0.1)}
-.eu-stars .star{color:#f5b301}
-.eu-inner .section-h2 .grad,.eu-inner .section-h2 .grad *{background:linear-gradient(120deg,var(--blue-600),var(--blue-400));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.eu-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-bottom:28px}
-.eu-card{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:30px;transition:transform .25s,box-shadow .25s,border-color .25s;box-shadow:0 2px 10px rgba(15,40,80,0.04)}
-.eu-card:hover{transform:translateY(-4px);border-color:var(--blue-300);box-shadow:0 16px 40px rgba(37,99,235,0.12)}
-.eu-card h3{font-family:var(--font-sans);font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;display:flex;align-items:center;gap:12px;letter-spacing:-.2px}
-.eu-icon{width:40px;height:40px;border-radius:var(--radius-md);background:linear-gradient(135deg,var(--blue-500),var(--blue-600));display:flex;align-items:center;justify-content:center;flex-shrink:0;box-shadow:0 4px 14px rgba(37,99,235,0.3)}
-.eu-icon svg{width:19px;height:19px;stroke:#fff;fill:none;stroke-width:1.9;stroke-linecap:round;stroke-linejoin:round}
-.eu-card p{font-size:14px;color:var(--text-secondary);line-height:1.7}
-.eu-banner{display:flex;align-items:center;gap:18px;background:linear-gradient(135deg,#EAF0F9 0%,#DCE6F4 100%);border:1px solid var(--blue-200);border-radius:var(--radius-lg);padding:24px 30px;box-shadow:0 8px 24px rgba(29,58,103,0.08)}
-.eu-banner-flag{font-size:32px;flex-shrink:0}
-.eu-banner p{font-size:14px;color:var(--text-secondary);line-height:1.65}
-.eu-banner strong{color:var(--blue-deep);font-weight:600}
+/* STATS CAPTION */
+.stats-caption{text-align:center;font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);padding:56px 2rem 0;background:#fff}
+.stats-section .stat-num{color:var(--blue-300)}
 
-/* LAW */
-.law-section{background:#fff;padding:104px 2rem}
-.law-inner{max-width:980px;margin:0 auto}
-.law-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.law-card{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:30px;transition:transform .25s,box-shadow .25s}
-.law-card:hover{transform:translateY(-3px);box-shadow:0 12px 36px rgba(59,130,246,0.1)}
-.law-card h3{font-family:var(--font-sans);font-size:16px;font-weight:700;color:var(--blue-deep);margin-bottom:8px;letter-spacing:-.2px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
-.law-tag{font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;background:var(--blue-500);color:#fff;padding:3px 8px;border-radius:4px}
-.law-card p{font-size:14px;color:var(--text-secondary);line-height:1.65}
-.law-note{margin-top:26px;background:var(--blue-50);border:1px solid var(--blue-200);border-radius:var(--radius-md);padding:18px 22px;display:flex;gap:14px;align-items:flex-start}
-.law-note-icon{width:32px;height:32px;border-radius:50%;background:var(--blue-500);flex-shrink:0;display:flex;align-items:center;justify-content:center}
-.law-note-icon svg{width:16px;height:16px;stroke:#fff;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
-.law-note p{font-size:13px;color:var(--text-secondary);line-height:1.6}
-.law-note strong{color:var(--blue-deep);font-weight:600}
+/* PROBLEM */
+.problem-section{background:var(--blue-50);border-top:1px solid var(--border);padding:104px 2rem}
+.problem-inner{max-width:720px;margin:0 auto;text-align:center}
+.problem-inner .eyebrow{color:var(--blue-600);justify-content:center}
+.problem-inner .section-h2{margin:0 auto 28px;max-width:640px}
+.problem-inner p{font-size:17px;color:var(--text-secondary);line-height:1.75;margin-bottom:18px}
+.problem-punch{font-family:var(--font-sans);font-size:19px;font-weight:700;color:var(--blue-deep);margin-top:14px}
 
-/* HOW */
-.how-section{background:var(--blue-50);border-top:1px solid var(--blue-100);padding:104px 2rem}
-.how-inner{max-width:980px;margin:0 auto}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.step{background:#fff;border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:38px 32px;transition:transform .25s,box-shadow .25s}
-.step:hover{transform:translateY(-4px);box-shadow:0 14px 40px rgba(59,130,246,0.1)}
-.step-num{font-family:var(--font-sans);font-size:52px;font-weight:800;letter-spacing:-1px;background:linear-gradient(135deg,var(--blue-500),var(--blue-600));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:20px}
-.step h3{font-family:var(--font-sans);font-size:18px;font-weight:700;color:var(--blue-deep);margin-bottom:10px;letter-spacing:-.3px}
-.step p{font-size:14px;color:var(--text-secondary);line-height:1.7}
-
-/* QUOTES */
-.quotes-section{background:#fff;padding:104px 2rem}
-.quotes-inner{max-width:980px;margin:0 auto}
-.quotes-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.quote-card{border:1px solid var(--blue-100);border-radius:var(--radius-lg);padding:36px;background:#fff;transition:transform .25s,box-shadow .25s}
-.quote-card:hover{transform:translateY(-3px);box-shadow:0 12px 40px rgba(59,130,246,0.1)}
-.quote-eyebrow{font-size:11px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}
-.quote-card blockquote{font-family:var(--font-sans);font-size:20px;font-weight:700;line-height:1.25;letter-spacing:-.3px;color:var(--blue-deep);margin-bottom:22px}
-.quote-card ul{list-style:none;display:flex;flex-direction:column;gap:10px}
-.quote-card li{font-size:14px;color:var(--text-secondary);display:flex;align-items:flex-start;gap:10px}
-.li-dot{width:16px;height:16px;border-radius:50%;background:var(--blue-50);border:1px solid var(--blue-200);flex-shrink:0;display:flex;align-items:center;justify-content:center;margin-top:2px}
-.li-dot::after{content:'';width:5px;height:5px;background:var(--blue-500);border-radius:50%}
+/* PRINCIPLES (how it works) */
+.principles-section{background:#fff;padding:104px 2rem}
+.principles-inner{max-width:980px;margin:0 auto}
+.principles-inner .section-h2{margin-left:auto;margin-right:auto;text-align:center;max-width:640px}
+.principles-inner .eyebrow{text-align:center;justify-content:center}
+.principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:56px}
+.principle-card{background:#FAFBFD;border:1px solid rgba(29,58,103,0.09);border-radius:24px;padding:34px 30px;transition:border-color .25s ease,box-shadow .25s ease,transform .25s ease}
+.principle-card:hover{border-color:rgba(59,125,224,0.4);box-shadow:0 0 0 1px rgba(59,125,224,0.14),0 24px 48px -24px rgba(29,58,103,0.32);transform:translateY(-3px)}
+.principle-num{font-family:var(--font-sans);font-size:13px;font-weight:700;letter-spacing:.1em;color:var(--blue-600);margin-bottom:18px}
+.principle-card h3{font-family:var(--font-sans);font-size:19px;font-weight:700;color:var(--blue-deep);margin-bottom:12px;letter-spacing:-.3px;line-height:1.25}
+.principle-card p{font-size:14.5px;color:var(--text-secondary);line-height:1.7}
+.principle-tags{margin-top:16px;font-size:12px;font-weight:600;color:var(--blue-600);letter-spacing:.02em;line-height:1.6}
 
 /* CTA */
 .bottom-cta-wrap{background:linear-gradient(180deg,#F7F7F8 0%,#EAF0F9 100%);position:relative;overflow:hidden;border-top:1px solid var(--border)}
@@ -391,11 +329,11 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 .modal-success .ms-icon svg{width:28px;height:28px;stroke:#16a34a;fill:none;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round}
 .modal-success p{font-size:14px;color:var(--text-secondary)}
 
+@media(max-width:860px) and (min-width:721px){
+  .principles-grid{grid-template-columns:1fr 1fr}
+}
 @media(max-width:720px){
-  .steps,.quotes-grid,.law-grid,.eu-grid,.phone-inner{grid-template-columns:1fr}
-  .phone-inner{gap:40px;text-align:center}
-  .phone-copy>p{margin:0 auto}
-  .iphone-frame{width:260px;margin-bottom:0}
+  .principles-grid{grid-template-columns:1fr}
   .stats-inner{flex-wrap:wrap}
   .stat{flex:1 1 45%;padding:12px 8px;border-right:none}
   .stat-num{font-size:28px}
@@ -412,7 +350,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .hero-form input[type="email"],.bottom-form input[type="email"]{width:100%;text-align:center}
   .hero-form .btn-primary,.bottom-form .btn-primary{width:100%}
   .name-input{text-align:center}
-  .section,.law-section,.how-section,.quotes-section,.eu-section{padding-left:1.25rem;padding-right:1.25rem}
+  .section,.problem-section,.principles-section{padding-left:1.25rem;padding-right:1.25rem}
   /* compact schedule grid stays visible on mobile */
   .schedule-card{padding:18px;margin-top:48px}
   .sg{grid-template-columns:58px repeat(7,1fr);gap:3px}
@@ -425,8 +363,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   .overtime-tag{font-size:9px;margin-left:0}
   .sched-notif{width:auto;left:12px;right:12px;top:46px}
   .sched-toast{white-space:normal;text-align:center;width:max-content;max-width:92%}
-  .hfeat-grid{grid-template-columns:1fr}
-  .hcard{padding:28px 24px;min-height:0}
+  .principle-card{padding:28px 24px}
   footer{flex-direction:column;gap:6px;text-align:center}
 }
 @media(prefers-reduced-motion:reduce){
@@ -443,9 +380,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   <button class="nav-burger" aria-label="Menu" aria-expanded="false" onclick="toggleNav(this)"><span></span><span></span><span></span></button>
   <div class="nav-collapse">
     <div class="nav-links">
-      <a href="#features" data-i="nav_features">Features</a>
-      <a href="#eu" data-i="nav_eu">EU sovereignty</a>
-      <a href="#how" data-i="nav_how">How it works</a>
+      <a href="#problem" data-i="nav_problem">The problem</a>
+      <a href="#principles" data-i="nav_how">How it works</a>
       <a href="/en/faq" data-i="nav_faq">FAQ</a>
       <a href="/en/about" data-i="nav_about">About</a>
     </div>
@@ -462,8 +398,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <section class="hero" id="hero">
   <canvas id="heroCanvas"></canvas>
   <div class="hero-inner">
-    <h1 id="heroTitle"><span class="line" data-i-words="h1a">Scheduling that</span><br><span class="line accent" data-i-words="h1b">thinks for you</span></h1>
-    <p class="hero-sub" data-anim="fade" data-i="hero_sub">Timeaxe AI builds perfect staff schedules for restaurants and hotels in seconds — less overtime, less burnout, and hours given back to your managers every week.</p>
+    <h1 id="heroTitle"><span class="line" data-i-words="h1a">Your team's schedule,</span><br><span class="line accent" data-i-words="h1b">checked by law, approved by you.</span></h1>
+    <p class="hero-sub" data-anim="fade" data-i="hero_sub">Timeaxe generates your HCR-compliant schedule in seconds. No schedule goes live without your approval.</p>
     <div data-anim="fade" id="waitlist">
       <input type="text" id="heroName" class="name-input" data-placeholder-fr="Nom complet ou entreprise" data-placeholder-en="Full name or company" placeholder="Full name or company" autocomplete="name">
       <div class="hero-form" id="heroForm">
@@ -527,27 +463,14 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   </div>
 </section>
 
-<div class="marquee-wrap">
-  <div class="marquee">
-    <span class="m-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><span data-i="m1">100% GDPR</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span data-i="m2">100% European hosting</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg><span data-i="m3">European payments</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg><span data-i="m4">European API</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span data-i="m5">Encrypted data</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg><span data-i="m1b">100% GDPR</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20"></path><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><span data-i="m2b">100% European hosting</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg><span data-i="m3b">European payments</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg><span data-i="m4b">European API</span></span>
-    <span class="m-item"><svg viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg><span data-i="m5b">Encrypted data</span></span>
-  </div>
-</div>
-
-<div class="stats-section">
-  <div class="stats-inner">
-    <div class="stat" data-anim="up"><div class="stat-num"><span class="stat-prefix" data-i="s1_prefix">Up to</span> <span data-count="8">8</span>h+</div><div class="stat-label" data-i="s1">saved on manual scheduling, every week</div></div>
-    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="100">100</span>%</div><div class="stat-label" data-i="s2">compliant with the HCR agreement &amp; 35h</div></div>
-    <div class="stat" data-anim="up"><div class="stat-num"><span data-count="2.4" data-decimal="1">2,4</span>s</div><div class="stat-label" data-i="s3">to generate a full schedule</div></div>
-    <div class="stat" data-anim="up"><div class="stat-num"><span>0</span></div><div class="stat-label" data-i="s4">spreadsheets needed</div></div>
+<div class="trust-bar">
+  <p class="trust-bar-label" data-i="trust_label">Coming soon to these venues</p>
+  <div class="trust-logos">
+    <span class="trust-logo" data-i="trust1">Restaurant</span>
+    <span class="trust-logo" data-i="trust2">Hotel</span>
+    <span class="trust-logo" data-i="trust3">Brasserie</span>
+    <span class="trust-logo" data-i="trust4">Bar</span>
+    <span class="trust-logo" data-i="trust5">Café</span>
   </div>
 </div>
 
@@ -555,176 +478,49 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   <p data-i="reco_line">Ranked 15th overall out of 900+ startups at the Global Innovation Show in Hong Kong — and proudly the 1st Western company. <a href="/en/about">Read our story →</a></p>
 </div>
 
-<!-- HORIZONTAL FEATURES -->
-<div class="hfeat" id="features">
-  <div class="hfeat-head">
-    <p class="eyebrow" data-anim="up" data-i="feat_eyebrow">What it does</p>
-    <h2 class="section-h2" data-i="feat_h2">Three problems. Solved automatically.</h2>
+<!-- PROBLEM -->
+<div class="problem-section" id="problem">
+  <div class="problem-inner">
+    <p class="eyebrow" data-anim="up" data-i="problem_eyebrow">The reality today</p>
+    <h2 class="section-h2" data-anim="up" data-i="problem_h2">Schedules, still built in spreadsheets — or worse, pasted into ChatGPT.</h2>
+    <p data-anim="up" data-i="problem_p1">A spreadsheet checks neither the HCR agreement, nor mandatory rest periods, nor overtime.</p>
+    <p data-anim="up" data-i="problem_p2">Pasting schedules and your team's names into a general-purpose chatbot is worse: these tools ignore French labour law and offer no guarantee over what happens to your employees' data.</p>
+    <p class="problem-punch" data-anim="up" data-i="problem_punch">Timeaxe replaces both — without the risk.</p>
   </div>
-  <div class="hfeat-grid" id="hfeatGrid">
-      <div class="hcard" data-anim="up">
-        <div class="hcard-num">01</div>
-        <div class="h-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></div>
-        <h3 data-i="f1_h">Saves manager time</h3>
-        <p data-i="f1_p">No more spreadsheets, WhatsApp threads, or last-minute panic. Describe your team and hours — Timeaxe builds the schedule instantly.</p>
-      </div>
-      <div class="hcard" data-anim="up">
-        <div class="hcard-num">02</div>
-        <div class="h-icon"><svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"></line><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg></div>
-        <h3 data-i="f2_h">Reduces labour costs</h3>
-        <p data-i="f2_p">You only pay for time actually worked, down to the minute. Timeaxe matches staffing to real demand — no over- or understaffing.</p>
-      </div>
-      <div class="hcard" data-anim="up">
-        <div class="hcard-num">03</div>
-        <div class="h-icon"><svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path></svg></div>
-        <h3 data-i="f3_h">Keeps staff happy</h3>
-        <p data-i="f3_p">The AI detects burnout risk before it becomes a resignation. It tracks hours, flags overworked staff, and balances workloads fairly.</p>
-      </div>
-      <div class="hcard" data-anim="up">
-        <div class="hcard-num">04</div>
-        <div class="h-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></div>
-        <h3 data-i="f4_h">Guarantees compliance</h3>
-        <p data-i="f4_p">35h week, mandatory rest, HCR agreement: every schedule is checked against French labour law before publishing.</p>
-      </div>
-  </div>
-  <hr class="feat-divider">
 </div>
 
-<!-- APP SHOWCASE -->
-<div class="phone-showcase" id="app">
-  <div class="phone-glow"></div>
-  <div class="phone-inner">
-    <div class="phone-copy">
-      <p class="eyebrow" data-anim="up" data-i="phone_eyebrow">The Timeaxe AI app</p>
-      <h2 class="section-h2" data-i="phone_h2">Your team's schedule, in every pocket.</h2>
-      <p data-anim="up" data-i="phone_p">Your team checks their schedule, requests time off, or swaps a shift in one tap — synced in real time with the manager's schedule.</p>
-    </div>
-    <div class="phone-stage" id="phoneStage">
-      <div class="iphone-frame" id="iphoneFrame">
-        <img src="./assets/img/full-phone-ui.png" alt="Timeaxe AI app showing today's shift, upcoming events, and a clock-in button" class="iphone-screen-img" width="382" height="783" loading="lazy">
+<!-- PRINCIPLES -->
+<div class="principles-section" id="principles">
+  <div class="principles-inner">
+    <p class="eyebrow" data-anim="up" data-i="principles_eyebrow">Our three principles</p>
+    <h2 class="section-h2" data-anim="up" data-i="principles_h2">AI under control, at every step.</h2>
+    <div class="principles-grid">
+      <div class="principle-card" data-anim="up">
+        <div class="principle-num">01</div>
+        <h3 data-i="p1_h">The AI never has the final word</h3>
+        <p data-i="p1_p">Every schedule generated is checked by code — not by a model — against the HCR agreement and French labour law. Nothing is published without your approval.</p>
+      </div>
+      <div class="principle-card" data-anim="up">
+        <div class="principle-num">02</div>
+        <h3 data-i="p2_h">The AI never sees a person</h3>
+        <p data-i="p2_p">Names, contacts, and identifying data are pseudonymised before any call to the model. It only ever processes anonymised data — never your employees' identities.</p>
+      </div>
+      <div class="principle-card" data-anim="up">
+        <div class="principle-num">03</div>
+        <h3 data-i="p3_h">The model is a component, not a dependency</h3>
+        <p data-i="p3_p">Today, Mistral — a European model. Tomorrow, our own model. The provider can change; your data and schedules stay in Europe.</p>
+        <p class="principle-tags" data-i="p3_tags">100% GDPR · European hosting · European payments · Encrypted data</p>
       </div>
     </div>
   </div>
 </div>
 
-<!-- EU -->
-<div class="eu-section" id="eu">
-  <div class="eu-inner">
-    <div class="eu-stars" data-anim="up"><span class="star">★</span> <span data-i="eu_badge">European sovereignty</span> <span class="star">★</span></div>
-    <h2 class="section-h2" data-i="eu_h2">100% European.<br><span class="grad">End to end.</span></h2>
-    <div class="eu-grid">
-      <div class="eu-card" data-anim="up">
-        <h3><span class="eu-icon"><svg viewBox="0 0 24 24"><path d="M20 17.58A5 5 0 0 0 18 8h-1.26A8 8 0 1 0 4 16.25"></path><path d="M8 16h.01"></path><path d="M8 20h.01"></path><path d="M12 18h.01"></path><path d="M12 22h.01"></path><path d="M16 16h.01"></path><path d="M16 20h.01"></path></svg></span><span data-i="eu1_h">European cloud hosting</span></h3>
-        <p data-i="eu1_p">Your data is hosted exclusively with European cloud providers, on servers located within the European Union. It never leaves European territory.</p>
-      </div>
-      <div class="eu-card" data-anim="up">
-        <h3><span class="eu-icon"><svg viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="2"></rect><line x1="2" y1="10" x2="22" y2="10"></line></svg></span><span data-i="eu2_h">European payments</span></h3>
-        <p data-i="eu2_p">Our payment infrastructure relies solely on European providers. Your transactions and banking data remain under European jurisdiction.</p>
-      </div>
-      <div class="eu-card" data-anim="up">
-        <h3><span class="eu-icon"><svg viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg></span><span data-i="eu3_h">European API</span></h3>
-        <p data-i="eu3_p">Our API is designed, built, and operated in Europe. Every call, every process, every byte of data flows through entirely European infrastructure.</p>
-      </div>
-      <div class="eu-card" data-anim="up">
-        <h3><span class="eu-icon"><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg></span><span data-i="eu4_h">GDPR-native compliance</span></h3>
-        <p data-i="eu4_p">GDPR isn't a checkbox for us — it's our architecture. Data minimisation, end-to-end encryption, and the right to erasure built in by design.</p>
-      </div>
-    </div>
-    <div class="eu-banner" data-anim="up">
-      <span class="eu-banner-flag">🇪🇺</span>
-      <p data-i="eu_banner"><strong>Our commitment:</strong> zero dependency on non-European providers, from the payment layer to cloud storage. Your business data and your employees' data stay in Europe, under European law — full stop.</p>
-    </div>
-  </div>
-</div>
-
-<!-- LAW -->
-<div class="law-section">
-  <div class="law-inner">
-    <p class="eyebrow" data-anim="up" data-i="law_eyebrow">Labour law compliance</p>
-    <h2 class="section-h2" data-i="law_h2">Built to respect French labour law — automatically.</h2>
-    <div class="law-grid">
-      <div class="law-card" data-anim="up">
-        <h3><span data-i="law1_h">35-hour working week</span> <span class="law-tag">Code du travail</span></h3>
-        <p data-i="law1_p">Timeaxe automatically tracks weekly working hours and triggers an alert when an employee approaches the 35h threshold. Overtime is logged and rated at the legal rates (25% or 50%).</p>
-      </div>
-      <div class="law-card" data-anim="up">
-        <h3><span data-i="law2_h">Mandatory rest periods</span> <span class="law-tag">Art. L3131-1</span></h3>
-        <p data-i="law2_p">The system automatically enforces the minimum 11 consecutive hours of daily rest and 35 hours of weekly rest. No non-compliant schedule can be published.</p>
-      </div>
-      <div class="law-card" data-anim="up">
-        <h3><span data-i="law3_h">HCR Collective Agreement</span> <span class="law-tag">Hôtellerie-Restauration</span></h3>
-        <p data-i="law3_p">Timeaxe incorporates the specific rules of the National Collective Agreement for hospitality: split shifts, maximum 13h working span, and Sunday and bank holiday premiums.</p>
-      </div>
-      <div class="law-card" data-anim="up">
-        <h3><span data-i="law4_h">Notice period requirements</span> <span class="law-tag">Art. L3121-47</span></h3>
-        <p data-i="law4_p">Schedules are published within legal deadlines. Timeaxe automatically notifies employees and keeps a timestamped record with legal evidentiary value in case of an inspection.</p>
-      </div>
-    </div>
-    <div class="law-note" data-anim="up">
-      <div class="law-note-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="12"></line><line x1="12" y1="16" x2="12.01" y2="16"></line></svg></div>
-      <p data-i="law_note"><strong>Important:</strong> Timeaxe AI facilitates compliance but does not replace legal counsel. Rules may vary depending on your company or branch agreements. If in doubt, consult your legal advisor or the labour inspectorate.</p>
-    </div>
-  </div>
-</div>
-
-<!-- HOW -->
-<div class="how-section" id="how">
-  <div class="how-inner">
-    <p class="eyebrow" data-anim="up" data-i="how_eyebrow">How it works</p>
-    <h2 class="section-h2" data-i="how_h2">Tell us your staff and hours.<br>We handle the rest.</h2>
-    <div class="steps">
-      <div class="step" data-anim="up">
-        <div class="step-num">01</div>
-        <h3 data-i="step1_h">Set up your venue</h3>
-        <p data-i="step1_p">Import your staff list, set roles, availability, and opening hours. About two minutes — just once. Employees join by email invite in two minutes.</p>
-      </div>
-      <div class="step" data-anim="up">
-        <div class="step-num">02</div>
-        <h3 data-i="step2_h">AI builds your schedule</h3>
-        <p data-i="step2_p">Timeaxe analyses historical data, predicts peak periods, and generates a labour-law-compliant schedule in seconds.</p>
-      </div>
-      <div class="step" data-anim="up">
-        <div class="step-num">03</div>
-        <h3 data-i="step3_h">Review and publish</h3>
-        <p data-i="step3_p">Make any tweaks you want, then publish. Nothing goes live until you approve it. Staff are notified automatically, every week.</p>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- QUOTES -->
-<div class="quotes-section">
-  <div class="quotes-inner">
-    <p class="eyebrow" data-anim="up" data-i="who_eyebrow">Who it's for</p>
-    <h2 class="section-h2" data-i="who_h2">Built for hospitality, front to back.</h2>
-    <div class="quotes-grid">
-      <div class="quote-card" data-anim="up">
-        <p class="quote-eyebrow" data-i="q1_ey">Restaurants</p>
-        <ul>
-          <li><span class="li-dot"></span><span data-i="q1_l1">Front-of-house and kitchen scheduling in one place</span></li>
-          <li><span class="li-dot"></span><span data-i="q1_l2">Handles split shifts and variable covers automatically</span></li>
-          <li><span class="li-dot"></span><span data-i="q1_l3">Flags when someone's working too many closes in a row</span></li>
-        </ul>
-      </div>
-      <div class="quote-card" data-anim="up">
-        <p class="quote-eyebrow" data-i="q2_ey">Hotels</p>
-        <ul>
-          <li><span class="li-dot"></span><span data-i="q2_l1">Coordinates housekeeping, F&amp;B, and front desk in sync</span></li>
-          <li><span class="li-dot"></span><span data-i="q2_l2">Adapts to occupancy forecasts and seasonal demand</span></li>
-          <li><span class="li-dot"></span><span data-i="q2_l3">Labour law compliance built in — no more manual checks</span></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- FAQ TEASER -->
-<div style="background:var(--blue-50);border-top:1px solid var(--blue-100);border-bottom:1px solid var(--blue-100);padding:72px 2rem;text-align:center">
-  <div style="max-width:560px;margin:0 auto">
-    <p style="font-size:12px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue-600);margin-bottom:14px" data-i="faq_eyebrow">Frequently asked questions</p>
-    <h2 style="font-family:var(--font-sans);font-size:clamp(24px,4vw,36px);font-weight:800;letter-spacing:-1px;line-height:1.1;color:var(--blue-deep);margin-bottom:16px" data-i="faq_title">Got questions about Timeaxe AI?</h2>
-    <p style="font-size:16px;color:var(--text-secondary);margin-bottom:32px" data-i="faq_sub">Launch, pricing, features, waitlist — we have the answers.</p>
-    <a href="/en/faq" style="display:inline-block;background:var(--blue-600);color:#fff;padding:14px 32px;border-radius:999px;font-size:15px;font-weight:600;text-decoration:none;transition:opacity .15s" onmouseover="this.style.opacity='.85'" onmouseout="this.style.opacity='1'" data-i="faq_btn">View the FAQ</a>
+<p class="stats-caption" data-i="stats_caption">Pilot figures — coming soon</p>
+<div class="stats-section">
+  <div class="stats-inner">
+    <div class="stat" data-anim="up"><div class="stat-num">—</div><div class="stat-label" data-i="s1">hours of scheduling time saved per week</div></div>
+    <div class="stat" data-anim="up"><div class="stat-num">—</div><div class="stat-label" data-i="s2">legal compliance on published schedules</div></div>
+    <div class="stat" data-anim="up"><div class="stat-num">—</div><div class="stat-label" data-i="s3">average time to generate a schedule</div></div>
   </div>
 </div>
 
@@ -732,7 +528,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <div class="bottom-cta-wrap">
   <canvas id="ctaCanvas"></canvas>
   <div class="bottom-cta">
-    <h2><span data-i="cta_h2a">Be first when</span><br><span data-i="cta_h2b">we <span>launch</span>.</span></h2>
+    <h2><span data-i="cta_h2a">A compliant schedule,</span><br><span data-i="cta_h2b">in <span>seconds</span>.</span></h2>
     <p data-anim="up" data-i="cta_sub">We're onboarding a small group of venues before our public launch. Join the waitlist and skip the queue.</p>
     <input type="text" id="bottomName" class="name-input" data-anim="up" data-placeholder-fr="Nom complet ou entreprise" data-placeholder-en="Full name or company" placeholder="Full name or company" autocomplete="name">
     <div class="bottom-form" id="bottomForm" data-anim="up">
@@ -802,72 +598,13 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <script>
 /* ============ TRANSLATIONS ============ */
 const translations = {
-  fr: {
-    nav_features:"Fonctionnalités",nav_eu:"Souveraineté",nav_faq:"FAQ",nav_how:"Comment ça marche",nav_cta:"Rejoindre la liste",promo:"Accès anticipé — lancement septembre 2026 · Rejoignez la liste d'attente →",nav_about:"À propos",
-    badge:"Ouverture de l'accès anticipé en septembre 2026",
-    h1a:"La planification qui",h1b:"pense à votre place",
-    hero_sub:"Timeaxe AI génère des plannings parfaits pour vos restaurants et hôtels en quelques secondes — moins d'heures supplémentaires, moins d'épuisement, et des heures rendues à vos managers chaque semaine.",
-    cta_hero:"Accès anticipé gratuit",success:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt.",
-    form_note:"Sans carte bancaire · Sans spam · <a href='/privacy' style='color:inherit;text-decoration:underline'>Politique de confidentialité</a>",
-    reco_line:"Classés 15ᵉ au classement général parmi plus de 900 startups au Global Innovation Show de Hong Kong — et fièrement la 1ʳᵉ entreprise occidentale. <a href='about.html'>Découvrez notre histoire →</a>",
-    sc_title:"Semaine du 16 juin 2026 — Le Grand Bistrot",sc_time:"Généré en 2,4s",sc_ai:"Optimisé par IA",
-    d_mon:"Lun",d_tue:"Mar",d_wed:"Mer",d_thu:"Jeu",d_fri:"Ven",d_sat:"Sam",d_sun:"Dim",
-    leg_on:"Planifié",leg_peak:"Pic d'activité",leg_off:"Repos",no_overtime:"✓ Aucun conflit d'heures supp.",
-    notif_title:"Absence signalée",
-    notif_body:"<strong>Marco R.</strong> vient de se déclarer malade pour dimanche. Suggestion&nbsp;: <strong>Sarah K.</strong> est disponible et sous son quota d'heures.",
-    consent_label:"J'accepte que Timeaxe AI conserve mes informations et me contacte au sujet du lancement. <a href='/privacy'>En savoir plus</a>",
-    consent_label2:"J'accepte que Timeaxe AI conserve mes informations et me contacte au sujet du lancement. <a href='/privacy'>En savoir plus</a>",
-    consent_modal:"J'accepte que Timeaxe AI conserve mes informations et me contacte au sujet du lancement. <a href='/privacy'>En savoir plus</a>",
-    consent_company:"J'autorise l'affichage du nom de mon établissement comme utilisateur de Timeaxe AI (facultatif). <a href='/privacy'>En savoir plus</a>",
-    notif_btn:"Confirmer l'échange",
-    toast_txt:"Planning mis à jour — Sarah K. remplace Marco R. dimanche",
-    m1:"100% RGPD",m2:"Hébergement 100% européen",m3:"Paiements européens",m4:"API européenne",m5:"Données chiffrées",
-    m1b:"100% RGPD",m2b:"Hébergement 100% européen",m3b:"Paiements européens",m4b:"API européenne",m5b:"Données chiffrées",
-    s1:"économisées de planning manuel, chaque semaine",s1_prefix:"Jusqu'à",s2:"conforme à la convention HCR & aux 35h",s3:"pour générer un planning complet",s4:"tableur nécessaire",
-    feat_eyebrow:"Ce que ça fait",feat_h2:"Trois problèmes. Résolus automatiquement.",
-    f1_h:"Libère les managers",f1_p:"Fini les tableurs, les fils WhatsApp et la panique du lundi. Décrivez votre équipe et vos horaires — Timeaxe construit le planning instantanément.",
-    f2_h:"Réduit la masse salariale",f2_p:"Vous ne payez que le temps réellement travaillé, à la minute près. Timeaxe adapte les effectifs à votre activité réelle — sans sureffectif ni sous-effectif.",
-    f3_h:"Fidélise votre équipe",f3_p:"L'IA détecte les signaux d'épuisement avant qu'ils deviennent une démission. Elle surveille les heures, signale les surcharges et équilibre les roulements.",
-    f4_h:"Garantit la conformité",f4_p:"35h, repos obligatoires, Convention HCR : chaque planning est vérifié contre le droit du travail français avant publication.",
-    phone_eyebrow:"L'app Timeaxe AI",phone_h2:"Le planning de votre équipe, dans toutes les poches.",phone_p:"Vos équipes consultent leur planning, posent une indisponibilité ou échangent un shift en un tap — synchronisé en temps réel avec le planning manager.",
-    eu_badge:"Souveraineté européenne",eu_h2:"100% européen.<br><span class='grad'>De bout en bout.</span>",
-    eu1_h:"Hébergement cloud européen",eu1_p:"Vos données sont hébergées exclusivement chez des fournisseurs cloud européens, sur des serveurs situés dans l'Union européenne. Elles ne quittent jamais le territoire européen.",
-    eu2_h:"Paiements européens",eu2_p:"Notre infrastructure de paiement repose uniquement sur des prestataires européens. Vos transactions et données bancaires restent sous juridiction européenne.",
-    eu3_h:"API européenne",eu3_p:"Notre API est conçue, développée et opérée en Europe. Chaque appel, chaque traitement, chaque donnée transite par une infrastructure entièrement européenne.",
-    eu4_h:"Conformité RGPD native",eu4_p:"Le RGPD n'est pas une case à cocher — c'est notre architecture. Minimisation des données, chiffrement de bout en bout, droit à l'effacement intégré dès la conception.",
-    eu_banner:"<strong>Notre engagement :</strong> aucune dépendance à des fournisseurs non-européens, de la couche de paiement au stockage cloud. Vos données d'entreprise et celles de vos salariés restent en Europe, soumises au droit européen — point final.",
-    law_eyebrow:"Conformité droit du travail",law_h2:"Conçu pour respecter le droit français du travail — automatiquement.",
-    law1_h:"Durée légale de 35h",law1_p:"Timeaxe calcule automatiquement le temps de travail hebdomadaire et déclenche une alerte dès qu'un salarié approche du seuil des 35h. Les heures supplémentaires sont tracées et majorées selon les taux légaux (25% ou 50%).",
-    law2_h:"Repos obligatoires",law2_p:"Le système impose automatiquement le repos quotidien minimum de 11h consécutives et le repos hebdomadaire de 35h. Aucun planning en infraction ne peut être publié.",
-    law3_h:"Convention HCR",law3_p:"Timeaxe intègre les règles spécifiques à la Convention Collective Nationale des HCR : coupures, amplitude maximale de 13h, majoration des dimanches et jours fériés.",
-    law4_h:"Délai de prévenance",law4_p:"Les plannings sont publiés dans les délais légaux. Timeaxe envoie automatiquement les notifications aux salariés et conserve un historique horodaté à valeur probante en cas de contrôle.",
-    law_note:"<strong>Important :</strong> Timeaxe AI facilite la conformité mais ne remplace pas un conseil juridique. Les règles peuvent varier selon vos accords d'entreprise ou de branche. En cas de doute, consultez votre juriste ou l'inspection du travail.",
-    how_eyebrow:"Comment ça marche",how_h2:"Dites-nous vos équipes et vos horaires.<br>On s'occupe du reste.",
-    step1_h:"Configurez votre établissement",step1_p:"Importez votre liste d'employés, définissez les postes, les disponibilités et les horaires d'ouverture. Environ deux minutes — une seule fois. Vos employés rejoignent l'équipe par simple invitation e-mail, en deux minutes.",
-    step2_h:"L'IA construit votre planning",step2_p:"Timeaxe analyse les données historiques, anticipe les pics d'affluence et génère un planning conforme au droit du travail en quelques secondes.",
-    step3_h:"Vérifiez et publiez",step3_p:"Ajustez si besoin, puis publiez. Rien n'est publié sans votre validation. Les employés reçoivent ensuite leur planning automatiquement, chaque semaine.",
-    who_eyebrow:"Pour qui",who_h2:"Conçu pour l'hôtellerie-restauration.",
-    q1_ey:"Restaurants",
-    q1_l1:"Salle et cuisine planifiées au même endroit",q1_l2:"Gère les coupures et les couverts variables automatiquement",q1_l3:"Signale quand quelqu'un enchaîne trop de fermetures de suite",
-    q2_ey:"Hôtels",
-    q2_l1:"Coordonne housekeeping, F&B et réception en simultané",q2_l2:"S'adapte aux prévisions d'occupation et à la saisonnalité",q2_l3:"Conformité droit du travail intégrée — plus de vérifications manuelles",
-    cta_h2a:"Soyez parmi",cta_h2b:"les <span>premiers</span>.",
-    cta_sub:"Nous ouvrons l'accès à un petit groupe d'établissements avant notre lancement public. Rejoignez la liste d'attente et passez en tête de file.",
-    cta_bottom:"Accès anticipé gratuit",success2:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt.",
-    bottom_note:"Sans carte bancaire · Sans spam · <a href='/privacy' style='color:inherit;text-decoration:underline'>Politique de confidentialité</a>",
-    footer_eu:"Fièrement européen",faq_eyebrow:"Questions fréquentes",faq_title:"Vous avez des questions sur Timeaxe AI ?",faq_sub:"Lancement, tarifs, fonctionnalités, liste d'attente — on a les réponses.",faq_btn:"Voir la FAQ",footer_faq:"FAQ",footer_privacy:"Confidentialité",footer_about:"À propos",footer_legal:"Mentions légales",
-    modal_title:"Rejoignez la liste d'attente",modal_sub:"Soyez parmi les premiers établissements à utiliser Timeaxe AI. Entrez votre email pour réserver votre place.",
-    modal_btn:"Réserver ma place",modal_perk1:"Aucune carte bancaire requise",modal_perk2:"Zéro spam — juste les nouvelles importantes",modal_perk3:"Accès anticipé prioritaire au lancement",
-    modal_ok_title:"Vous y êtes !",modal_ok_sub:"Vous êtes sur la liste — nous reviendrons vers vous très bientôt."
-  },
   en: {
-    nav_features:"Features",nav_eu:"EU sovereignty",nav_faq:"FAQ",nav_how:"How it works",nav_cta:"Join waitlist",promo:"Early access — launching September 2026 · Join the waitlist →",nav_about:"About",
-    badge:"Early access opens September 2026",
-    h1a:"Scheduling that",h1b:"thinks for you",
-    hero_sub:"Timeaxe AI builds perfect staff schedules for restaurants and hotels in seconds — less overtime, less burnout, and hours given back to your managers every week.",
+    nav_problem:"The problem",nav_how:"How it works",nav_faq:"FAQ",nav_cta:"Join waitlist",promo:"Early access — launching September 2026 · Join the waitlist →",nav_about:"About",
+    h1a:"Your team's schedule,",h1b:"checked by law, approved by you.",
+    hero_sub:"Timeaxe generates your HCR-compliant schedule in seconds. No schedule goes live without your approval.",
     cta_hero:"Get early access",success:"You're on the list — we'll be in touch soon.",
     form_note:"No credit card · No spam · <a href='/privacy' style='color:inherit;text-decoration:underline'>Privacy policy</a>",
-    reco_line:"Ranked 15th overall out of 900+ startups at the Global Innovation Show in Hong Kong — and proudly the 1st Western company. <a href='about.html'>Read our story →</a>",
+    reco_line:"Ranked 15th overall out of 900+ startups at the Global Innovation Show in Hong Kong — and proudly the 1st Western company. <a href='/en/about'>Read our story →</a>",
     sc_title:"Week of 16 June 2026 — The Grand Bistrot",sc_time:"Generated in 2.4s",sc_ai:"AI optimised",
     d_mon:"Mon",d_tue:"Tue",d_wed:"Wed",d_thu:"Thu",d_fri:"Fri",d_sat:"Sat",d_sun:"Sun",
     leg_on:"Scheduled",leg_peak:"Peak shift",leg_off:"Day off",no_overtime:"✓ No overtime conflicts",
@@ -879,41 +616,23 @@ const translations = {
     consent_company:"I authorise Timeaxe AI to display my business name as a user (optional). <a href='/privacy'>See our privacy policy</a>",
     notif_btn:"Confirm swap",
     toast_txt:"Schedule updated — Sarah K. covers for Marco R. on Sunday",
-    m1:"100% GDPR",m2:"100% European hosting",m3:"European payments",m4:"European API",m5:"Encrypted data",
-    m1b:"100% GDPR",m2b:"100% European hosting",m3b:"European payments",m4b:"European API",m5b:"Encrypted data",
-    s1:"saved on manual scheduling, every week",s1_prefix:"Up to",s2:"compliant with the HCR agreement & 35h",s3:"to generate a full schedule",s4:"spreadsheets needed",
-    feat_eyebrow:"What it does",feat_h2:"Three problems. Solved automatically.",
-    f1_h:"Saves manager time",f1_p:"No more spreadsheets, WhatsApp threads, or last-minute panic. Describe your team and hours — Timeaxe builds the schedule instantly.",
-    f2_h:"Reduces labour costs",f2_p:"You only pay for time actually worked, down to the minute. Timeaxe matches staffing to real demand — no over- or understaffing.",
-    f3_h:"Keeps staff happy",f3_p:"The AI detects burnout risk before it becomes a resignation. It tracks hours, flags overworked staff, and balances workloads fairly.",
-    f4_h:"Guarantees compliance",f4_p:"35h week, mandatory rest, HCR agreement: every schedule is checked against French labour law before publishing.",
-    phone_eyebrow:"The Timeaxe AI app",phone_h2:"Your team's schedule, in every pocket.",phone_p:"Your team checks their schedule, requests time off, or swaps a shift in one tap — synced in real time with the manager's schedule.",
-    eu_badge:"European sovereignty",eu_h2:"100% European.<br><span class='grad'>End to end.</span>",
-    eu1_h:"European cloud hosting",eu1_p:"Your data is hosted exclusively with European cloud providers, on servers located within the European Union. It never leaves European territory.",
-    eu2_h:"European payments",eu2_p:"Our payment infrastructure relies solely on European providers. Your transactions and banking data remain under European jurisdiction.",
-    eu3_h:"European API",eu3_p:"Our API is designed, built, and operated in Europe. Every call, every process, every byte of data flows through entirely European infrastructure.",
-    eu4_h:"GDPR-native compliance",eu4_p:"GDPR isn't a checkbox for us — it's our architecture. Data minimisation, end-to-end encryption, and the right to erasure built in by design.",
-    eu_banner:"<strong>Our commitment:</strong> zero dependency on non-European providers, from the payment layer to cloud storage. Your business data and your employees' data stay in Europe, under European law — full stop.",
-    law_eyebrow:"Labour law compliance",law_h2:"Built to respect French labour law — automatically.",
-    law1_h:"35-hour working week",law1_p:"Timeaxe automatically tracks weekly working hours and triggers an alert when an employee approaches the 35h threshold. Overtime is logged and rated at the legal rates (25% or 50%).",
-    law2_h:"Mandatory rest periods",law2_p:"The system automatically enforces the minimum 11 consecutive hours of daily rest and 35 hours of weekly rest. No non-compliant schedule can be published.",
-    law3_h:"HCR Collective Agreement",law3_p:"Timeaxe incorporates the specific rules of the National Collective Agreement for hospitality: split shifts, maximum 13h working span, and Sunday and bank holiday premiums.",
-    law4_h:"Notice period requirements",law4_p:"Schedules are published within legal deadlines. Timeaxe automatically notifies employees and keeps a timestamped record with legal evidentiary value in case of an inspection.",
-    law_note:"<strong>Important:</strong> Timeaxe AI facilitates compliance but does not replace legal counsel. Rules may vary depending on your company or branch agreements. If in doubt, consult your legal advisor or the labour inspectorate.",
-    how_eyebrow:"How it works",how_h2:"Tell us your staff and hours.<br>We handle the rest.",
-    step1_h:"Set up your venue",step1_p:"Import your staff list, set roles, availability, and opening hours. About two minutes — just once. Employees join by email invite in two minutes.",
-    step2_h:"AI builds your schedule",step2_p:"Timeaxe analyses historical data, predicts peak periods, and generates a labour-law-compliant schedule in seconds.",
-    step3_h:"Review and publish",step3_p:"Make any tweaks you want, then publish. Nothing goes live until you approve it. Staff are notified automatically, every week.",
-    who_eyebrow:"Who it's for",who_h2:"Built for hospitality, front to back.",
-    q1_ey:"Restaurants",
-    q1_l1:"Front-of-house and kitchen scheduling in one place",q1_l2:"Handles split shifts and variable covers automatically",q1_l3:"Flags when someone's working too many closes in a row",
-    q2_ey:"Hotels",
-    q2_l1:"Coordinates housekeeping, F&B, and front desk in sync",q2_l2:"Adapts to occupancy forecasts and seasonal demand",q2_l3:"Labour law compliance built in — no more manual checks",
-    cta_h2a:"Be first when",cta_h2b:"we <span>launch</span>.",
+    trust_label:"Coming soon to these venues",trust1:"Restaurant",trust2:"Hotel",trust3:"Brasserie",trust4:"Bar",trust5:"Café",
+    stats_caption:"Pilot figures — coming soon",
+    s1:"hours of scheduling time saved per week",s2:"legal compliance on published schedules",s3:"average time to generate a schedule",
+    problem_eyebrow:"The reality today",problem_h2:"Schedules, still built in spreadsheets — or worse, pasted into ChatGPT.",
+    problem_p1:"A spreadsheet checks neither the HCR agreement, nor mandatory rest periods, nor overtime.",
+    problem_p2:"Pasting schedules and your team's names into a general-purpose chatbot is worse: these tools ignore French labour law and offer no guarantee over what happens to your employees' data.",
+    problem_punch:"Timeaxe replaces both — without the risk.",
+    principles_eyebrow:"Our three principles",principles_h2:"AI under control, at every step.",
+    p1_h:"The AI never has the final word",p1_p:"Every schedule generated is checked by code — not by a model — against the HCR agreement and French labour law. Nothing is published without your approval.",
+    p2_h:"The AI never sees a person",p2_p:"Names, contacts, and identifying data are pseudonymised before any call to the model. It only ever processes anonymised data — never your employees' identities.",
+    p3_h:"The model is a component, not a dependency",p3_p:"Today, Mistral — a European model. Tomorrow, our own model. The provider can change; your data and schedules stay in Europe.",
+    p3_tags:"100% GDPR · European hosting · European payments · Encrypted data",
+    cta_h2a:"A compliant schedule,",cta_h2b:"in <span>seconds</span>.",
     cta_sub:"We're onboarding a small group of venues before our public launch. Join the waitlist and skip the queue.",
     cta_bottom:"Get early access",success2:"You're on the list — we'll be in touch soon.",
     bottom_note:"No credit card · No spam · <a href='/privacy' style='color:inherit;text-decoration:underline'>Privacy policy</a>",
-    footer_eu:"Proudly European",faq_eyebrow:"Questions fréquentes",faq_title:"Vous avez des questions sur Timeaxe AI ?",faq_sub:"Lancement, tarifs, fonctionnalités, liste d'attente — on a les réponses.",faq_btn:"Voir la FAQ",faq_eyebrow:"Frequently asked questions",faq_title:"Got questions about Timeaxe AI?",faq_sub:"Launch, pricing, features, waitlist — we have the answers.",faq_btn:"View the FAQ",footer_faq:"FAQ",footer_privacy:"Privacy",footer_about:"About",footer_legal:"Legal",
+    footer_eu:"Proudly European",footer_faq:"FAQ",footer_privacy:"Privacy",footer_about:"About",footer_legal:"Legal",
     modal_title:"Join the waitlist",modal_sub:"Be among the first venues to use Timeaxe AI. Enter your email to reserve your spot.",
     modal_btn:"Reserve my spot",modal_perk1:"No credit card required",modal_perk2:"Zero spam — only the news that matters",modal_perk3:"Priority early access at launch",
     modal_ok_title:"You're in!",modal_ok_sub:"You're on the list — we'll be in touch soon."
@@ -1246,16 +965,6 @@ window.addEventListener('load',()=>{
 
     /* parallax on schedule card */
     gsap.to('#scheduleCard',{yPercent:-14,ease:'none',scrollTrigger:{trigger:'.hero',start:'top top',end:'bottom top',scrub:true}});
-
-    /* app showcase: phone physically tilts upright in 3D space as it scrolls into view */
-    gsap.set('#iphoneFrame',{transformPerspective:1200,transformOrigin:'50% 100%'});
-    gsap.fromTo('#iphoneFrame',
-      {rotateX:40,opacity:0,y:80},
-      {rotateX:0,opacity:1,y:0,ease:'none',
-        scrollTrigger:{trigger:'#phoneStage',start:'top 90%',end:'top 40%',scrub:1}});
-
-    /* app showcase: continuous gentle float while the phone is on screen */
-    gsap.to('.iphone-screen-img',{y:-10,duration:3,repeat:-1,yoyo:true,ease:'sine.inOut'});
 
     /* generic scroll reveals */
     gsap.utils.toArray('[data-anim="up"]').forEach(el=>{
