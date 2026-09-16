@@ -259,6 +259,19 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .principle-card p{font-size:14.5px;color:var(--text-secondary);line-height:1.7}
 .principle-tags{margin-top:16px;font-size:12px;font-weight:600;color:var(--blue-600);letter-spacing:.02em;line-height:1.6}
 
+/* APP SHOWCASE (3D PHONE) */
+.phone-showcase{background:linear-gradient(180deg,var(--blue-deep) 0%,var(--blue-night) 100%);position:relative;padding:120px 2rem 40px}
+.phone-showcase::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,0.06) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 70% 80% at 50% 40%,black,transparent)}
+.phone-glow{position:absolute;top:10%;left:50%;width:600px;height:600px;transform:translateX(-50%);background:radial-gradient(circle,rgba(90,147,230,0.35),transparent 65%);filter:blur(40px);z-index:0}
+.phone-inner{max-width:1100px;margin:0 auto;position:relative;z-index:2;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
+.phone-copy .eyebrow{color:var(--blue-400)}
+.phone-copy .section-h2{color:#fff;margin-bottom:18px}
+.phone-copy>p{font-size:16px;color:rgba(255,255,255,0.7);line-height:1.7;max-width:440px}
+.phone-stage{display:flex;justify-content:center;perspective:1200px;overflow:visible}
+.iphone-frame{width:440px;position:relative;z-index:3;margin-bottom:-70px;transform-style:preserve-3d;transform-origin:50% 100%}
+.iphone-frame::before{content:'';position:absolute;top:50%;left:50%;width:130%;aspect-ratio:1/1;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(125,180,255,0.45),transparent 70%);filter:blur(60px);z-index:-1;pointer-events:none}
+.iphone-screen-img{display:block;width:100%;height:auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,0.5)) drop-shadow(0 0 30px rgba(0,0,0,0.1))}
+
 /* CTA */
 .bottom-cta-wrap{background:linear-gradient(180deg,#F7F7F8 0%,#EAF0F9 100%);position:relative;overflow:hidden;border-top:1px solid var(--border)}
 #ctaCanvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
@@ -316,6 +329,9 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 }
 @media(max-width:720px){
   .principles-grid{grid-template-columns:1fr}
+  .phone-inner{grid-template-columns:1fr;gap:40px;text-align:center}
+  .phone-copy>p{margin:0 auto}
+  .iphone-frame{width:260px;margin-bottom:0}
   .stats-inner{flex-wrap:wrap}
   .stat{flex:1 1 45%;padding:12px 8px;border-right:none}
   .stat-num{font-size:28px}
@@ -498,6 +514,23 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   </div>
 </div>
 
+<!-- APP SHOWCASE -->
+<div class="phone-showcase" id="app">
+  <div class="phone-glow"></div>
+  <div class="phone-inner">
+    <div class="phone-copy">
+      <p class="eyebrow" data-anim="up" data-i="phone_eyebrow">L'app Timeaxe AI</p>
+      <h2 class="section-h2" data-i="phone_h2">Le planning de votre équipe, dans toutes les poches.</h2>
+      <p data-anim="up" data-i="phone_p">Vos équipes consultent leur planning, posent une indisponibilité ou échangent un shift en un tap — synchronisé en temps réel avec le planning manager.</p>
+    </div>
+    <div class="phone-stage" id="phoneStage">
+      <div class="iphone-frame" id="iphoneFrame">
+        <img src="assets/img/full-phone-ui-fr.png" alt="Application Timeaxe AI affichant le service du jour, les événements à venir et le pointage d'arrivée" class="iphone-screen-img" width="381" height="783" loading="lazy">
+      </div>
+    </div>
+  </div>
+</div>
+
 <p class="stats-caption" data-i="stats_caption">Chiffres pilotes — bientôt disponibles</p>
 <div class="stats-section">
   <div class="stats-inner">
@@ -603,10 +636,11 @@ const translations = {
     stats_caption:"Chiffres pilotes — bientôt disponibles",
     s1:"heures de planning économisées par semaine",s2:"conformité légale sur les plannings publiés",s3:"temps moyen pour générer un planning",
     problem_eyebrow:"Le coût du statu quo",problem_h2:"Le tableur vous coûte des heures. Le mauvais planning vous coûte de l'argent.",
-    problem_p1:"Reconstruire le planning chaque semaine, gérer les échanges par SMS ou WhatsApp, corriger les erreurs à la main&nbsp;: ce sont des heures que vos managers ne récupèrent jamais, et des heures supplémentaires mal anticipées qui pèsent sur votre masse salariale.",
+    problem_p1:"Reconstruire le planning chaque semaine, gérer les échanges par SMS ou WhatsApp, corriger les erreurs à la main&nbsp;: ce sont des heures que vos managers ne récupèrent jamais, et des heures supplémentaires mal anticipées qui pèsent sur votre masse salariale. Timeaxe génère ce même planning en quelques secondes — conforme, sans erreur, sans tableur.",
     problem_p2:"Coller les plannings et les noms de votre équipe dans un chatbot grand public, c'est pire&nbsp;: ces outils ignorent le droit du travail français et n'offrent aucune garantie sur le devenir des données de vos salariés.",
     problem_punch:"Timeaxe remplace les deux — sans le risque.",
     principles_eyebrow:"Nos trois principes",principles_h2:"Une IA sous contrôle, à chaque étape.",
+    phone_eyebrow:"L'app Timeaxe AI",phone_h2:"Le planning de votre équipe, dans toutes les poches.",phone_p:"Vos équipes consultent leur planning, posent une indisponibilité ou échangent un shift en un tap — synchronisé en temps réel avec le planning manager.",
     p1_h:"L'IA n'a jamais le dernier mot",p1_p:"Chaque planning généré est vérifié par du code — pas par un modèle — contre la convention HCR et le droit du travail français. Rien n'est publié sans votre approbation.",
     p2_h:"L'IA ne voit jamais une personne",p2_p:"Noms, contacts et données identifiantes sont pseudonymisés avant tout appel au modèle. Il ne traite que des données anonymisées — jamais l'identité de vos salariés.",
     p3_h:"Le modèle est un composant, pas une dépendance",p3_p:"Aujourd'hui, Mistral — un modèle européen. Demain, notre propre modèle. Le fournisseur peut changer&nbsp;; vos données et vos plannings restent en Europe.",
@@ -642,10 +676,11 @@ const translations = {
     stats_caption:"Pilot figures — coming soon",
     s1:"hours of scheduling time saved per week",s2:"legal compliance on published schedules",s3:"average time to generate a schedule",
     problem_eyebrow:"The cost of the status quo",problem_h2:"The spreadsheet costs you hours. A bad schedule costs you money.",
-    problem_p1:"Rebuilding the schedule every week, chasing swaps over text or WhatsApp, fixing mistakes by hand — that's hours your managers never get back, and unplanned overtime that quietly eats into your payroll.",
+    problem_p1:"Rebuilding the schedule every week, chasing swaps over text or WhatsApp, fixing mistakes by hand — that's hours your managers never get back, and unplanned overtime that quietly eats into your payroll. Timeaxe generates that same schedule in seconds — compliant, error-free, with no spreadsheet involved.",
     problem_p2:"Pasting schedules and your team's names into a general-purpose chatbot is worse: these tools ignore French labour law and offer no guarantee over what happens to your employees' data.",
     problem_punch:"Timeaxe replaces both — without the risk.",
     principles_eyebrow:"Our three principles",principles_h2:"AI under control, at every step.",
+    phone_eyebrow:"The Timeaxe AI app",phone_h2:"Your team's schedule, in every pocket.",phone_p:"Your team checks their schedule, requests time off, or swaps a shift in one tap — synced in real time with the manager's schedule.",
     p1_h:"The AI never has the final word",p1_p:"Every schedule generated is checked by code — not by a model — against the HCR agreement and French labour law. Nothing is published without your approval.",
     p2_h:"The AI never sees a person",p2_p:"Names, contacts, and identifying data are pseudonymised before any call to the model. It only ever processes anonymised data — never your employees' identities.",
     p3_h:"The model is a component, not a dependency",p3_p:"Today, Mistral — a European model. Tomorrow, our own model. The provider can change; your data and schedules stay in Europe.",
@@ -993,6 +1028,16 @@ window.addEventListener('load',()=>{
       gsap.from(el,{opacity:0,y:44,scale:.985,duration:.9,ease:'power3.out',
         scrollTrigger:{trigger:el,start:'top 86%',toggleActions:'play none none none'}});
     });
+
+    /* app showcase: phone physically tilts upright in 3D space as it scrolls into view */
+    gsap.set('#iphoneFrame',{transformPerspective:1200,transformOrigin:'50% 100%'});
+    gsap.fromTo('#iphoneFrame',
+      {rotateX:40,opacity:0,y:80},
+      {rotateX:0,opacity:1,y:0,ease:'none',
+        scrollTrigger:{trigger:'#phoneStage',start:'top 90%',end:'top 40%',scrub:1}});
+
+    /* app showcase: continuous gentle float while the phone is on screen */
+    gsap.to('.iphone-screen-img',{y:-10,duration:3,repeat:-1,yoyo:true,ease:'sine.inOut'});
 
     /* cinematic heading reveal: SplitType word-split + staggered rise/fade */
     if(window.SplitType){
