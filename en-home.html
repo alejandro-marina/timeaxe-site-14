@@ -398,8 +398,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <section class="hero" id="hero">
   <canvas id="heroCanvas"></canvas>
   <div class="hero-inner">
-    <h1 id="heroTitle"><span class="line" data-i-words="h1a">Your team's schedule,</span><br><span class="line accent" data-i-words="h1b">checked by law, approved by you.</span></h1>
-    <p class="hero-sub" data-anim="fade" data-i="hero_sub">Timeaxe generates your HCR-compliant schedule in seconds. No schedule goes live without your approval.</p>
+    <h1 id="heroTitle"><span class="line" data-i-words="h1a">The schedule that's costing you</span><br><span class="line accent" data-i-words="h1b">hours — and money.</span></h1>
+    <p class="hero-sub" data-anim="fade" data-i="hero_sub">Every week spent on a spreadsheet means unplanned overtime and hours your team never gets back. Timeaxe generates your HCR-compliant schedule in seconds.</p>
     <div data-anim="fade" id="waitlist">
       <input type="text" id="heroName" class="name-input" data-placeholder-fr="Nom complet ou entreprise" data-placeholder-en="Full name or company" placeholder="Full name or company" autocomplete="name">
       <div class="hero-form" id="heroForm">
@@ -481,9 +481,9 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 <!-- PROBLEM -->
 <div class="problem-section" id="problem">
   <div class="problem-inner">
-    <p class="eyebrow" data-anim="up" data-i="problem_eyebrow">The reality today</p>
-    <h2 class="section-h2" data-anim="up" data-i="problem_h2">Schedules, still built in spreadsheets — or worse, pasted into ChatGPT.</h2>
-    <p data-anim="up" data-i="problem_p1">A spreadsheet checks neither the HCR agreement, nor mandatory rest periods, nor overtime.</p>
+    <p class="eyebrow" data-anim="up" data-i="problem_eyebrow">The cost of the status quo</p>
+    <h2 class="section-h2" data-anim="up" data-i="problem_h2">The spreadsheet costs you hours. A bad schedule costs you money.</h2>
+    <p data-anim="up" data-i="problem_p1">Rebuilding the schedule every week, chasing swaps over text or WhatsApp, fixing mistakes by hand — that's hours your managers never get back, and unplanned overtime that quietly eats into your payroll.</p>
     <p data-anim="up" data-i="problem_p2">Pasting schedules and your team's names into a general-purpose chatbot is worse: these tools ignore French labour law and offer no guarantee over what happens to your employees' data.</p>
     <p class="problem-punch" data-anim="up" data-i="problem_punch">Timeaxe replaces both — without the risk.</p>
   </div>
@@ -529,7 +529,7 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
   <canvas id="ctaCanvas"></canvas>
   <div class="bottom-cta">
     <h2><span data-i="cta_h2a">A compliant schedule,</span><br><span data-i="cta_h2b">in <span>seconds</span>.</span></h2>
-    <p data-anim="up" data-i="cta_sub">We're onboarding a small group of venues before our public launch. Join the waitlist and skip the queue.</p>
+    <p data-anim="up" data-i="cta_sub">We're onboarding a small group of restaurants and hotels ready to leave the spreadsheet behind. Join the waitlist and skip the queue.</p>
     <input type="text" id="bottomName" class="name-input" data-anim="up" data-placeholder-fr="Nom complet ou entreprise" data-placeholder-en="Full name or company" placeholder="Full name or company" autocomplete="name">
     <div class="bottom-form" id="bottomForm" data-anim="up">
       <input type="email" id="bottomEmail" data-placeholder-fr="votre@email.com" data-placeholder-en="your@email.com" placeholder="your@email.com" autocomplete="email">
@@ -600,8 +600,8 @@ footer p{font-size:13px;color:rgba(255,255,255,0.55)}
 const translations = {
   en: {
     nav_problem:"The problem",nav_how:"How it works",nav_faq:"FAQ",nav_cta:"Join waitlist",promo:"Early access — launching September 2026 · Join the waitlist →",nav_about:"About",
-    h1a:"Your team's schedule,",h1b:"checked by law, approved by you.",
-    hero_sub:"Timeaxe generates your HCR-compliant schedule in seconds. No schedule goes live without your approval.",
+    h1a:"The schedule that's costing you",h1b:"hours — and money.",
+    hero_sub:"Every week spent on a spreadsheet means unplanned overtime and hours your team never gets back. Timeaxe generates your HCR-compliant schedule in seconds.",
     cta_hero:"Get early access",success:"You're on the list — we'll be in touch soon.",
     form_note:"No credit card · No spam · <a href='/privacy' style='color:inherit;text-decoration:underline'>Privacy policy</a>",
     reco_line:"Ranked 15th overall out of 900+ startups at the Global Innovation Show in Hong Kong — and proudly the 1st Western company. <a href='/en/about'>Read our story →</a>",
@@ -619,8 +619,8 @@ const translations = {
     trust_label:"Coming soon to these venues",trust1:"Restaurant",trust2:"Hotel",trust3:"Brasserie",trust4:"Bar",trust5:"Café",
     stats_caption:"Pilot figures — coming soon",
     s1:"hours of scheduling time saved per week",s2:"legal compliance on published schedules",s3:"average time to generate a schedule",
-    problem_eyebrow:"The reality today",problem_h2:"Schedules, still built in spreadsheets — or worse, pasted into ChatGPT.",
-    problem_p1:"A spreadsheet checks neither the HCR agreement, nor mandatory rest periods, nor overtime.",
+    problem_eyebrow:"The cost of the status quo",problem_h2:"The spreadsheet costs you hours. A bad schedule costs you money.",
+    problem_p1:"Rebuilding the schedule every week, chasing swaps over text or WhatsApp, fixing mistakes by hand — that's hours your managers never get back, and unplanned overtime that quietly eats into your payroll.",
     problem_p2:"Pasting schedules and your team's names into a general-purpose chatbot is worse: these tools ignore French labour law and offer no guarantee over what happens to your employees' data.",
     problem_punch:"Timeaxe replaces both — without the risk.",
     principles_eyebrow:"Our three principles",principles_h2:"AI under control, at every step.",
@@ -629,7 +629,7 @@ const translations = {
     p3_h:"The model is a component, not a dependency",p3_p:"Today, Mistral — a European model. Tomorrow, our own model. The provider can change; your data and schedules stay in Europe.",
     p3_tags:"100% GDPR · European hosting · European payments · Encrypted data",
     cta_h2a:"A compliant schedule,",cta_h2b:"in <span>seconds</span>.",
-    cta_sub:"We're onboarding a small group of venues before our public launch. Join the waitlist and skip the queue.",
+    cta_sub:"We're onboarding a small group of restaurants and hotels ready to leave the spreadsheet behind. Join the waitlist and skip the queue.",
     cta_bottom:"Get early access",success2:"You're on the list — we'll be in touch soon.",
     bottom_note:"No credit card · No spam · <a href='/privacy' style='color:inherit;text-decoration:underline'>Privacy policy</a>",
     footer_eu:"Proudly European",footer_faq:"FAQ",footer_privacy:"Privacy",footer_about:"About",footer_legal:"Legal",
