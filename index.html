@@ -11,7 +11,7 @@
 <link rel="icon" type="image/png" sizes="32x32" href="assets/img/new-logo.png">
 <link rel="icon" type="image/png" sizes="16x16" href="assets/img/new-logo.png">
 <link rel="apple-touch-icon" href="assets/img/apple-touch-icon-new.png">
-<meta name="theme-color" content="#1D3A67">
+<meta name="theme-color" content="#1F4D9B">
 <link rel="manifest" href="site.webmanifest">
 <link rel="canonical" href="https://timeaxeai.com/">
 <link rel="alternate" hreflang="fr-FR" href="https://timeaxeai.com/">
@@ -95,9 +95,10 @@
 .nav-about:hover{color:#fff}
 :root{
   --font-sans:'Plus Jakarta Sans',system-ui,-apple-system,sans-serif;
-  --blue-deep:#1D3A67;--blue-night:#274777;--blue-900:#3E5F9B;--blue-800:#6482BC;
+  --blue-deep:#1F4D9B;--blue-night:#274777;--blue-900:#3E5F9B;--blue-800:#6482BC;
   --blue-600:#3B7DE0;--blue-500:#5A93E6;--blue-400:#98ADD4;
-  --blue-300:#D3DCEC;--blue-200:#EAF0F9;--blue-100:#F2F2F2;--blue-50:#F7F7F8;
+  --blue-300:#D3DCEC;--blue-200:#EAF0F9;--blue-100:#F2F2F2;--blue-50:#F0EFEB;
+  --brand-navy-core:#0B0F1A;
   --cyan:#1D9E75;
   --text-primary:#1a1a1a;--text-secondary:#5a5a5a;--text-muted:#9a9a9a;--border:#E6E6E6;
   --radius-sm:8px;--radius-md:14px;--radius-lg:18px;--radius-xl:28px;
@@ -143,7 +144,7 @@ nav{position:fixed;top:calc(33px + env(safe-area-inset-top));left:0;right:0;z-in
 .magnetic{will-change:transform;transition:transform .25s cubic-bezier(.2,.7,.3,1)}
 
 /* HERO */
-.hero{min-height:100vh;min-height:100svh;background:linear-gradient(180deg,#1D3A67 0%,#274777 30%,#3E5F9B 50%,#6482BC 68%,#98ADD4 82%,#D3DCEC 92%,rgba(247,247,248,0) 100%) top center / 100% 800px no-repeat,#F7F7F8;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:163px 2rem 100px;position:relative;overflow:hidden;text-align:center}
+.hero{min-height:100vh;min-height:100svh;background:linear-gradient(180deg,#0B0F1A 0%,#1F4D9B 26%,#3E5F9B 50%,#6482BC 68%,#98ADD4 82%,#D3DCEC 92%,rgba(240,239,235,0) 100%) top center / 100% 800px no-repeat,#F0EFEB;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:163px 2rem 100px;position:relative;overflow:hidden;text-align:center}
 #heroCanvas{position:absolute;inset:0;width:100%;height:100%;display:block}
 .hero::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(96,165,250,0.12) 1px,transparent 1px);background-size:34px 34px;mask-image:radial-gradient(ellipse 80% 80% at 50% 45%,black 30%,transparent 100%);pointer-events:none}
 .hero-inner{position:relative;z-index:2;max-width:880px;margin:0 auto}
@@ -273,7 +274,7 @@ h1 .accent .w{background:linear-gradient(120deg,var(--blue-400) 0%,var(--blue-20
 .iphone-screen-img{display:block;width:100%;height:auto;filter:drop-shadow(0 40px 60px rgba(0,0,0,0.5)) drop-shadow(0 0 30px rgba(0,0,0,0.1))}
 
 /* CTA */
-.bottom-cta-wrap{background:linear-gradient(180deg,#F7F7F8 0%,#EAF0F9 100%);position:relative;overflow:hidden;border-top:1px solid var(--border)}
+.bottom-cta-wrap{background:linear-gradient(180deg,#F0EFEB 0%,#EAF0F9 100%);position:relative;overflow:hidden;border-top:1px solid var(--border)}
 #ctaCanvas{position:absolute;inset:0;width:100%;height:100%;opacity:.5}
 .bottom-cta{position:relative;z-index:2;text-align:center;padding:110px 2rem;max-width:700px;margin:0 auto}
 .bottom-cta h2{font-family:var(--font-sans);font-size:clamp(32px,5.2vw,54px);font-weight:800;letter-spacing:-1px;line-height:1.02;color:var(--blue-deep);margin-bottom:18px}
